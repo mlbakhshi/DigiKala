@@ -1,0 +1,28 @@
+@import './variables.scss';
+
+html {
+  font-size:  4vw;
+}
+@media (min-width: 760px) {
+  html {
+    font-size:  10vw;
+  }
+}
+
+button{outline: none!important;}
+
+.invalid-feedback{
+  display: block!important;
+}
+
+div[class^="jss"]{
+  display: none!important;
+}
+
+.mobile-fixed{
+  position: -ms-device-fixed;
+  position: -webkit-sticky;
+  position: fixed;
+  bottom: calcLen(16);
+  right: 0;
+}

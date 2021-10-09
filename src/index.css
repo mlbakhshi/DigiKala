@@ -1,13 +1,24 @@
-body {
+.body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Yekan','IranSans', serif;
+}
+@font-face {
+  font-family: 'Yekan','IranSans','Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local('IranSans'), url('/src/assets/fonts/eot/IRANSansWeb.eot') format('truetype');
+  src: local('IranSans'), url('/src/assets/fonts/ttf/IRANSansWeb.ttf') format('truetype');
+  src: local('IranSans'), url('/src/assets/fonts/woff/IRANSansWeb.woff') format('truetype');
+  src: local('IranSans'), url('/src/assets/fonts/woff2/IRANSansWeb.woff2') format('truetype');
+
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'Yekan','IranSans',source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }

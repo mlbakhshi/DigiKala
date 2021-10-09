@@ -1,0 +1,91 @@
+$black-color:#000;
+$red-color:#FF3262;
+$red-color-v2:#d43c13;
+$white-color:#fff;
+$green-color:#0AEE56;
+$green-color1:#00e676;
+$green-color2:#00c853;
+
+$rightel-color:#ba197f;
+$rightel-color-light: rgba(186, 25, 127, 0.5);
+$mci-color:#26C6DA;
+$mci-color-darker: #26b0c1;
+$mci-color-light: rgba(38, 198, 218, 0.5);
+$irancell-color:#FFCC00;
+$irancell-color-dark:#f1c209;
+$irancell-color-light: rgba(255, 204, 0, 0.5);
+$shatel-color:#214981;
+$shatel-color-light: rgba(33, 73, 129, 0.51);
+
+
+$charge-color:#FF9100;
+$internet-color:#00E5FF;
+$bill-color:#00E676;
+$report-color:#F50057;
+
+$theme-color:#4870F5;
+$theme-color-2:#196bbc;
+
+:root {
+  /*--theme-color-v2: #415DB3;
+  --theme-color-light-v2: #c7d0fd;
+  --logo-url: url('./../../../assets/images/common/baman-logo-blue.png');*/
+
+  --theme-color-v2: #00BDA6;
+  --theme-color-light-v2: #c7fdf6;
+  //--logo-url: url('./../../../assets/images/mobile/v2/svg/sad24.svg');
+}
+
+
+$select-bg-color:#E0F2F1;
+
+$color-success:#00E676;
+$color-success-v2:#39B54A;
+$color-fail:#F50057;
+$color-warning:#ffcc00;
+
+$color-222222:#222222;
+$color-cccccc:#cccccc;
+$color-333333:#333333;
+$color-013C74:#013C74;
+$color-edf3fe:#edf3fe;
+$color-232323:#232323;
+$color-d5d5d5:#d5d5d5;
+$color-545454:#545454;
+$color-777777:#777777;
+$color-a5a5a5:#A5A5A5;
+$color-f7f7f7:#f7f7f7;
+$color-f1f1f1:#f1f1f1;
+$color-efefef:#efefef;
+$color-a6a6a6:#A6A6A6;
+$color-fafafa:#fafafa;
+$color-fafafadd:#fafafadd;
+$color-d1d1d1:#d1d1d1;
+$color-e6e6e6:#e6e6e6;
+$color-e1e1e1:#e1e1e1;
+$color-e7e7e7:#e7e7e7;
+$color-f5222d:#f5222d;
+$color-caf0ff:#CAF0FF;
+$color-08bfff:#08bfff;
+$color-54c5d0:#54C5D0;
+$color-173167:#173167;
+$color-ababab:#ababab;
+$color-dedede:#dedede;
+$color-9d9d9d:#9D9D9D;
+$color-6d6d6d:#6d6d6d;
+
+$font-weight-bold:bold;
+$font-weight-medium:500;
+$font-weight-regular:300;
+$font-weight-light:200;
+
+$font-main:IRANSans;//IRANSans
+$font-main-fa-num:IRANSans_FaNum;//IRANSans
+
+@function multiply($value1, $value2) {
+  @return $value1 * $value2 +px;
+}
+
+@function calcRem($baseSize, $size) {
+  @return $size / $baseSize +rem;
+}

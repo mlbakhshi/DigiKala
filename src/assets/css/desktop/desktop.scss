@@ -1,0 +1,147 @@
+@import './variables';
+
+html {
+  font-size: calcHtmlFontSize($base-width-desktop);
+}
+
+
+@media all and (min-width: 1024px) {
+  html {
+    font-size: calcHtmlFontSize(1024);
+  }
+}
+
+
+@media all and (min-width: 1280px) {
+  html {
+    font-size: calcHtmlFontSize(1280);
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  html {
+    font-size: calcHtmlFontSize(1366);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  html {
+    font-size: calcHtmlFontSize(1440);
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  html {
+    font-size: calcHtmlFontSize(1600);
+  }
+}
+
+@media only screen and (min-width: 1680px) {
+  html {
+    font-size: calcHtmlFontSize(1680);
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  html {
+    font-size: calcHtmlFontSize(1920);
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  html {
+    font-size: calcHtmlFontSize(2560);
+  }
+}
+
+.font-size_8 {
+  font-size: calcFont(8);
+}
+
+.font-size_9 {
+  font-size: calcFont(9);
+}
+
+.font-size_10 {
+  font-size: calcFont(10);
+}
+
+.font-size_11 {
+  font-size: calcFont(11);
+}
+
+.font-size_12 {
+  font-size: calcFont(12);
+}
+
+.font-size_13 {
+  font-size: calcFont(13);
+}
+
+.font-size_14 {
+  font-size: calcFont(14);
+}
+
+.font-size_15 {
+  font-size: calcFont(15);
+}
+
+.font-size_16 {
+  font-size: calcFont(16);
+}
+
+.font-size_17 {
+  font-size: calcFont(17);
+}
+
+.font-size_18 {
+  font-size: calcFont(18);
+}
+
+.font-size_19 {
+  font-size: calcFont(19);
+}
+
+.font-size_20 {
+  font-size: calcFont(20);
+}
+
+.font-size_21 {
+  font-size: calcFont(21);
+}
+
+.font-size_22 {
+  font-size: calcFont(21);
+}
+
+.font-size_23 {
+  font-size: calcFont(21);
+}
+
+.font-size_24 {
+  font-size: calcFont(21);
+}
+
+.font-size_25 {
+  font-size: calcFont(21);
+}
+
+.font-size_26 {
+  font-size: calcFont(21);
+}
+
+.font-size_27 {
+  font-size: calcFont(21);
+}
+
+.font-size_28 {
+  font-size: calcFont(21);
+}
+
+.font-size_29 {
+  font-size: calcFont(21);
+}
+
+.font-size_30 {
+  font-size: calcFont(21);
+}

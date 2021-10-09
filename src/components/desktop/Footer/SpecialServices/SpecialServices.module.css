@@ -1,0 +1,23 @@
+.Logo{
+    display: flex;
+    background-color: #f2f2f2;
+    height: 80px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.notice{
+color:#aea7a7;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.icons{
+    border-left: #807979 solid 1px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}

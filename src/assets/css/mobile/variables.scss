@@ -1,0 +1,14 @@
+
+$base-font-size-mobile: 14.4;
+$base-width-mobile: 360;
+
+@function calcFont($size) {
+  @return calcRem($base-font-size-mobile, $size);
+}
+
+@function calcLen($size) {
+  @return calcRem($base-font-size-mobile, $size);
+}
+
+$mobile-them-x-padding:12;
+$mobile-them-y-padding:16;

@@ -1,0 +1,23 @@
+.footerContainer{
+display:flex;
+    align-items:start;
+    justify-content:space-between;
+    width: 90%;
+}
+.inputEmail{
+background-color:#f8f4f4;
+    border-radius:10px;
+    border:none;
+    color:darkgray;
+    height:50px;
+    padding-right:10px;
+    margin-left:15px;
+    width:80%;
+}
+.inputButton{
+background-color:#e2d6d6;
+    border-radius:10%;
+    border:none;
+    color:white;
+    width:18%;
+}

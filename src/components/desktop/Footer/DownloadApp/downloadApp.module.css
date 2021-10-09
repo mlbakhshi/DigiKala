@@ -1,0 +1,17 @@
+.downloadApp{
+    display: flex;
+height: 75px;
+    width: 98%;
+    background-color: #3c4b6d;
+    border-radius: 10px;
+    align-items: center;
+    padding-left: 10px;
+}
+.App{
+    margin-left: 10px;
+}
+.Smile{
+width:40px;
+    margin-right: 14px;
+    border-radius: 10px;
+}
