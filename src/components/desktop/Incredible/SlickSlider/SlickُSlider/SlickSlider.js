@@ -1,59 +1,47 @@
-import React, { Component } from "react";
-import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
-import pic1 from './../../../../../assets/images/incredibleSuper/1.jpg';
-import pic2 from './../../../../../assets/images/incredibleSuper/2.jpg';
-import pic3 from './../../../../../assets/images/incredibleSuper/3.jpg';
-import pic4 from './../../../../../assets/images/incredibleSuper/4.jpg';
-import pic5 from './../../../../../assets/images/incredibleSuper/5.jpg';
-import pic6 from './../../../../../assets/images/incredibleSuper/6.jpg';
+import React from 'react'
+import Carousel from 'react-bootstrap/Carousel';
 
+const SlickSlide=()=> {
 
-const SlickSlider =()=> {
-   return(
-       <div>
-           {/*<Carousel*/}
-           {/*    plugins={[*/}
-           {/*        'arrows',*/}
-           {/*        {*/}
-           {/*            resolve: slidesToShowPlugin,*/}
-           {/*            options: {*/}
-           {/*                numberOfSlides: 3*/}
-           {/*            }*/}
-           {/*        },*/}
-           {/*    ]}*/}
-           {/*    breakpoints={{*/}
-           {/*        640: {*/}
-           {/*            plugins: [*/}
-           {/*                {*/}
-           {/*                    resolve: slidesToShowPlugin,*/}
-           {/*                    options: {*/}
-           {/*                        numberOfSlides: 1*/}
-           {/*                    }*/}
-           {/*                },*/}
-           {/*            ]*/}
-           {/*        },*/}
-           {/*        900: {*/}
-           {/*            plugins: [*/}
-           {/*                {*/}
-           {/*                    resolve: slidesToShowPlugin,*/}
-           {/*                    options: {*/}
-           {/*                        numberOfSlides: 2*/}
-           {/*                    }*/}
-           {/*                },*/}
-           {/*            ]*/}
-           {/*        }*/}
-           {/*    }}*/}
-           {/*>*/}
-               <img src={pic1} />
-               <img src={pic2} />
-               <img src={pic3} />
-               <img src={pic4} />
-               <img src={pic5} />
-               <img src={pic6} />
-           {/*</Carousel>*/}
-       </div>
-       )
+        return (
+            <div>
+                    <div className='container-fluid' >
+                            <div className="row title" style={{ marginBottom: "20px" }} >
+                                    <div className="col-sm-12 btn btn-warning">
+                                            How To Use Bootstrap Carousel In ReactJS
+                                    </div>
+                            </div>
+                    </div>
+                    <div className='container-fluid' >
+                            <Carousel interval={600} keyboard={false} pauseOnHover={true}>
+                                    <Carousel.Item style={{'height':"300px"}}  >
+                                            <img style={{'height':"300px"}}
+                                                 className="d-block w-100"
+                                                 src={'assets/img/img2.jpg'}  />
+                                            <Carousel.Caption>
+                                                    <h3>First Demo </h3>
+                                            </Carousel.Caption>
+                                    </Carousel.Item  >
+                                    <Carousel.Item style={{'height':"300px"}}>
+                                            <img style={{'height':"300px"}}
+                                                 className="d-block w-100"
+                                                 src={'assets/img/img1.jpg'}    />
+                                            <Carousel.Caption>
+                                                    <h3>Second Demo</h3>
+                                            </Carousel.Caption>
+                                    </Carousel.Item>
+                                    <Carousel.Item style={{'height':"300px"}}>
+                                            <img style={{'height':"300px"}}
+                                                 className="d-block w-100"
+                                                 src={'assets/img/img3.jpg'}   />
+                                            <Carousel.Caption>
+                                                    <h3>Third Demo</h3>
+                                            </Carousel.Caption>
+                                    </Carousel.Item>
+                            </Carousel>
+                    </div>
+            </div>
+        )
 
 }
-export default SlickSlider;
+export default SlickSlide;
