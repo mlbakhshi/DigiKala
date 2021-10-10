@@ -4,8 +4,8 @@ import leftBottom from './../../../../assets/images/slider/leftBottom.jpg';
 import classes from './SliderLeft.module.scss';
 const SliderLeft=()=>{
     return(
-        <div style={{width:"40%"}}>
-            <aside  style={{width:"95%"}}>
+        <div className={classes.sliderLeft} style={{width:"40%",height:"100%"}}>
+            <aside  >
                 <div >
                     <img src={leftTop} className={classes.images} />
                 </div>

@@ -4,6 +4,7 @@ import classes from './layout.module.css';
 import Toolbar from "../../components/desktop/Navigation/toolbar/toolbar";
 import Footer from "../../components/desktop/Footer/footer";
 import ContainerHome from "../../components/desktop/SliderTop/ContainerHome";
+import Incredible from "../../components/desktop/Incredible/incredible";
 const Layout=(props)=>{
     return(
         <Auxx>
@@ -12,6 +13,7 @@ const Layout=(props)=>{
             <main className={classes.Content}>
                 {props.children}
                 <ContainerHome />
+                <Incredible />
             </main>
             <Footer />
         </Auxx>
