@@ -1,47 +1,41 @@
 import React from 'react'
-import Carousel from 'react-bootstrap/Carousel';
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/swiper-bundle.min.css';
+import 'swiper/swiper.min.css';
 
-const SlickSlide=()=> {
+import '../../../../../assets/icon/style.css';
+import SliderComponent from "../../../SliderComponent/SliderComponent";
 
-        return (
-            <div>
-                    <div className='container-fluid' >
-                            <div className="row title" style={{ marginBottom: "20px" }} >
-                                    <div className="col-sm-12 btn btn-warning">
-                                            How To Use Bootstrap Carousel In ReactJS
-                                    </div>
-                            </div>
-                    </div>
-                    <div className='container-fluid' >
-                            <Carousel interval={600} keyboard={false} pauseOnHover={true}>
-                                    <Carousel.Item style={{'height':"300px"}}  >
-                                            <img style={{'height':"300px"}}
-                                                 className="d-block w-100"
-                                                 src={'assets/img/img2.jpg'}  />
-                                            <Carousel.Caption>
-                                                    <h3>First Demo </h3>
-                                            </Carousel.Caption>
-                                    </Carousel.Item  >
-                                    <Carousel.Item style={{'height':"300px"}}>
-                                            <img style={{'height':"300px"}}
-                                                 className="d-block w-100"
-                                                 src={'assets/img/img1.jpg'}    />
-                                            <Carousel.Caption>
-                                                    <h3>Second Demo</h3>
-                                            </Carousel.Caption>
-                                    </Carousel.Item>
-                                    <Carousel.Item style={{'height':"300px"}}>
-                                            <img style={{'height':"300px"}}
-                                                 className="d-block w-100"
-                                                 src={'assets/img/img3.jpg'}   />
-                                            <Carousel.Caption>
-                                                    <h3>Third Demo</h3>
-                                            </Carousel.Caption>
-                                    </Carousel.Item>
-                            </Carousel>
-                    </div>
-            </div>
-        )
+const SlickSlide=(props)=> {
+    return (
+        <Swiper
+            spaceBetween={5}
+            slidesPerView={4}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+        >
+            <SwiperSlide >
+                <SliderComponent productDiscription={props.superProducts[0]} SuperProductsPics={props.SuperProductsPics[0]}/>
+            </SwiperSlide>
+            <SwiperSlide>
+                <SliderComponent productDiscription={props.superProducts[1]} SuperProductsPics={props.SuperProductsPics[1]} />
+            </SwiperSlide>
+            <SwiperSlide>
+                <SliderComponent productDiscription={props.superProducts[2]} SuperProductsPics={props.SuperProductsPics[2]} />
+            </SwiperSlide>
+            <SwiperSlide>
+                <SliderComponent productDiscription={props.superProducts[3]} SuperProductsPics={props.SuperProductsPics[3]}/>
+            </SwiperSlide>
+            <SwiperSlide>
+                <SliderComponent productDiscription={props.superProducts[4]} SuperProductsPics={props.SuperProductsPics[4]}/>
+            </SwiperSlide>
+            <SwiperSlide>
+                <SliderComponent productDiscription={props.superProducts[5]} SuperProductsPics={props.SuperProductsPics[5]}/>
+            </SwiperSlide>
+
+
+        </Swiper>
+    );
 
 }
 export default SlickSlide;

@@ -9,6 +9,8 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "bootstrap": "^5.1.1",
+    "framework7": "^6.3.5",
+    "framework7-react": "^6.3.5",
     "mdbreact": "^5.1.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-rc.0",
@@ -19,6 +21,7 @@
     "react-scripts": "4.0.3",
     "react-slick": "^0.28.1",
     "sass": "^1.42.1",
+    "swiper": "^6.8.4",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

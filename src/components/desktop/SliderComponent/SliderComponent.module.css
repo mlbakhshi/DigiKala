@@ -1,0 +1,36 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  border-radius: 30px;
+  margin: auto;
+  height: 400px;
+  padding: 10px; }
+
+.ProductImage {
+  width: 200px; }
+
+.ProductDescription {
+  font-size: 14px;
+  color: #4a5f73; }
+
+.DigiPay {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #636d7a; }
+
+.OffPrice {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 35px; }
+
+.OffPercent {
+  background-color: red;
+  border-radius: 25px;
+  width: 40px;
+  justify-content: center;
+  align-content: center;
+  font-size: 14px; }
+
+/*# sourceMappingURL=SliderComponent.module.css.map */
