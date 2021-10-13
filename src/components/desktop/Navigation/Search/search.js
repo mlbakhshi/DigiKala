@@ -8,7 +8,7 @@ const Search=()=>{
                 <span class="icon-search"></span>
             </div>
             <div >
-                <input placeholder="جستجو در دیجی کالا..."/>
+                <input style={{fontSize:"11px"}} placeholder="جستجو در دیجی کالا..."/>
             </div>
         </div>
     )

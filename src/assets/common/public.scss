@@ -6,10 +6,9 @@ body
 
 @font-face {
   font-family: IRANSans;
-  //src: url("../src/assete/font/iran-sans-fa-num/eot/IRANSansWeb(FaNum).eot");
-  //src: url("../../../assete/font/iran-sans-fa-num/eot/IRANSansWeb(FaNum).eot?#iefix") format('embedded-opentype'),
-  //url("../../../assete/font/iran-sans-fa-num/ttf/IRANSansWeb(FaNum).ttf") format("truetype"),
-  //url("../../../assete/font/iran-sans-fa-num/woff/IRANSansWeb(FaNum).woff") format("woff");
+  src: url("../../assets/fonts/eot/IRANSansWeb(FaNum).eot");
+  url("../../assete/fonts/ttf/IRANSansWeb(FaNum).ttf") format("truetype"),
+  url("../../assete/fonts/woff/IRANSansWeb(FaNum).woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

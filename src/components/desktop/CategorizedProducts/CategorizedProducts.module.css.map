@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,SAAS;EACP,KAAK,EAAC,IAAI;EACV,MAAM,EAAC,IAAI;EACX,OAAO,EAAC,IAAI;EACZ,gBAAgB,EAAC,KAAK;EACtB,OAAO,EAAC,IAAI",
+"sources": ["CategorizedProducts.module.scss"],
+"names": [],
+"file": "CategorizedProducts.module.css"
+}

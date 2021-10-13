@@ -5,6 +5,9 @@ import Toolbar from "../../components/desktop/Navigation/toolbar/toolbar";
 import Footer from "../../components/desktop/Footer/footer";
 import ContainerHome from "../../components/desktop/SliderTop/ContainerHome";
 import Incredible from "../../components/desktop/Incredible/incredible";
+import Commercial from "../../components/desktop/Comercial NavBar/Comercial";
+import IncredibleSuggestion from "../../components/desktop/IncredibleSuggestion/IncredibleSuggestion";
+import CategorizedProducts from "../../components/desktop/CategorizedProducts/CategorizedProducts";
 const Layout=(props)=>{
     return(
         <Auxx>
@@ -14,8 +17,12 @@ const Layout=(props)=>{
                 {props.children}
                 <ContainerHome />
                 <Incredible />
+                <Commercial />
+                <IncredibleSuggestion />
+                <CategorizedProducts />
+                <Footer />
             </main>
-            <Footer />
+
         </Auxx>
     )
 }

@@ -1,24 +1,24 @@
 .body {
   margin: 0;
-  font-family: 'Yekan','IranSans', serif;
+  /*font-family: 'IRANSans', serif;*/
 }
-@font-face {
-  font-family: 'Yekan','IranSans','Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  src: local('IranSans'), url('/src/assets/fonts/eot/IRANSansWeb.eot') format('truetype');
-  src: local('IranSans'), url('/src/assets/fonts/ttf/IRANSansWeb.ttf') format('truetype');
-  src: local('IranSans'), url('/src/assets/fonts/woff/IRANSansWeb.woff') format('truetype');
-  src: local('IranSans'), url('/src/assets/fonts/woff2/IRANSansWeb.woff2') format('truetype');
+/*@font-face {*/
+/*  font-family: 'IRANSans','Segoe UI', 'Roboto', 'Oxygen',*/
+/*  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',*/
+/*  sans-serif;*/
+/*  font-style: normal;*/
+/*  font-weight: 400;*/
+/*  src: local('IranSans'), url('/src/assets/fonts/eot/IRANSansWeb(FaNum).eot') format('truetype');*/
+/*  src: local('IranSans'), url('/src/assets/fonts/ttf/IRANSansWeb(FaNum).ttf') format('truetype');*/
+/*  src: local('IranSans'), url('/src/assets/fonts/woff/IRANSansWeb(FaNum).woff') format('truetype');*/
+/*  src: local('IranSans'), url('/src/assets/fonts/woff2/IRANSansWeb(FaNum).woff2') format('truetype');*/
 
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/*  -webkit-font-smoothing: antialiased;*/
+/*  -moz-osx-font-smoothing: grayscale;*/
+/*}*/
 
-code {
-  font-family: 'Yekan','IranSans',source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/*code {*/
+/*  font-family: 'IRANSans','Yekan','IranSans',source-code-pro, Menlo, Monaco, Consolas, 'Courier New',*/
+/*    monospace;*/
+/*}*/

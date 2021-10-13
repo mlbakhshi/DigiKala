@@ -11,23 +11,23 @@ import Pic6 from "../../../assets/images/incredibleSuper/6.jpg";
 
 const Incredible=()=>{
     const SuperProducts=[
-        {description:"مایع لوله باز کن پاکناز مدل Strong Cleaner حجم 1250 میلی لیتر",digipay:"0",OffPercent:"20",OriginalPrice:"20000",OffPrice:"18000"},
-        {description:"عدس همدل - 900 گرم",digipay:"۱,۳۰۰",OffPercent:"20",OriginalPrice:"50000",OffPrice:"48000"},
-        {description:"کنسرو ماهی تن با شوید طبیعت مقدار 180 گرم",digipay:"0",OffPercent:"9",OriginalPrice:"50000",OffPrice:"49000"},
-        {description:"مایع ظرفشویی پریل مدل Orange and Grapefruit حجم 3.75 لیتر",digipay:"20000",OffPercent:"15",OriginalPrice:"50000",OffPrice:"35000"},
-        {description:"میگو سایز 60-51 بیستون - 500 گرم",digipay:"0",OffPercent:"0",OriginalPrice:"189000",OffPrice:"189000"},
-        {description:"ماست یونانی کم چرب پگاه - 1.5 کیلوگرم",digipay:"1200",OffPercent:"10",OriginalPrice:"47000",OffPrice:"35000"},
-
-
+        {description:"مایع لوله باز کن پاکناز مدل Strong Cleaner حجم 1250 میلی لیتر",digipay:"0",OffPercent:"20",OriginalPrice:"20000",OffPrice:"18000",src:{Pic1}},
+        {description:"عدس همدل - 900 گرم",digipay:"۱,۳۰۰",OffPercent:"20",OriginalPrice:"50000",OffPrice:"48000",src:{Pic2}},
+        {description:"کنسرو ماهی تن با شوید طبیعت مقدار 180 گرم",digipay:"0",OffPercent:"9",OriginalPrice:"50000",OffPrice:"49000",src:{Pic3}},
+        {description:"مایع ظرفشویی پریل مدل Orange and Grapefruit حجم 3.75 لیتر",digipay:"20000",OffPercent:"15",OriginalPrice:"50000",OffPrice:"35000",src:{Pic4}},
+        {description:"میگو سایز 60-51 بیستون - 500 گرم",digipay:"0",OffPercent:"0",OriginalPrice:"189000",OffPrice:"189000",src:{Pic5}},
+        {description:"ماست یونانی کم چرب پگاه - 1.5 کیلوگرم",digipay:"1200",OffPercent:"10",OriginalPrice:"47000",OffPrice:"35000",src:{Pic6}},
     ];
-    const SuperProductsPics=[{Pic1},{Pic2},{Pic3},{Pic4},{Pic5},{Pic6}];
+    // const SuperProductsPics=[{src:"Pic1"},{src:"Pic2"},{src:"Pic3"},{src:"Pic4"},{src:"Pic5"},{src:"Pic6"}];
     return(
         <section className={classes.incredibleSec}>
             <div style={{width:"30%"}}>
                 <img src={incredibleSuperImage} className={classes.Image}/>
             </div>
             <div style={{margin:"auto",width:"70%"}}>
-                <SlickSlide superProducts={SuperProducts} SuperProductsPics={SuperProductsPics}  />
+                <SlickSlide Products={SuperProducts}
+                            // ProductsPics={SuperProductsPics}
+                />
             </div>
         </section>
     )

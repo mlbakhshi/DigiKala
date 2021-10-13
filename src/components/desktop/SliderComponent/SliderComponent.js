@@ -5,31 +5,32 @@ import classes  from './SliderComponent.module.scss';
 const SliderComponent=(props)=>{
     return(
         <div className={classes.Card} >
-            <img className={classes.ProductImage}  src={props.SuperProductsPics} />
+            {/*<div style={{backgroundImage:`url("${props.SuperProductsPics}")`}} className={classes.ProductImage}>H</div>*/}
+            <img className={classes.ProductImage}  src={props.src} />
             <div className={classes.ProductDescription}  >
                 {/*بسته 250 گرمی عدس برند damdel*/}
-                {props.productDiscription.description}
+                {props.description}
             </div>
             <div className={classes.DigiPay} >
                 <span className="icon-Dg-plus" style={{fontSize:"15px"}}>  </span>
                 {/*هدیه نقدی 1200 تومان*/}
-               هدیه نقدی  {props.productDiscription.digipay} تومان
+               هدیه نقدی  {props.digipay} تومان
             </div>
             <div className={classes.OffPrice} >
                 <div className={classes.OffPercent} >
                     {/*20%*/}
-                    {props.productDiscription.OffPercent}%
+                    {props.OffPercent}%
                 </div>
                 <div style={{marginLeft:"10px"}}>
                     <del>
                         {/*20000 تومان*/}
-                        {props.productDiscription.OriginalPrice} تومان
+                        {props.OriginalPrice} تومان
                     </del>
                 </div>
             </div>
             <div style={{textAlign:"left"}}>
                 {/*18000 تومان*/}
-                {props.productDiscription.OffPrice} تومان
+                {props.OffPrice} تومان
             </div>
         </div>
     )
