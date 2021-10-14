@@ -1,0 +1,32 @@
+.Symbols{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    order: 2;
+}
+.PicSymbols{
+    display: flex;
+    order: 1;
+    justify-content: center;
+}
+.Comment{
+    padding-left: 50px;
+    margin-left: 100px;
+    color: #928888;
+
+}
+.Picture{
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10px;
+}
+.PicDiv{
+    /*width:200px;*/
+    border-radius: 10px;
+    border: solid #bab7b7 1px;
+    margin-left: 10px;
+    width:150px;
+    height: 150px;
+}

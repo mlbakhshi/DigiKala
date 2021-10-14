@@ -1,3 +1,10 @@
+:root {
+  /*--theme-color-v2: #415DB3;
+  --theme-color-light-v2: #c7d0fd;
+  --logo-url: url('./../../../assets/images/common/baman-logo-blue.png');*/
+  --theme-color-v2: #00BDA6;
+  --theme-color-light-v2: #c7fdf6; }
+
 html {
   font-size: 14px; }
 
@@ -26,72 +33,72 @@ html {
   html {
     font-size: 24px; } }
 .font-size_8 {
-  font-size: calcRem(14, 8); }
+  font-size: 0.5714285714rem; }
 
 .font-size_9 {
-  font-size: calcRem(14, 9); }
+  font-size: 0.6428571429rem; }
 
 .font-size_10 {
-  font-size: calcRem(14, 10); }
+  font-size: 0.7142857143rem; }
 
 .font-size_11 {
-  font-size: calcRem(14, 11); }
+  font-size: 0.7857142857rem; }
 
 .font-size_12 {
-  font-size: calcRem(14, 12); }
+  font-size: 0.8571428571rem; }
 
 .font-size_13 {
-  font-size: calcRem(14, 13); }
+  font-size: 0.9285714286rem; }
 
 .font-size_14 {
-  font-size: calcRem(14, 14); }
+  font-size: 1rem; }
 
 .font-size_15 {
-  font-size: calcRem(14, 15); }
+  font-size: 1.0714285714rem; }
 
 .font-size_16 {
-  font-size: calcRem(14, 16); }
+  font-size: 1.1428571429rem; }
 
 .font-size_17 {
-  font-size: calcRem(14, 17); }
+  font-size: 1.2142857143rem; }
 
 .font-size_18 {
-  font-size: calcRem(14, 18); }
+  font-size: 1.2857142857rem; }
 
 .font-size_19 {
-  font-size: calcRem(14, 19); }
+  font-size: 1.3571428571rem; }
 
 .font-size_20 {
-  font-size: calcRem(14, 20); }
+  font-size: 1.4285714286rem; }
 
 .font-size_21 {
-  font-size: calcRem(14, 21); }
+  font-size: 1.5rem; }
 
 .font-size_22 {
-  font-size: calcRem(14, 21); }
+  font-size: 1.5rem; }
 
 .font-size_23 {
-  font-size: calcRem(14, 21); }
+  font-size: 1.5rem; }
 
 .font-size_24 {
-  font-size: calcRem(14, 21); }
+  font-size: 1.5rem; }
 
 .font-size_25 {
-  font-size: calcRem(14, 21); }
+  font-size: 1.5rem; }
 
 .font-size_26 {
-  font-size: calcRem(14, 21); }
+  font-size: 1.5rem; }
 
 .font-size_27 {
-  font-size: calcRem(14, 21); }
+  font-size: 1.5rem; }
 
 .font-size_28 {
-  font-size: calcRem(14, 21); }
+  font-size: 1.5rem; }
 
 .font-size_29 {
-  font-size: calcRem(14, 21); }
+  font-size: 1.5rem; }
 
 .font-size_30 {
-  font-size: calcRem(14, 21); }
+  font-size: 1.5rem; }
 
 /*# sourceMappingURL=desktop.css.map */

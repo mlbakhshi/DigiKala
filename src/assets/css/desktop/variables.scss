@@ -1,7 +1,6 @@
-
+@import "./../../common/variables";
 $base-font-size-desktop: 14;
 $base-width-desktop: 1024;
-
 
 @function calcFont($size) {
   @return calcRem($base-font-size-desktop, $size);

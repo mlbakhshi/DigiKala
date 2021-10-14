@@ -1,0 +1,16 @@
+:root {
+  /*--theme-color-v2: #415DB3;
+  --theme-color-light-v2: #c7d0fd;
+  --logo-url: url('./../../../assets/images/common/baman-logo-blue.png');*/
+  --theme-color-v2: #00BDA6;
+  --theme-color-light-v2: #c7fdf6; }
+
+.ContainerHome {
+  display: flex;
+  padding-right: 2.1428571429rem;
+  padding-left: 2.1428571429rem;
+  margin-top: 2.1428571429rem;
+  padding-top: 15px;
+  height: 100%; }
+
+/*# sourceMappingURL=Container.module.css.map */

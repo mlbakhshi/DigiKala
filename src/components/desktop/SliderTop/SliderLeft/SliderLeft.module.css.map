@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AACA,OAAO;EAEL,aAAa,EAAE,IAAI;EACnB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,GAAG;;AAIb,WACA;EACE,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,IAAI;EACb,cAAc,EAAC,MAAM",
-"sources": ["SliderLeft.module.scss"],
-"names": [],
-"file": "SliderLeft.module.css"
-}

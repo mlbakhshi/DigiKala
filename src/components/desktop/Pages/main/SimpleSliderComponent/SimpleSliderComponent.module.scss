@@ -1,0 +1,26 @@
+.Card
+{
+  display:flex;
+  flex-direction:column;
+  background-color:white;
+  width:100%;
+  //margin-left:10px;
+  border-radius:10px;
+  margin:auto;
+  height:350px;
+  padding:10px;
+}
+.ProductImage{
+  width:80%;
+  display:flex;
+  justify-content:center;
+  //height:200px;
+}
+.ProductDescription{
+  font-size:13px;
+  color:#4a5f73;
+  margin-top:15px;
+}
+.Card:hover{
+  border:2px solid #d3d3d6;
+}

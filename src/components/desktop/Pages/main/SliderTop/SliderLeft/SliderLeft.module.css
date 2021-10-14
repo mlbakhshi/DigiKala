@@ -1,0 +1,18 @@
+:root {
+  /*--theme-color-v2: #415DB3;
+  --theme-color-light-v2: #c7d0fd;
+  --logo-url: url('./../../../assets/images/common/baman-logo-blue.png');*/
+  --theme-color-v2: #00BDA6;
+  --theme-color-light-v2: #c7fdf6; }
+
+.images {
+  border-radius: 20px;
+  width: 320px;
+  height: 50%; }
+
+.sliderLeft {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; }
+
+/*# sourceMappingURL=SliderLeft.module.css.map */

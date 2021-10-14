@@ -1,11 +1,11 @@
 body
 {
-  font-family: IRANSans !important;
+  font-family: IRANSans_FaNum !important;
   direction: rtl;
 }
 
 @font-face {
-  font-family: IRANSans;
+  font-family: IRANSans_FaNum;
   src: url("../../assets/fonts/eot/IRANSansWeb(FaNum).eot");
   url("../../assete/fonts/ttf/IRANSansWeb(FaNum).ttf") format("truetype"),
   url("../../assete/fonts/woff/IRANSansWeb(FaNum).woff") format("woff");
