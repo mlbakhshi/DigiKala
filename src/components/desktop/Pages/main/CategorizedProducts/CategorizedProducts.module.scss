@@ -1,7 +1,9 @@
+@import '../../../../../assets/css/desktop/variables';
+
 .Category{
   width:95%;
-  margin:20px;
-  padding:20px;
+  margin:calcLen(20);
+  padding:calcLen(20);
   background-color:white;
-  heigth:150px;
+  heigth:calcLen(150);
 }

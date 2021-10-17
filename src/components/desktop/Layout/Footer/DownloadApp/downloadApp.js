@@ -1,6 +1,5 @@
 import React from 'react';
-import classes from './downloadApp.module.css';
-import './downloadApp.module.css';
+import classes from './downloadApp.module.scss';
 import  googlePlay  from '../../../../../assets/SVG/googleplay.png';
 import bazar  from '../../../../../assets/SVG/bazar.png';
 import sib from '../../../../../assets/SVG/sib.png';
@@ -13,7 +12,7 @@ const downloadApp=()=>{
             <div >
                 <img src={SmileLogo} className={classes.Smile}  />
             </div>
-            <div style={{marginRight:"10px",color:"white",fontSize:"16px"}}>
+            <div className={classes.DownLoad} >
                 دانلود اپلیکیشن دیجی کالا
             </div>
             <div style={{marginRight:"auto",display:"flex"}}>

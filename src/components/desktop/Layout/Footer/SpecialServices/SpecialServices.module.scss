@@ -1,0 +1,26 @@
+@import '../../../../../assets/css/desktop/variables';
+
+
+.Logo{
+    display: flex;
+    background-color: #f2f2f2;
+    height: calcLen(80);
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.notice{
+    color:#aea7a7;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.icons{
+    border-left: #807979 solid calcLen(1);
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}

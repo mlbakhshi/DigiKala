@@ -1,10 +1,13 @@
+@import '../../../../../../assets/css/desktop/variables';
+
+
 .images{
-width: 850px;
-  border-radius: 20px;
-  height:400px;
+width: 80%;
+  border-radius: calcLen(20);
+  height:calcLen(400);
 
 }
 .divSlider{
-  width:75%;
-  margin-bottom:10px;
+  width:70%;
+  margin-bottom:calcLen(10);
 }

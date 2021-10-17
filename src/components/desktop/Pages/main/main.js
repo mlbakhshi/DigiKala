@@ -8,19 +8,24 @@ import CategorizedProducts from "./CategorizedProducts/CategorizedProducts";
 import BottomBanner from "./BottomBanner/BottomBanner";
 import Footer from "../../Layout/Footer/footer";
 import Auxx from "../../../../hoc/Auxx/Auxx";
+import Toolbar from "../../Layout/Header/toolbar/toolbar";
 
 const Main=(props)=>{
     return(
-        <main className={classes.Content}>
-            {props.children}
-            <ContainerHome />
-            <Incredible />
-            <Commercial />
-            <IncredibleSuggestion />
-            <CategorizedProducts />
-            <BottomBanner />
+        <Auxx>
+            <Toolbar />
+            <main className={classes.Content}>
+                {props.children}
+                <ContainerHome />
+                <Incredible />
+                <Commercial />
+                <IncredibleSuggestion />
+                <CategorizedProducts />
+                <BottomBanner />
+                <Footer />
+            </main>
+        </Auxx>
 
-        </main>
     )
 }
 export default Main;

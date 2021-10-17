@@ -1,0 +1,11 @@
+@import '../../../../../assets/css/desktop/variables';
+
+
+.NavigationFooterItem{
+    list-style-type: none;
+display: flex;
+    align-items: end;
+    padding: calcLen(10);
+    //flex-grow: 1;
+    font-size:calcFont(12)!important;
+}

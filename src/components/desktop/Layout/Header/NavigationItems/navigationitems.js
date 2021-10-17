@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../../../../assets/icon/style.css';
-import classes from './navigationitems.module.css';
+import classes from './navigationitems.module.scss';
 import NavigationItem from "./Navigationitem/navigationitem";
 const NavigationItems=(props)=>{
     return(

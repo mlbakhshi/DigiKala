@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../../../../assets/icon/style.css';
-import classes from './Login.module.css';
+import classes from './Login.module.scss';
 import {NavLink} from "react-router-dom";
 const Login=()=>{
     return(

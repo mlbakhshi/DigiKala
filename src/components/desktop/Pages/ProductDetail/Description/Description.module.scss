@@ -26,13 +26,13 @@ margin-top:calcLen(10);
   margin-top:calcLen(10);
 }
 .Dot{
-  height: 35px;
-  width: 35px;
+  height: calcLen(35);
+  width: calcLen(35);
   border-radius: 50%;
   display: inline-block;
   margin-left:calcLen(12);
-  border: 3px solid #fff;
-  box-shadow: 0 0 0 1px #cce3e9;
+  border: calcLen(3) solid #fff;
+  box-shadow: 0 0 0 calcLen(1) #cce3e9;
 }
 
 .Colors{

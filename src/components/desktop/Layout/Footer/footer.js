@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './footer.module.css';
+import classes from './footer.module.scss';
 import '../../../../assets/icon/style.css';
 import Express from '../../../../assets/SVG/1.png';
 import Pay from '../../../../assets/SVG/2.png';
@@ -20,25 +20,25 @@ const Footer=()=>{
             </div>
             <div className={classes.About}>
                 <div>تلفن پشتیبانی : </div>
-                <div>021 - 4192000 </div>
+                <div>42920000-021 </div>
                 <div>  | </div>
                 <div>  هفت روز هفته، ۲۴ ساعت شبانه‌روز پاسخگوی شما هستیم. </div>
             </div>
 
             <div className={classes.PNGLogo}>
-                <div style={{width:"200px"}} >
+                <div  >
                     <img src={Express} style={{width:"60%"}} />
                 </div>
-                <div style={{width:"200px"}} >
+                <div >
                     <img src={Pay} style={{width:"60%"}} />
                 </div>
-                <div style={{width:"200px"}} >
+                <div  >
                     <img src={Allday} style={{width:"60%"}} />
                 </div>
-                <div style={{width:"200px"}} >
+                <div >
                     <img src={Return} style={{width:"60%"}} />
                 </div>
-                <div style={{width:"200px"}} >
+                <div  >
                     <img src={Orginal} style={{width:"60%"}} />
                 </div>
             </div>

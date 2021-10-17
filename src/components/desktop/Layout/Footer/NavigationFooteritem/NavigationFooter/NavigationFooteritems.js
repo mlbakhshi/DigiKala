@@ -1,9 +1,8 @@
 import React from 'react';
 import NavigationFooterItem from "../NavigationFooteritem";
-import classes from './NavigationFooteritems.module.css';
+import classes from './NavigationFooteritems.module.scss';
 import '../../../../../../assets/icon/style.css';
-import {NavLink} from "react-router-dom";
-import Auxx from "../../../../../../hoc/Auxx/Auxx";
+
 
 const NavigationFooterItems=(props)=>{
     return(
@@ -69,7 +68,7 @@ const NavigationFooterItems=(props)=>{
             <nav>
                 <ul>
                     با ما همراه باشید
-                    <div style={{display:"flex",flexDirection:"row",paddingTop:"10px"}}>
+                    <div className={classes.Nav} >
                         <NavigationFooterItem link="/orders">
                             <span className="icon-instagram"></span>
                         </NavigationFooterItem>

@@ -12,7 +12,7 @@ import CategorizedProducts from "../../components/desktop/Pages/main/Categorized
 const Layout=(props)=>{
     return(
         <Auxx>
-            <Toolbar />
+            {/*<Toolbar />*/}
             {/*<SideDrawer open={this.state.showSideDrawer} closed={this.sideDrawerClosedHandler} />*/}
             {/*<main className={classes.Content}>*/}
                 {props.children}
@@ -22,7 +22,7 @@ const Layout=(props)=>{
                 {/*<IncredibleSuggestion />*/}
                 {/*<CategorizedProducts />*/}
                 {/*<BottomBanner />*/}
-                <Footer />
+                {/*<Footer />*/}
             {/*</main>*/}
 
         </Auxx>

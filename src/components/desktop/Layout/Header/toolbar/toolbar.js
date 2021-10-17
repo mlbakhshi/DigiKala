@@ -1,7 +1,7 @@
 import React from 'react';
 import NavigationItems from "../NavigationItems/navigationitems";
 import TopBar from "../TopBar/topbar";
-import classes from './header.module.css';
+import classes from './header.module.scss';
 
 const Toolbar =(props)=>{
     return(

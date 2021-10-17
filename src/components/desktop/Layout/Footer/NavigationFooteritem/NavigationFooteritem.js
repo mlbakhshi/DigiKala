@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Navigationfooteritem.module.css';
+import classes from './Navigationfooteritem.module.scss';
 import {NavLink} from "react-router-dom";
 
 const NavigationFooterItem=(props)=>{

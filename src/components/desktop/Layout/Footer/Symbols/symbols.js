@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './symbols.module.css';
+import classes from './symbols.module.scss';
 import  samandehi  from '../../../../../assets/SVG/samandehi.png';
 import  etehadiye  from '../../../../../assets/SVG/etehadiye.png';
 import  tejarat  from '../../../../../assets/SVG/tejarat.png';
@@ -9,7 +9,7 @@ const Symbols=()=>{
         <div className={classes.Symbols}>
             <div>
                 <article className={classes.Comment}>
-                    <h3 style={{color:"black",fontSize:"15px"}}>
+                    <h3 >
                         فروشگاه اینترنتی دیجی‌کالا، بررسی، انتخاب و خرید آنلاین
                     </h3>
                     <p>
