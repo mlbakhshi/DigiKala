@@ -1,0 +1,29 @@
+@import '../../../../assets/css/desktop/variables';
+
+
+.Footer{
+    font-size: calcFont(16) !important;
+    margin-top:calcLen(20);
+    padding-top:calcLen(20);
+    padding-right:calcLen(20);
+    background-color:#fff;
+}
+.PrLogo{
+margin-top: calcLen(20);
+}
+.About{
+    display: flex;
+    margin-top: calcLen(20);
+
+}
+.PNGLogo{
+    display: flex;
+    margin-top: calcLen(30);
+    justify-content: center;
+}
+.PNGLogo div{
+    width:calcLen(200);
+}
+.newColumnMenu{
+    display: flex;
+}

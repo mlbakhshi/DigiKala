@@ -8,7 +8,9 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.23.0",
     "bootstrap": "^5.1.1",
+    "cors": "^2.8.5",
     "font-awesome": "^4.7.0",
     "framework7": "^6.3.5",
     "framework7-react": "^6.3.5",
@@ -58,6 +60,8 @@
     "react-dom": ">=17.0.2"
   },
   "devDependencies": {
-    "react-redux": "^7.2.5"
+    "jquery": "^3.6.0",
+    "react-redux": "^7.2.5",
+    "react-toastify": "^8.0.3"
   }
 }

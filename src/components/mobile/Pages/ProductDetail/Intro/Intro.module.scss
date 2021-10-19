@@ -1,0 +1,22 @@
+@import '../../../../../assets/css/desktop/variables';
+
+
+
+.Description{
+  display:flex;
+  flex-direction:row;
+  margin-top:calcLen(12);
+}
+.PNGLogo{
+  display: flex;
+  margin-top: calcLen(15);
+  /*margin-right: 100px;*/
+  /*margin-left: auto;*/
+  justify-content: center;
+}
+.PNGLogo div{
+  width:calcLen(200);
+}
+.PNGLogo img{
+  width:40%;
+}

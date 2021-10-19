@@ -1,0 +1,23 @@
+@import '../../../../assets/css/desktop/variables';
+
+
+.dataProduct{
+  display:flex;
+
+}
+.Detail{
+display:flex;
+  flex-direction:column;
+  width:65%;
+  padding:calcLen(15);
+}
+.picGallery{
+direction:ltr;
+  width:35%;
+}
+.Suggestion{
+  border-radius:calcLen(15);
+  border: calcLen(1) solid #bfbbbb;
+margin:calcLen(10);
+  padding:calcLen(5);
+}

@@ -1,0 +1,47 @@
+@import '../../../../../assets/css/desktop/variables';
+
+
+.Card
+{
+  display:flex;
+  flex-direction:column;
+  background-color:white;
+  width:100%;
+  border-radius:calcLen(10);
+  margin:auto;
+  height:calcLen(350);
+  padding:calcLen(10);
+}
+.ProductImage{
+  width:80%;
+  display:flex;
+  justify-content:center;
+}
+.ProductDescription{
+  font-size:calcFont(14);
+  color:#4a5f73;
+  margin-top:calcLen(15);
+}
+.DigiPay{
+ margin-top:calcLen(15);
+  font-size:calcFont(12);
+  color:#636d7a;
+}
+.OffPrice{
+  display:flex;
+  flex-direction:row-reverse;
+  margin-top:calcLen(35);
+}
+.OffPercent{
+  background-color:red;
+  border-radius:calcLen(20);
+  width:calcLen(40);
+  heigth:calcLen(20);
+  justify-content:center;
+  align-content:center;
+  margin-top:auto;
+  margin-bottom:auto;
+  font-size:calcFont(14);
+  display:flex;
+color:white;
+}

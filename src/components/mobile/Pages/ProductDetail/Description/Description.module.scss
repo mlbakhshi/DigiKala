@@ -1,0 +1,102 @@
+@import '../../../../../assets/css/desktop/variables';
+
+
+.DesEnglish{
+  font-size:calcFont(10);
+  color: #bfbcbc;
+}
+.Like{
+  font-size:calcFont(11);
+  display:flex;
+margin-top:calcLen(10);
+}
+.LikeFont{
+  font-size:calcFont(13);
+  color:green!important;
+  margin-left:calcLen(10);
+}
+.StarFont{
+  font-size:calcFont(13);
+  color:goldenrod!important;
+  margin-left:calcLen(10);
+}
+.Star{
+  display:flex;
+  font-size:calcFont(11);
+  margin-top:calcLen(10);
+}
+.Dot{
+  height: calcLen(35);
+  width: calcLen(35);
+  border-radius: 50%;
+  display: inline-block;
+  margin-left:calcLen(12);
+  border: calcLen(3) solid #fff;
+  box-shadow: 0 0 0 calcLen(1) #cce3e9;
+}
+
+.Colors{
+  margin-top:calcLen(15);
+
+}
+.Parameters{
+  margin-top:calcLen(10);
+}
+.ParametersList{
+  margin-top:calcLen(15);
+  color: #888585;
+}
+.ParametersList li{
+  margin-top:calcLen(8);
+  color: #888585;
+  font-size:calcFont(12);
+}
+.Notification{
+  display:flex;
+  font-size:calcFont(10);
+  margin-top:calcLen(25);
+}
+.Notification i{
+  margin-left:calcLen(15);
+  font-size:calcFont(12);
+
+}
+.Notification span{
+  margin-right:calcLen(10);
+}
+.DigiPlus{
+  border-radius:calcLen(10);
+border: calcLen(1) solid #d4d1d1;
+  font-size:calcFont(12);
+margin:calcLen(15);
+  padding:calcLen(10);
+}
+.Notify{
+  margin-top:calcLen(10);
+  font-size:calcFont(10);
+  color: #a9a0a0;
+}
+.Notify span{
+  margin-left:calcLen(15);
+  margin-right:calcLen(18);
+
+}
+.Notify i{
+  font-size:calcFont(5);
+  color: #c6c0c0;
+}
+.Send{
+  display:flex;
+  border: calcLen(1) solid #d4d1d1;
+  border-radius:calcLen(10);
+  font-size:calcFont(13);
+  padding-right:calcLen(15);
+  padding-left:0;
+  margin:calcLen(15);
+}
+.Send span{
+  font-size:calcFont(10);
+}
+.Send img{
+  width:75%;
+}

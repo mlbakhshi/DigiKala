@@ -1,0 +1,15 @@
+.Navigation{
+  width:100%;
+  height:50px;
+}
+.Navigation ul{
+  display:flex;
+  flex-wrap:wrap;
+  float:right;
+  margin:20px;
+  padding:20px;
+}
+.Navigation ul li{
+  list-style-type:none;
+  padding-right:10px;
+}

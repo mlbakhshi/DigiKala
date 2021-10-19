@@ -1,0 +1,42 @@
+@import '../../../../../assets/css/desktop/variables';
+
+
+.Symbols{
+    display: flex;
+    margin-top: calcLen(20);
+    margin-left: calcLen(20);
+    order: 2;
+}
+.PicSymbols{
+    display: flex;
+    order: 1;
+    justify-content: center;
+}
+.Comment{
+    padding-left: calcLen(50);
+    margin-left: calcLen(100);
+    color: #928888;
+
+}
+.Comment h3{
+   color:black;
+    font-size:calcFont(15);
+}
+.Comment p{
+    color:black;
+    font-size:calcFont(12);
+}
+.Picture{
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: calcLen(10);
+}
+.PicDiv{
+    border-radius: calcLen(10);
+    border: solid #bab7b7 calcLen(1);
+    margin-left: calcLen(10);
+    width:calcLen(150);
+    height: calcLen(150);
+}

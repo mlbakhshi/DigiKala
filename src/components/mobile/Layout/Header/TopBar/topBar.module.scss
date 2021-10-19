@@ -1,0 +1,14 @@
+@import '../../../../../assets/css/desktop/variables';
+
+
+.TopBar{
+    display: flex;
+    margin-top:calcLen(15);
+    justify-content:space-around;
+  margin-left:3%;
+  margin-right:3%;
+}
+.Question{
+   font-size:calcFont(8);
+  margin-top:calcLen(8);
+}

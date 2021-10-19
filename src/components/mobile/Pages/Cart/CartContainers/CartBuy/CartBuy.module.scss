@@ -1,0 +1,45 @@
+@import '../../../../../../assets/css/desktop/variables';
+.BuyNotify{
+  margin-right:calcLen(25);
+  padding:calcLen(15);
+}
+
+.Buy{
+  display:flex;
+  flex-direction:column;
+  background-color: #fdfcfc;
+  border-radius:calcLen(5);
+  border:calcLen(1) solid #d4d0d0;
+  margin-top:calcLen(25);
+  padding-bottom:calcLen(25);
+  padding-right:calcLen(25);
+  padding-top:calcLen(25);
+
+}
+.Buy button{
+  margin-top:calcLen(15);
+}
+.BuyNotify p{
+  margin-top:calcLen(15);
+  font-size:calcFont(11);
+color:gray;
+}
+.Send{
+  display:flex;
+  border: calcLen(1) solid #d4d1d1;
+  border-radius:calcLen(10);
+  font-size:calcFont(13);
+  padding-right:calcLen(15);
+  padding-left:0;
+  margin:calcLen(15);
+}
+.Send span{
+  font-size:calcFont(10);
+}
+.Send img{
+  width:75%;
+
+}
+.Image{
+  width:55%;
+}

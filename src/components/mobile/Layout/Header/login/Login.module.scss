@@ -1,0 +1,31 @@
+@import '../../../../../assets/css/desktop/variables';
+
+
+.LoginBag{
+    display: flex;
+}
+.Login
+{
+    outline: solid calcLen(1);
+    border-radius: calcLen(10);
+    border-color: #decfcf;
+    margin-top: calcLen(30);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: stretch;
+    align-content: space-around;
+    padding: calcLen(8);
+    margin-left: calcLen(10);
+}
+.Cart{
+    margin-top: calcLen(30);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: stretch;
+    align-content: space-around;
+    padding-right: calcLen(6);
+    padding-left: calcLen(6);
+    margin-left: calcLen(15);
+}

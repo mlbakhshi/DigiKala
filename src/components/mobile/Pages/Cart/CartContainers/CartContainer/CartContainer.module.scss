@@ -1,0 +1,98 @@
+@import '../../../../../../assets/css/desktop/variables';
+
+
+.Dot{
+  height: calcLen(17);
+  width: calcLen(17);
+  border-radius: 50%;
+  display: inline-block;
+  margin-left:calcLen(3);
+  margin-top:calcLen(5);
+  border: calcLen(3) solid #fff;
+  margin-right:calcLen(8);
+}
+.Color{
+  font-size:calcFont(12);
+color: #737272;
+}
+.Guarantee{
+    margin-right:calcLen(10);
+  color:#737272;
+  margin-top:calcLen(6);
+}
+.Guarantee span{
+  margin-right:calcLen(3);
+  font-size:calcFont(12);
+}
+.Seller{
+  margin-right:calcLen(8);
+  color:#737272;
+  margin-top:calcLen(6);
+}
+.Seller img{
+  width:calcLen(15);
+}
+.Seller span{
+  margin-right:calcLen(5);
+  font-size:calcFont(12);
+}
+.Stock{
+  margin-right:calcLen(8);
+  color:#737272;
+  margin-top:calcLen(6);
+}
+.Stock span{
+  margin-right:calcLen(5);
+  font-size:calcFont(12);
+}
+.numberOrder{
+  display:flex;
+  margin-top:calcLen(15);
+  padding-top: calcLen(5);
+  padding-right: calcLen(15);
+  font-size: calcFont(15);
+  border:calcLen(1) solid  darkgray;
+  border-radius: 5%;
+
+}
+.incrbtn{
+  color: #b1b4ff;
+  background-color: transparent;
+  border: none;
+
+}
+.numorder{
+width:15%;
+}
+.decrbtn{
+  background-color: transparent;
+  color: #b1b4ff;
+  border: none;
+
+}
+.numberOrder,.incrbtn,.decrbtn,.numorder{
+  width: 20%;
+}
+.formControl{
+  width:20%;
+}
+.NumberDelPrice{
+  display:flex;
+
+}
+.Del{
+  display:flex;
+  margin-top:calcLen(15);
+  margin-right:calcLen(15);
+  padding-top: calcLen(5);
+
+}
+.Del span{
+  margin-right:calcLen(5);
+  font-size: calcFont(13);
+}
+.Price{
+  margin-right:auto;
+  margin-top:calcLen(15);
+  padding-top: calcLen(5);
+}

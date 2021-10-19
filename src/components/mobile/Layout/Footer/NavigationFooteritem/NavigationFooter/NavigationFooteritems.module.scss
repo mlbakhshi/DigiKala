@@ -1,0 +1,35 @@
+@import '../../../../../../assets/css/desktop/variables';
+
+
+.footerContainer{
+    display:flex;
+    align-items:start;
+    justify-content:space-between;
+    width: 90%;
+}
+.inputEmail{
+    background-color:#f8f4f4;
+    border-radius:calcLen(10);
+    border:none;
+    color:darkgray;
+    height:calcLen(50);
+    padding-right:calcLen(10);
+    margin-left:calcLen(15);
+    width:80%;
+    font-size:calcFont(11);
+}
+.inputButton{
+    background-color:#e2d6d6;
+    border-radius:10%;
+    border:none;
+    color:white;
+    width:18%;
+}
+.Nav{
+    display:flex;
+    flex-direction:row;
+    padding-top:calcLen(10);
+}
+.footerContainer ul{
+    font-size:calcFont(14)!important;
+}

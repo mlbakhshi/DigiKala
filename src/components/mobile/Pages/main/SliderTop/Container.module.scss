@@ -1,0 +1,11 @@
+@import '../../../../../assets/css/desktop/variables';
+
+.ContainerHome{
+  display: flex;
+  padding-right: calcLen(30);
+  padding-left: calcLen(30);
+  margin-top: calcLen(30);
+   padding-top: calcLen(15);
+  height: 100%;
+
+}

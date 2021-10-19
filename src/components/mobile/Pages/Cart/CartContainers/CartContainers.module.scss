@@ -1,0 +1,22 @@
+@import '../../../../../assets/css/desktop/variables';
+
+.CartContainers{
+  display:flex;
+  background-color: #fdfcfc;
+  border-radius:calcLen(5);
+  border:calcLen(1) solid #d4d0d0;
+  margin-top:calcLen(25);
+  margin-right:calcLen(25);
+  padding:calcLen(15);
+}
+.detailBuy{
+  display:flex;
+  flex-direction:column;
+  width:80%;
+}
+.CartContainers img{
+  width:80%;
+}
+.Image{
+  width:20%;
+}

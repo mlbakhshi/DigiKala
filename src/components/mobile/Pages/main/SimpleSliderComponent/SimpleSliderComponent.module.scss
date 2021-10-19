@@ -1,0 +1,27 @@
+@import '../../../../../assets/css/desktop/variables';
+
+
+.Card
+{
+  display:flex;
+  flex-direction:column;
+  background-color:white;
+  width:100%;
+  border-radius:calcLen(10);
+  margin:auto;
+  height:calcLen(350);
+  padding:calcLen(10);
+}
+.ProductImage{
+  width:80%;
+  display:flex;
+  justify-content:center;
+}
+.ProductDescription{
+  font-size:calcFont(13);
+  color:#4a5f73;
+  margin-top:calcLen(15);
+}
+.Card:hover{
+  border:calcLen(2) solid #d3d3d6;
+}
