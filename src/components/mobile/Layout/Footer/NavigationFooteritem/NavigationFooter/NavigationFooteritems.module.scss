@@ -1,9 +1,9 @@
-@import '../../../../../../assets/css/desktop/variables';
+@import '../../../../../../assets/css/mobile/variables';
 
 
 .footerContainer{
     display:flex;
-    align-items:start;
+    //align-items:start;
     justify-content:space-between;
     width: 90%;
 }
@@ -13,23 +13,31 @@
     border:none;
     color:darkgray;
     height:calcLen(50);
-    padding-right:calcLen(10);
+    //padding-right:calcLen(10);
     margin-left:calcLen(15);
     width:80%;
     font-size:calcFont(11);
 }
 .inputButton{
-    background-color:#e2d6d6;
+    background-color:#f8f4f4;
     border-radius:10%;
     border:none;
     color:white;
     width:18%;
+    margin-right:auto;
 }
 .Nav{
     display:flex;
-    flex-direction:row;
-    padding-top:calcLen(10);
+    align-items:center;
+    //flex-direction:row;
+    //padding-top:calcLen(10);
 }
 .footerContainer ul{
-    font-size:calcFont(14)!important;
+    font-size:calcFont(12)!important;
+    padding:0;
+}
+.EmailInput{
+   padding-top:calcLen(20);
+    padding-left:calcLen(20);
+    display:flex;
 }

@@ -9,13 +9,10 @@ import SmileLogo from '../../../../../assets/SVG/labkhand.png';
 const downloadApp=()=>{
     return(
         <div className={classes.downloadApp}>
-            <div >
-                <img src={SmileLogo} className={classes.Smile}  />
-            </div>
             <div className={classes.DownLoad} >
                 دانلود اپلیکیشن دیجی کالا
             </div>
-            <div style={{marginRight:"auto",display:"flex"}}>
+            <div className={classes.DownlaodLogo} >
                 <div className={classes.App} >
                     <img src={googlePlay} alt="Google Play"/>
                 </div>

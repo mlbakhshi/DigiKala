@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../../../assets/icon/style.css';
+import '../../../../../../assets/icon/style.css';
 import classes from './search.module.scss';
 const Search=()=>{
     return(

@@ -7,12 +7,12 @@ import SimpleSliderComponent from "../../../SimpleSliderComponent/SimpleSliderCo
 const SimpleSlickSlider=(props)=> {
     // const {SuperProductsPics}= props;
     const swiperParams = {
-        slidesPerView: 5,
+        slidesPerView: 2,
         grabCursor: true,
         loop: false,
         direction: 'horizontal',
         watchOverflow: true,
-        spaceBetween: 15,
+        spaceBetween: 10,
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
@@ -21,12 +21,12 @@ const SimpleSlickSlider=(props)=> {
         breakpoints: {
            // when window width is <= 1024px
             1024: {
-                slidesPerView: 5,
-                spaceBetween: 15
+                slidesPerView: 2,
+                spaceBetween: 10
             },
             900: {
-                slidesPerView: 3,
-                spaceBetween: 15
+                slidesPerView: 2,
+                spaceBetween: 10
             },
             480: {
                 slidesPerView: 2,
@@ -44,9 +44,9 @@ const SimpleSlickSlider=(props)=> {
     let productInformation=props.Products.map(productInfo=>
         <SwiperSlide >
         <SimpleSliderComponent
-            mobilePic={productInfo.ProductPicture}
-            title={productInfo.ProductTitle}
-            price={productInfo.ProductPrice}
+            mobilePic={productInfo.mobilePic}
+            title={productInfo.title}
+            price={productInfo.price}
 
         />
         </SwiperSlide>

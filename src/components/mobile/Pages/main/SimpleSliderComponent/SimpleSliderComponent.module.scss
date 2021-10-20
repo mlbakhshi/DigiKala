@@ -1,4 +1,4 @@
-@import '../../../../../assets/css/desktop/variables';
+@import '../../../../../assets/css/mobile/variables';
 
 
 .Card
@@ -9,19 +9,24 @@
   width:100%;
   border-radius:calcLen(10);
   margin:auto;
-  height:calcLen(350);
-  padding:calcLen(10);
+  height:calcLen(200);
+  padding:calcLen(5);
 }
 .ProductImage{
-  width:80%;
+  width:75%;
   display:flex;
   justify-content:center;
 }
 .ProductDescription{
-  font-size:calcFont(13);
+  font-size:calcFont(11);
   color:#4a5f73;
   margin-top:calcLen(15);
 }
 .Card:hover{
   border:calcLen(2) solid #d3d3d6;
+}
+.Price{
+ text-align:left;
+  margin-top:calcLen(10);
+  font-size:calcFont(10);
 }

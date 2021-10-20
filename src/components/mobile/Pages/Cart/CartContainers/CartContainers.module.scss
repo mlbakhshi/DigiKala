@@ -6,13 +6,15 @@
   border-radius:calcLen(5);
   border:calcLen(1) solid #d4d0d0;
   margin-top:calcLen(25);
-  margin-right:calcLen(25);
+  margin-right:calcLen(8);
+  margin-left:calcLen(8);
   padding:calcLen(15);
 }
 .detailBuy{
   display:flex;
   flex-direction:column;
   width:80%;
+  margin-left:calcLen(5);
 }
 .CartContainers img{
   width:80%;

@@ -1,17 +1,19 @@
 import React from 'react';
-import NavigationItems from "../NavigationItems/navigationitems";
 import TopBar from "../TopBar/topbar";
 import classes from './header.module.scss';
+import SearchLoginBar from "../SearchLoginBar/SearchLoginBar";
 
 const Toolbar =(props)=>{
     return(
         <header className={classes.Header} >
             <div >
                 <TopBar />
+                <hr className={classes.Line}/>
             </div>
-            {/*<nav className={classes.Toolbar}>*/}
-            {/*    <NavigationItems />*/}
-            {/*</nav>*/}
+           <div>
+               <SearchLoginBar />
+               <hr className={classes.Line}/>
+           </div>
         </header>
     )
 }

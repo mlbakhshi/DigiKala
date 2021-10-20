@@ -2,14 +2,13 @@ import React from 'react';
 import '../../../../../assets/icon/style.css';
 import Auxx from "../../../../../hoc/Auxx/Auxx";
 import DigikalaLogo from '../../../../../assets/SVG/dg.png';
-
+import classes from './Logo.module.scss';
 const Logo=()=>{
     return(
         <Auxx>
             <div >
-                {/*<span class="icon-Digikala-Logowine"></span>*/}
-                {/*<span class="icon-Digikala-Logo .path2"></span>*/}
-                <img src={DigikalaLogo} style={{width:"175px",marginTop:"27px"}}/>
+
+                <img className={classes.Logo} src={DigikalaLogo} />
             </div>
         </Auxx>
 

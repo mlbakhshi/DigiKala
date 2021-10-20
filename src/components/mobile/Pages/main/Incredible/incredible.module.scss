@@ -1,4 +1,4 @@
-@import '../../../../../assets/css/desktop/variables';
+@import '../../../../../assets/css/mobile/variables';
 
 
 .incredibleSec{
@@ -7,13 +7,13 @@
   margin: 0;
   padding: 0;
   display: flex;
-  height: calcLen(450);
+  height: calcLen(300);
 }
 .Image{
   width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: calcLen(15);
+  margin-top: calcLen(65);
   margin-right: calcLen(30);
 }

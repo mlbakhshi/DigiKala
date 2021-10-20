@@ -1,14 +1,12 @@
 import React from 'react';
 import Logo from "../Logo/Logo";
-import Search from "../Search/search";
-import Login from "../login/Login";
 import classes from './topBar.module.scss';
-import HamburgurMenu from "../HamburgurMenu/HamburgurMenu";
+import Nav from "../HamburgurMenu/Nav";
 const TopBar=()=>{
     return(
         <div className={classes.TopBar}>
             <div>
-                <HamburgurMenu />
+                <Nav />
             </div>
             <div style={{width:"30%"}}>
                 <Logo />

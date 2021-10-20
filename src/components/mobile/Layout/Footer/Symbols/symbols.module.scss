@@ -1,9 +1,10 @@
-@import '../../../../../assets/css/desktop/variables';
+@import '../../../../../assets/css/mobile/variables';
 
 
 .Symbols{
     display: flex;
-    margin-top: calcLen(20);
+    flex-direction:column;
+    margin-top: calcLen(50);
     margin-left: calcLen(20);
     order: 2;
 }
@@ -13,8 +14,8 @@
     justify-content: center;
 }
 .Comment{
-    padding-left: calcLen(50);
-    margin-left: calcLen(100);
+    //padding-left: calcLen(50);
+    //margin-left: calcLen(50);
     color: #928888;
 
 }
@@ -24,7 +25,7 @@
 }
 .Comment p{
     color:black;
-    font-size:calcFont(12);
+    font-size:calcFont(10);
 }
 .Picture{
     vertical-align: middle;
@@ -35,8 +36,8 @@
 }
 .PicDiv{
     border-radius: calcLen(10);
-    border: solid #bab7b7 calcLen(1);
+    //border: solid #bab7b7 calcLen(1);
     margin-left: calcLen(10);
-    width:calcLen(150);
-    height: calcLen(150);
+    width:calcLen(100);
+    height: calcLen(100);
 }

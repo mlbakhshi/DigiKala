@@ -1,4 +1,4 @@
-@import '../../../../../assets/css/desktop/variables';
+@import '../../../../../../assets/css/mobile/variables';
 
 
 .LoginBag{
@@ -6,10 +6,8 @@
 }
 .Login
 {
-    outline: solid calcLen(1);
-    border-radius: calcLen(10);
     border-color: #decfcf;
-    margin-top: calcLen(30);
+    //margin-top: calcLen(30);
     display: flex;
     flex-wrap: wrap;
     justify-content:flex-start;
@@ -19,7 +17,7 @@
     margin-left: calcLen(10);
 }
 .Cart{
-    margin-top: calcLen(30);
+    //margin-top: calcLen(30);
     display: flex;
     flex-wrap: wrap;
     justify-content:flex-start;

@@ -1,5 +1,5 @@
 import React from "react";
-import classes from './IncredibleSuggestion.scss';
+// import classes from './IncredibleSuggestion.scss';
 import incredibleSuggestImage from '../../../../../assets/images/incredibleSuggestion/incredibleSuggestionImage.png';
 import Pic1 from "../../../../../assets/images/incredibleSuggestion/1.jpg";
 import Pic2 from "../../../../../assets/images/incredibleSuggestion/2.jpg";
@@ -23,17 +23,17 @@ return(
         margin: "0",
         padding: "0",
         display: "flex",
-        height: "450px"
+        height: "20%"
     }}>
         <div style={{width:"30%"}}>
             <img src={incredibleSuggestImage} style={{width: "60%",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                marginTop: "15px",
-                marginRight: "30px"}}/>
+                marginTop: "60%",
+                marginRight: "15%"}}/>
         </div>
-        <div style={{margin:"auto",width:"70%"}}>
+        <div style={{margin:"2%",width:"70%"}}>
             <SlickSlide Products={IncredibleProducts}
                         // ProductsPics={Pic}
             />

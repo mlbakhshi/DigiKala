@@ -18,13 +18,13 @@ const SliderComponent=(props)=>{
                 <div className={classes.OffPercent} >
                     {props.OffPercent}%
                 </div>
-                <div style={{marginLeft:"10px"}}>
+                <div className={classes.OffPri} >
                     <del>
                         {props.OriginalPrice} تومان
                     </del>
                 </div>
             </div>
-            <div style={{textAlign:"left"}}>
+            <div className={classes.FinalPrice}>
                 {props.OffPrice} تومان
             </div>
         </div>

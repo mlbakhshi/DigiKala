@@ -1,11 +1,11 @@
-@import '../../../../../assets/css/desktop/variables';
+@import '../../../../../assets/css/mobile/variables';
 
 
 .NavigationFooterItem{
     list-style-type: none;
 display: flex;
     align-items: end;
-    padding: calcLen(10);
+    padding: calcLen(5);
     //flex-grow: 1;
-    font-size:calcFont(12)!important;
+    font-size:calcFont(10)!important;
 }

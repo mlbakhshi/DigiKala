@@ -1,6 +1,9 @@
-@import '../../../../../../assets/css/desktop/variables';
+@import '../../../../../../assets/css/mobile/variables';
 
-
+.Title{
+  font-size:calcFont(10);
+  color:black;
+}
 .Dot{
   height: calcLen(17);
   width: calcLen(17);
@@ -12,38 +15,38 @@
   margin-right:calcLen(8);
 }
 .Color{
-  font-size:calcFont(12);
+  font-size:calcFont(8);
 color: #737272;
 }
 .Guarantee{
     margin-right:calcLen(10);
   color:#737272;
-  margin-top:calcLen(6);
+  //margin-top:calcLen(6);
 }
 .Guarantee span{
   margin-right:calcLen(3);
-  font-size:calcFont(12);
+  font-size:calcFont(8);
 }
 .Seller{
   margin-right:calcLen(8);
   color:#737272;
-  margin-top:calcLen(6);
+  //margin-top:calcLen(6);
 }
 .Seller img{
   width:calcLen(15);
 }
 .Seller span{
   margin-right:calcLen(5);
-  font-size:calcFont(12);
+  font-size:calcFont(8);
 }
 .Stock{
   margin-right:calcLen(8);
   color:#737272;
-  margin-top:calcLen(6);
+  //margin-top:calcLen(6);
 }
 .Stock span{
   margin-right:calcLen(5);
-  font-size:calcFont(12);
+  font-size:calcFont(8);
 }
 .numberOrder{
   display:flex;
@@ -89,10 +92,11 @@ width:15%;
 }
 .Del span{
   margin-right:calcLen(5);
-  font-size: calcFont(13);
+  font-size: calcFont(11);
 }
 .Price{
   margin-right:auto;
-  margin-top:calcLen(15);
+  margin-top:calcLen(12);
   padding-top: calcLen(5);
+  font-size:calcFont(12);
 }

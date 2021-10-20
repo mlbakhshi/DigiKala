@@ -14,16 +14,17 @@ const Main=(props)=>{
     return(
         <Auxx>
             <Toolbar />
-            {/*<main className={classes.Content}>*/}
-            {/*    {props.children}*/}
-            {/*    <ContainerHome />*/}
-            {/*    <Incredible />*/}
-            {/*    <Commercial />*/}
-            {/*    <IncredibleSuggestion />*/}
-            {/*    <CategorizedProducts />*/}
-            {/*    <BottomBanner />*/}
-            {/*    <Footer />*/}
-            {/*</main>*/}
+            <main className={classes.Content}>
+                {props.children}
+                <ContainerHome />
+                <Incredible />
+                <Commercial />
+                <IncredibleSuggestion />
+                <CategorizedProducts />
+                <BottomBanner />
+
+            </main>
+                <Footer />
         </Auxx>
 
     )

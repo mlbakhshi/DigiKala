@@ -1,9 +1,10 @@
-@import '../../../../assets/css/desktop/variables';
+@import '../../../../assets/css/mobile/variables';
 
 
 .dataProduct{
   display:flex;
-
+  flex-direction:column;
+background-color: #f0f0f0;
 }
 .Detail{
 display:flex;
@@ -11,13 +12,49 @@ display:flex;
   width:65%;
   padding:calcLen(15);
 }
-.picGallery{
-direction:ltr;
-  width:35%;
+.picGallery,.Notification,.Buy,.FreeSend{
+  width:95%;
+  margin:calcLen(7);
+  padding:calcLen(5);
+  background-color: white;
+  border-radius:calcLen(10);
 }
 .Suggestion{
   border-radius:calcLen(15);
   border: calcLen(1) solid #bfbbbb;
 margin:calcLen(10);
   padding:calcLen(5);
+}
+.Notification{
+display:flex;
+
+}
+.Hoshdar{
+  font-size:calcFont(9);
+}
+
+.Alamat{
+  font-size:calcFont(12);
+  padding:calcLen(5);
+
+}
+.FreeSend{
+display:flex;
+  font-size:calcFont(10);
+}
+.FreeSend img{
+  width:calcLen(100);
+}
+
+.PNGLogo{
+  display: flex;
+  margin-top: calcLen(15);
+  justify-content: center;
+  margin-bottom:calcLen(15);
+}
+.PNGLogo div{
+  width:calcLen(200);
+}
+.PNGLogo img{
+  width:60%;
 }

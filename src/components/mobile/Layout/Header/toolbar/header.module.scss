@@ -1,4 +1,4 @@
-@import '../../../../../assets/css/desktop/variables';
+@import '../../../../../assets/css/mobile/variables';
 
 
 .Header{
@@ -8,5 +8,11 @@
 }
 .Toolbar nav{
     display: flex;
-    margin-top: calcLen(18);
+    //margin-top: calcLen(18);
+}
+.Line{
+    margin-top:calcLen(0);
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
 }

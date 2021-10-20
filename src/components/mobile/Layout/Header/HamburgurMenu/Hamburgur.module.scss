@@ -1,10 +1,13 @@
 .Hamburger{
-  width:2rem;
-  height:2rem;
-  display:flex;
-  justify-content:space-between;
-  flex-flow:column nowrap;
-  z-index:10;
+  display:none;
+}
+@media (max-width: 767px){
+  .Hamburger{
+    display:block;
+    padding-top:10px;
+    margin-left:10px;
+    z-index:10;
+  }
 }
 .Burger{
   width:2rem;

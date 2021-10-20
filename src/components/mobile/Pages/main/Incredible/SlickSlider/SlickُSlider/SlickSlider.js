@@ -16,12 +16,12 @@ import SliderComponent from "../../../SliderComponent/SliderComponent";
 const SlickSlide=(props)=> {
     // const {SuperProductsPics}= props;
     const swiperParams = {
-        slidesPerView: 3,
+        slidesPerView: 2,
         grabCursor: true,
         loop: false,
         direction: 'horizontal',
         watchOverflow: true,
-        spaceBetween: 30,
+        spaceBetween: 8,
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
@@ -66,25 +66,7 @@ const SlickSlide=(props)=> {
     return (
 
         <Swiper {...swiperParams}>
-            {/*<SwiperSlide >*/}
                 {productInformation}
-            {/*</SwiperSlide>*/}
-            {/*<SwiperSlide>*/}
-            {/*    <SliderComponent productDiscription={props.Products[1]} SuperProductsPics={props.ProductsPics[1]} />*/}
-            {/*</SwiperSlide>*/}
-            {/*<SwiperSlide>*/}
-            {/*        <SliderComponent productDiscription={props.Products[2]} SuperProductsPics={props.ProductsPics[2]} />*/}
-            {/*</SwiperSlide>*/}
-            {/*<SwiperSlide>*/}
-            {/*       <SliderComponent productDiscription={props.Products[3]} SuperProductsPics={props.ProductsPics[3]}/>*/}
-            {/*</SwiperSlide>*/}
-            {/*<SwiperSlide>*/}
-            {/*    <SliderComponent productDiscription={props.Products[4]} SuperProductsPics={props.ProductsPics[4]}/>*/}
-            {/*</SwiperSlide>*/}
-            {/*<SwiperSlide>*/}
-            {/*    <SliderComponent productDiscription={props.Products[5]} SuperProductsPics={props.ProductsPics[5]}/>*/}
-            {/*</SwiperSlide>*/}
-
         </Swiper>
 
     );

@@ -1,4 +1,4 @@
-@import '../../../../../../assets/css/desktop/variables';
+@import '../../../../../../assets/css/mobile/variables';
 .BuyNotify{
   margin-right:calcLen(25);
   padding:calcLen(15);
@@ -10,17 +10,17 @@
   background-color: #fdfcfc;
   border-radius:calcLen(5);
   border:calcLen(1) solid #d4d0d0;
-  margin-top:calcLen(25);
+  //margin-top:calcLen(25);
   padding-bottom:calcLen(25);
   padding-right:calcLen(25);
   padding-top:calcLen(25);
-
+  font-size:calcFont(11);
 }
 .Buy button{
   margin-top:calcLen(15);
 }
 .BuyNotify p{
-  margin-top:calcLen(15);
+  margin-top:calcLen(2);
   font-size:calcFont(11);
 color:gray;
 }
@@ -28,13 +28,13 @@ color:gray;
   display:flex;
   border: calcLen(1) solid #d4d1d1;
   border-radius:calcLen(10);
-  font-size:calcFont(13);
+  font-size:calcFont(9);
   padding-right:calcLen(15);
   padding-left:0;
   margin:calcLen(15);
 }
 .Send span{
-  font-size:calcFont(10);
+  font-size:calcFont(8);
 }
 .Send img{
   width:75%;

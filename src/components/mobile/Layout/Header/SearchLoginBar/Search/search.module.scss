@@ -1,8 +1,8 @@
-@import '../../../../../assets/css/desktop/variables';
+@import '../../../../../../assets/css/mobile/variables';
 
 
 .Search{
-    background-color: #faf5f5;
+    background-color: #f0f0f1;
     border-radius: calcLen(10);
     display: flex;
     justify-content:flex-start;
@@ -11,7 +11,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     height: calcLen(35);
-    margin-top: calcLen(30);
+    //margin-top: calcLen(30);
     margin-right: calcLen(10);
     width:100%;
     padding: calcLen(6);
@@ -19,6 +19,6 @@
 }
 .Search input{
     border: none;
-    background-color: #faf5f5;
+    background-color: #f0f0f1;
     outline: none;
 }

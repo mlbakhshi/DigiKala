@@ -1,13 +1,13 @@
-@import '../../../../../../assets/css/desktop/variables';
+@import '../../../../../../assets/css/mobile/variables';
 
 
 .images{
-width: 80%;
+width: 100%;
   border-radius: calcLen(20);
-  height:calcLen(400);
+  height:calcLen(250);
 
 }
 .divSlider{
-  width:70%;
+  width:100%;
   margin-bottom:calcLen(10);
 }

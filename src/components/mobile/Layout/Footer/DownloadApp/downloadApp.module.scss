@@ -1,17 +1,17 @@
-@import '../../../../../assets/css/desktop/variables';
+@import '../../../../../assets/css/mobile/variables';
 
 
 .downloadApp{
   display: flex;
+  flex-direction:column;
   height: calcLen(75);
   width: 98%;
-  background-color: #3c4b6d;
-  border-radius: calcLen(10);
-  align-items: center;
   padding-left: calcLen(10);
+  padding-top: calcLen(10);
 }
 .App{
   margin-left: calcLen(10);
+  margin-top:calcLen(10);
 }
 .Smile{
   width:calcLen(40);
@@ -20,6 +20,12 @@
 }
 .DownLoad{
  margin-right:calcLen(10);
-  color:white  ;
+  //color:white  ;
   font-size:calcFont(16);
+}
+.DownlaodLogo{
+ margin-right:auto;
+  display:flex;
+  margin-top:calcLen(10);
+  //flex-wrap:wrap;
 }

@@ -9,8 +9,8 @@ import {ToastContainer, Zoom} from "react-toastify";
 
 
 // let AppDevice = require(`./component/${process.env.REACT_APP_DEVICE_TYPE}/${process.env.REACT_APP_DEVICE_TYPE}`);
-// let AppDevice = require(`./desktop/desktop`);
-let AppDevice = require(`./mobile/mobile`);
+let AppDevice = require(`./desktop/desktop`);
+// let AppDevice = require(`./mobile/mobile`);
 
 
 function App() {

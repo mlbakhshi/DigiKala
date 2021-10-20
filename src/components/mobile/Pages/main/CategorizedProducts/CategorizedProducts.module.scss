@@ -1,9 +1,10 @@
-@import '../../../../../assets/css/desktop/variables';
+@import '../../../../../assets/css/mobile/variables';
 
 .Category{
   width:95%;
-  margin:calcLen(20);
-  padding:calcLen(20);
-  background-color:white;
-  heigth:calcLen(150);
+  margin:calcLen(5);
+  padding:calcLen(5);
+  background-color: #f0f0f1;
+  height:calcLen(275);
+  font-size:calcFont(12);
 }

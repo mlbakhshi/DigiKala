@@ -1,19 +1,19 @@
-@import '../../../../../assets/css/desktop/variables';
+@import '../../../../../assets/css/mobile/variables';
 
 
-.IncredibleSection{
-  background-color: #b92738;
+.IncredibleSection section{
+  background-color: #ef394e;
   width: 100%;
   margin: 0;
-  padding: 0;
-  display: flex;
-  height: calcLen(450);
+  padding:0;
+  display:flex;
+  height: calcLen(240);
 }
 .Image{
   width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: calcLen(15);
+  margin-top: calcLen(45);
   margin-right: calcLen(30);
 }

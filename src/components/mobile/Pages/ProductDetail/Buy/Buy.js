@@ -5,22 +5,24 @@ import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
 
 // Be sure to include styles at some point, probably during your bootstraping
 import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
+import Auxx from "../../../../../hoc/Auxx/Auxx";
 
 // import {Button} from "bootstrap";
 const Buy=()=>{
     return(
-        <div className={classes.Buy}>
+        <Auxx>
             <div>
-                فروشنده
+
             </div>
 
             <div className={classes.Contentment} >
                 <div style={{width:"8%"}}>
+
                     <img src={Labkhand}  />
                 </div>
                 <div className={classes.ContentmentPercent} >
                     <span className={classes.digikala} >
-                        دیجی کالا
+ فروشنده:دیجی کالا
                     </span>
                     <span className={classes.Rezayat} >
                         87% رضایت خریداران
@@ -57,31 +59,18 @@ const Buy=()=>{
 
             <div>
                 <div className={classes.Price}>
-6895000 تومان
-                </div>
-                <div className={classes.CountView}>
-                    <i className='far fa-eye' ></i>
-                    <span className={classes.View}>
-                                            +60 نفر این محصول را دیده اند.
-                    </span>
+                    6895000 تومان
                 </div>
 
-                {/*<div>*/}
-                {/*    <Button block lg btnStyle="primary">Block level button</Button>*/}
-                {/*</div>*/}
                 <div className="d-grid gap-2" >
                     <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}}>
                         افزودن به سبد خرید
                     </Button>
                 </div>
 
-                {/*<div>*/}
-                {/*    <button style={{backgroundColor:"red",color:"white",wi}}>*/}
 
-                {/*    </button>*/}
-                {/*</div>*/}
             </div>
-        </div>
+        </Auxx>
     )
 }
 export default Buy;

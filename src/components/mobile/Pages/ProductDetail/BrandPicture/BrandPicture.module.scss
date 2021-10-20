@@ -1,0 +1,34 @@
+@import '../../../../../assets/css/mobile/variables';
+
+.Title  span{
+  font-size:calcFont(10);
+}
+.DesEnglish{
+  font-size:calcFont(8);
+  color:darkgray;
+}
+.ProductPic{
+  width:calcLen(100);
+  //display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.ProductPic img{
+  width:100%;
+  //display:flex;
+  margin-top:calcLen(15);
+
+}
+
+.Like{
+  font-size:calcFont(8);
+  display:flex;
+  margin-top:calcLen(10);
+}
+.LikeFont{
+  color:#4caf50;
+  margin-left:calcLen(5);
+  font-size:calcFont(10);
+  margin-top:calcLen(-2);
+  margin-right:calcLen(10);
+}

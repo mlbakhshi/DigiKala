@@ -1,4 +1,4 @@
-@import '../../../../../assets/css/desktop/variables';
+@import '../../../../../assets/css/mobile/variables';
 
 
 .Card
@@ -9,28 +9,28 @@
   width:100%;
   border-radius:calcLen(10);
   margin:auto;
-  height:calcLen(350);
+  height:calcLen(250);
   padding:calcLen(10);
 }
 .ProductImage{
-  width:80%;
+  width:75%;
   display:flex;
   justify-content:center;
 }
 .ProductDescription{
-  font-size:calcFont(14);
+  font-size:calcFont(10);
   color:#4a5f73;
   margin-top:calcLen(15);
 }
 .DigiPay{
  margin-top:calcLen(15);
-  font-size:calcFont(12);
+  font-size:calcFont(8);
   color:#636d7a;
 }
 .OffPrice{
   display:flex;
   flex-direction:row-reverse;
-  margin-top:calcLen(35);
+  margin-top:calcLen(15);
 }
 .OffPercent{
   background-color:red;
@@ -41,7 +41,16 @@
   align-content:center;
   margin-top:auto;
   margin-bottom:auto;
-  font-size:calcFont(14);
+  font-size:calcFont(10);
   display:flex;
 color:white;
+}
+.OffPri{
+  font-size:calcFont(8);
+  margin-left:calcLen(10);
+}
+.FinalPrice{
+  text-align:left;
+  font-size:calcFont(11);
+  margin-top:calcLen(5);
 }

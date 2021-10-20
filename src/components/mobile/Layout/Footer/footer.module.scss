@@ -1,20 +1,29 @@
-@import '../../../../assets/css/desktop/variables';
+@import '../../../../assets/css/mobile/variables';
 
 
 .Footer{
     font-size: calcFont(16) !important;
-    margin-top:calcLen(20);
-    padding-top:calcLen(20);
+    //margin-top:calcLen(20);
+    //padding-top:calcLen(20);
     padding-right:calcLen(20);
     background-color:#fff;
+    display:flex;
+    flex-direction:column;
 }
 .PrLogo{
 margin-top: calcLen(20);
+
+}
+.PrLogo img{
+    width:calcLen(50);
 }
 .About{
     display: flex;
-    margin-top: calcLen(20);
-
+    margin-top: calcLen(5);
+font-size:calcFont(10);
+}
+.Alldays{
+    font-size:calcFont(10);
 }
 .PNGLogo{
     display: flex;
@@ -25,5 +34,17 @@ margin-top: calcLen(20);
     width:calcLen(200);
 }
 .newColumnMenu{
+    //display: flex;
+    margin-top:calcLen(10);
+}
+.Symbols{
     display: flex;
+    margin-top: calcLen(5);
+    font-size:calcFont(10);
+}
+.SpecialServices{
+    width:100%;
+    margin-right:0;
+    margin-left:0;
+    margin-top:calcLen(50);
 }

@@ -6,7 +6,7 @@ import classes from "../../App.module.css";
 import ProductDetail from "../mobile/Pages/ProductDetail/ProductDetail";
 import Cart from "../mobile/Pages/Cart/Cart";
 import Main from "../mobile/Pages/main/main";
-import Login from "../mobile/Layout/Header/login/Login";
+import Login from "./Layout/Header/SearchLoginBar/login/Login";
 // import {checkLogin, isLogin} from "../../common/helpers/authHelper";
 // import LoadingIndicator from "../../common/components/loadingIndicator/loadingIndicator";
 // import Helmet from "react-helmet";

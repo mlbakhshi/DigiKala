@@ -1,11 +1,13 @@
 .Cart{
   background-color: #f6f6f6;
   display:flex;
+  flex-direction:column;
 }
 .CartContainers{
-  width:65%;
+  width:100%;
 }
 .CartBuy{
-  width:32%;
+  width:100%;
   background-color: #f6f6f6;
+  margin-top:0;
 }

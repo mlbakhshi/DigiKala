@@ -1,9 +1,9 @@
-@import '../../../../../assets/css/desktop/variables';
+@import '../../../../../assets/css/mobile/variables';
 
 .ContainerHome{
   display: flex;
-  padding-right: calcLen(30);
-  padding-left: calcLen(30);
+  padding-right: calcLen(0);
+  padding-left: calcLen(0);
   margin-top: calcLen(30);
    padding-top: calcLen(15);
   height: 100%;

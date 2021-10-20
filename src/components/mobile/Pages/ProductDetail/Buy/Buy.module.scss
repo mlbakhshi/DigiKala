@@ -39,23 +39,24 @@ margin-right:calcLen(15);
   padding-left:calcLen(13);
 }
 .digikala{
-  font-size:calcFont(13);
+  font-size:calcFont(11);
 }
 .Rezayat{
-  font-size:calcFont(10);
-  margin-top:calcLen(8);
+  font-size:calcFont(8);
+  //margin-top:calcLen(3);
 }
 .Price{
-  font-size:calcFont(16);
+  font-size:calcFont(14);
   text-align:left;
 }
 .SendDigi{
   color:lightslategray;
-  font-size:calcFont(12);
+  font-size:calcFont(8);
   margin-right:calcLen(10);
 }
 .EgtheenMonth{
-  margin-right:calcLen(10);
+  margin-right:calcLen(8);
+  font-size:calcFont(10);
 }
 .btnBuy{
   width:95%;

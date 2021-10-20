@@ -51,7 +51,9 @@ const Footer=()=>{
             </div>
             <Symbols />
             <hr style={{color:"#ddd6d6"}} />
-            <SpecialServices  />
+            <div className={classes.SpecialServices}>
+                <SpecialServices  />
+            </div>
         </div>
     )
 }

@@ -2,10 +2,12 @@ import React from 'react';
 import NavigationFooterItem from "../NavigationFooteritem";
 import classes from './NavigationFooteritems.module.scss';
 import '../../../../../../assets/icon/style.css';
+import Auxx from "../../../../../../hoc/Auxx/Auxx";
 
 
 const NavigationFooterItems=(props)=>{
     return(
+        <div>
         <div className={classes.footerContainer}  >
             <nav>
                 <ul>
@@ -48,50 +50,30 @@ const NavigationFooterItems=(props)=>{
                     </NavigationFooterItem>
                 </ul>
             </nav>
+        </div>
 
-            <nav>
-                <ul>
-                    راهنمای خرید از دیجی کالا
-                    <NavigationFooterItem link="/orders">
-                        نحوه ثبت سفارش
-                    </NavigationFooterItem>
-                    <NavigationFooterItem link="/orders">
-                        رویه ارسال سفارش
-                    </NavigationFooterItem>
-                    <NavigationFooterItem link="/orders">
-                        شیوه های پرداخت
-                    </NavigationFooterItem>
-
-                </ul>
-            </nav>
-
-            <nav>
-                <ul>
+            <div className={classes.Nav} >
+                <div style={{marginLeft:"auto"}}>
                     با ما همراه باشید
-                    <div className={classes.Nav} >
-                        <NavigationFooterItem link="/orders">
-                            <span className="icon-instagram"></span>
-                        </NavigationFooterItem>
-                        <NavigationFooterItem link="/orders">
-                            <span className="icon-twitter"></span>
-                        </NavigationFooterItem>
-                        <NavigationFooterItem link="/orders">
-                            <span className="icon-linkedin"></span>
-                        </NavigationFooterItem>
-                        <NavigationFooterItem link="/orders">
-                            <span className="icon-aparat"></span>
-                        </NavigationFooterItem>
-                    </div>
-                    <div style={{paddingTop:"20px"}}>
-                        از جدیدترین تخفیف ها بهره مند شوید
-                        <div style={{paddingTop:"20px",display:"flex"}}>
-                            <input  className={classes.inputEmail} placeholder="ادرس ایمیل خود را وارد کنید" />
-                            <button className={classes.inputButton}  >ثبت  </button>
-                        </div>
-                    </div>
+                </div>
+                <NavigationFooterItem link="/orders">
+                    <span className="icon-instagram"></span>
+                </NavigationFooterItem>
+                <NavigationFooterItem link="/orders">
+                    <span className="icon-twitter"></span>
+                </NavigationFooterItem>
+                <NavigationFooterItem link="/orders">
+                    <span className="icon-linkedin"></span>
+                </NavigationFooterItem>
+                <NavigationFooterItem link="/orders">
+                    <span className="icon-aparat"></span>
+                </NavigationFooterItem>
+            </div>
+                <div className={classes.EmailInput} >
+                    <input  className={classes.inputEmail} placeholder="برای دریافت اخبار ایمیل خود را وارد کنید" />
+                    <button className={classes.inputButton}  >ثبت  </button>
+                </div>
 
-                </ul>
-            </nav>
         </div>
     )
 }
