@@ -41,16 +41,19 @@ const SimpleSlickSlider=(props)=> {
         rebuildOnUpdate: true,
         shouldSwiperUpdate: true
     }
-    let productInformation=props.Products.map(productInfo=>
-        <SwiperSlide >
-        <SimpleSliderComponent
-            mobilePic={productInfo.ProductPicture}
-            title={productInfo.ProductTitle}
-            price={productInfo.ProductPrice}
+    let productInformation=null;
+    if(props.Products) {
+        productInformation = props.Products.map(productInfo =>
+            <SwiperSlide>
+                <SimpleSliderComponent
+                    mobilePic={productInfo.ProductPicture}
+                    title={productInfo.ProductTitle}
+                    price={productInfo.ProductPrice}
 
-        />
-        </SwiperSlide>
-    )
+                />
+            </SwiperSlide>
+        )
+    }
     return (
 
         <Swiper {...swiperParams}>

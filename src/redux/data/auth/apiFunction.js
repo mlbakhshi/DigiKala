@@ -3,7 +3,8 @@ import { callApi } from '../../../common/helpers/apiHelper';
 
 // Login Member Api Call
 export const MobileProducts = async () => {
-    const  {data}  = await callApi('action/index',[],'get');
+    const  {data}  = await callApi('site/index',[],'get');
+console.log(data,'apifunction');
 
     return data;
 }

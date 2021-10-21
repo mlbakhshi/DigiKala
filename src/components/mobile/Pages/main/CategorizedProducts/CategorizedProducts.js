@@ -15,7 +15,7 @@ const CategorizedProducts=(props)=>{
 
     // const [loading,setLoading]=useState(false);
     //
-    // const [products,setProducts]=useState([]);
+    // const [Upload,setProducts]=useState([]);
     //
     //
     // // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -44,7 +44,7 @@ const CategorizedProducts=(props)=>{
         {mobilePic:pic7,title:"گوشی موبایل سامسونگ مدل Galaxy A12 SM-A125F/DS",price:"6000000"},
 
     ]
-    // if(products.length > 0) {
+    // if(Upload.length > 0) {
         return (
 
             <section className={classes.Category}>
@@ -63,7 +63,7 @@ const CategorizedProducts=(props)=>{
             </section>
 
             // <>
-            //     {products.map(product=>
+            //     {Upload.map(product=>
                     // <div className="container" style={{marginTop :"50px" , marginBottom : "50px" ,paddingTop:"30px" , paddingBottom:"30px"}}>
                     //     <div className="row ">
                     //

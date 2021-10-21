@@ -5,8 +5,7 @@ import classes  from './SimpleSliderComponent.module.scss';
 const SimpleSliderComponent=(props)=>{
     return(
         <div className={classes.Card} >
-            {/*<div style={{backgroundImage:`url("${props.SuperProductsPics}")`}} className={classes.ProductImage}>H</div>*/}
-            <img className={classes.ProductImage}  src={props.mobilePic} />
+            <img className={classes.ProductImage} src={`./../../${props.mobilePic}`}  />
             <div className={classes.ProductDescription}  >
                 {props.title}
             </div>
