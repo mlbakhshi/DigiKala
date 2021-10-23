@@ -7,16 +7,15 @@ import '../../../../../assets/icon/style.css';
 import SendPic from '../../../../../assets/images/send.png';
 
 
-const Description=()=>{
+const Description=(props)=>{
 
-    // const LikeFont = {
-    //     color : "green"
-    // };
+  console.log(props);
 
     return(
         <Auxx>
             <div className={classes.DesEnglish}>
-                Xiaomi POCO X3 Pro M2102J20SG Dual SIM 256GB And 8GB RAM Mobile Phone
+                {props.detailProduct.detailProduct.detailProduct.ProductNameEn}
+                {/*Xiaomi POCO X3 Pro M2102J20SG Dual SIM 256GB And 8GB RAM Mobile Phone*/}
             </div>
             <div className={classes.Like}>
                 <div className={classes.LikeFont}>
@@ -47,15 +46,15 @@ const Description=()=>{
                 <ul className={classes.ParametersList}>
                     <li>
                         حافظه داخلی:
-                        256 گیگابایت
+                        {props.detailProduct.detailProduct.detailProduct.ProRam}
                     </li>
                     <li>
-                        اندازه صفحه نمایش:
-                        6.0 اینچ و بزرگتر
+                        نوع صفحه نمایش:
+                        {props.detailProduct.detailProduct.detailProduct.ProLCD}
                     </li>
                     <li>
                         شبکه های ارتباطی:
-                        4G، 3G، 2G
+                        {props.detailProduct.detailProduct.detailProduct.ProNetwork}
                     </li>
                 </ul>
             </div>

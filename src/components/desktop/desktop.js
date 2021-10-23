@@ -42,10 +42,10 @@ const Desktop = (props) => {
             {/*<Layout>*/}
             <BrowserRouter>
                 <Switch>
-                    <Route path="/detail" component={ProductDetail} />
-                    <Route path="/cart" component={Cart} />
-                    <Route path="/" exact component={Main} />
-                    <Route path="/Login" exact component={Login} />
+                    <Route exact path="/"  ><Main/> </Route>
+                    <Route exact path="/detail/:id"  component={ProductDetail}  />
+                    <Route exact path="/cart"    component={Cart} />
+                    <Route exact path="/Login"   component={Login} />
 
                 </Switch>
             </BrowserRouter>
@@ -65,10 +65,12 @@ const Desktop = (props) => {
 // };
 
 export default
-// withRouter(LoadingIndicator(connect
+withRouter(
+// LoadingIndicator(connect
 // (null, mapDispatchToProps)
 // (
     Desktop
-// )))
+// ))
+)
 ;
 

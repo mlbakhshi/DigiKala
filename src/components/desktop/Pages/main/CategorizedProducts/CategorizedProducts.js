@@ -20,11 +20,11 @@ const CategorizedProducts=(props)=>{
             console.log('Error')
         }
 
-        console.log(response);
+        // console.log(response);
         // if(response?.success===true) {
-             console.log('true');
+        //      console.log('true');
             setProducts(response);
-            console.log(products);
+            // console.log(response);
         // }
         // else{
         //     console.log('false');

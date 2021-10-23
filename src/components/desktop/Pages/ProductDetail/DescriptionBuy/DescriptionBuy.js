@@ -4,14 +4,15 @@ import Auxx from "../../../../../hoc/Auxx/Auxx";
 import Description from "../Description/Description";
 import Buy from "../Buy/Buy";
 
-const DescriptionBuy=()=>{
+const DescriptionBuy=(props)=>{
+    console.log(props);
     return(
         <Auxx>
             <div className={classes.Right}>
-                <Description />
+                <Description  detailProduct={props}/>
             </div>
             <div className={classes.Left}>
-                <Buy />
+                <Buy detailProduct={props}/>
             </div>
         </Auxx>
 

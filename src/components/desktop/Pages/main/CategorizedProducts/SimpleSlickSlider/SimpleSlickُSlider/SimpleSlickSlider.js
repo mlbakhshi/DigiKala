@@ -46,6 +46,7 @@ const SimpleSlickSlider=(props)=> {
         productInformation = props.Products.map(productInfo =>
             <SwiperSlide>
                 <SimpleSliderComponent
+                    id={productInfo.ID}
                     mobilePic={productInfo.ProductPicture}
                     title={productInfo.ProductTitle}
                     price={productInfo.ProductPrice}

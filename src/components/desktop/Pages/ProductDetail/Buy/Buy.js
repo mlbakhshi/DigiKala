@@ -7,7 +7,7 @@ import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
 import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
 
 // import {Button} from "bootstrap";
-const Buy=()=>{
+const Buy=(props)=>{
     return(
         <div className={classes.Buy}>
             <div>
@@ -57,12 +57,14 @@ const Buy=()=>{
 
             <div>
                 <div className={classes.Price}>
-6895000 تومان
+                    {props.detailProduct.detailProduct.detailProduct.ProductPrice}
+ تومان
                 </div>
                 <div className={classes.CountView}>
                     <i className='far fa-eye' ></i>
                     <span className={classes.View}>
-                                            +60 نفر این محصول را دیده اند.
+                                            +                        {props.detailProduct.detailProduct.detailProduct.view}
+                        نفر این محصول را دیده اند.
                     </span>
                 </div>
 

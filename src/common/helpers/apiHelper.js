@@ -7,8 +7,8 @@ export const  BaseUrl="http://localhost/"
 export const ApiCallTimeout = 40 * 1000; //mili seconds
 
 export const callApi= (url, params = {}, method = "get") => {
-
-    let productMode = process.env.NODE_ENV === 'production';
+// console.log(url);
+let productMode = process.env.NODE_ENV === 'production';
 
     /*if(!productMode){
         method='get'
