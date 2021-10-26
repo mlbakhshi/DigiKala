@@ -1,13 +1,20 @@
-import React from "react";
+import React, {useCallback} from "react";
 import classes from './Buy.module.scss';
 import Labkhand from '../../../../../assets/images/labkhand.png';
 import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
 
 // Be sure to include styles at some point, probably during your bootstraping
 import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
+import {Link, useHistory} from "react-router-dom";
 
-// import {Button} from "bootstrap";
 const Buy=(props)=>{
+    // console.log(props);
+    // console.log( props.detailProduct.detailProduct.detailProduct.ID);
+
+    const history = useHistory();
+    const handleOnClick = () => {
+        history.push("/cart"); // now we're in localhost:3000/login
+    };
     return(
         <div className={classes.Buy}>
             <div>
@@ -46,7 +53,7 @@ const Buy=(props)=>{
                     </span>
                 </div>
                 <div>
-                    <i className='fas fa-truck' style={{color:"red"}}></i>
+                    <i className='fa fa-truck' style={{color:"red"}}></i>
                     <span className={classes.SendDigi}>
                                           ارسال دیجی کالا
                     </span>
@@ -58,30 +65,22 @@ const Buy=(props)=>{
             <div>
                 <div className={classes.Price}>
                     {props.detailProduct.detailProduct.detailProduct.ProductPrice}
- تومان
+                    تومان
                 </div>
                 <div className={classes.CountView}>
-                    <i className='far fa-eye' ></i>
+                    <i className='fa fa-eye'  ></i>
                     <span className={classes.View}>
-                                            +                        {props.detailProduct.detailProduct.detailProduct.view}
+                  +{props.detailProduct.detailProduct.detailProduct.view}
                         نفر این محصول را دیده اند.
                     </span>
                 </div>
-
-                {/*<div>*/}
-                {/*    <Button block lg btnStyle="primary">Block level button</Button>*/}
-                {/*</div>*/}
                 <div className="d-grid gap-2" >
-                    <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}}>
+                    <Link to={`/cart/${props.detailProduct.detailProduct.detailProduct.ID}`} >
+                    <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}} OnClick={handleOnClick}>
                         افزودن به سبد خرید
                     </Button>
+                    </Link>
                 </div>
-
-                {/*<div>*/}
-                {/*    <button style={{backgroundColor:"red",color:"white",wi}}>*/}
-
-                {/*    </button>*/}
-                {/*</div>*/}
             </div>
         </div>
     )

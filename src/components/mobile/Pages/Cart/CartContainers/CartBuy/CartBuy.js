@@ -25,7 +25,7 @@ const CartBuy=()=>{
             <div className={classes.Send}>
                 <div>
                     <div>
-                        <i className='"fas fa-truck' style={{fontSize:"24px",color:"red"}}></i>
+                        <i className='fa fa-truck' style={{fontSize:"24px",color:"red"}}></i>
                         ارسال رایگان سفارش
                     </div>
                     <span >

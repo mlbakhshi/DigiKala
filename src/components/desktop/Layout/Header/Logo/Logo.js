@@ -2,14 +2,15 @@ import React from 'react';
 import '../../../../../assets/icon/style.css';
 import Auxx from "../../../../../hoc/Auxx/Auxx";
 import DigikalaLogo from '../../../../../assets/SVG/dg.png';
+import {Link} from "react-router-dom";
 
 const Logo=()=>{
     return(
         <Auxx>
             <div >
-                {/*<span class="icon-Digikala-Logowine"></span>*/}
-                {/*<span class="icon-Digikala-Logo .path2"></span>*/}
+               <Link to={"/"}>
                 <img src={DigikalaLogo} style={{width:"175px",marginTop:"27px"}}/>
+               </Link>
             </div>
         </Auxx>
 

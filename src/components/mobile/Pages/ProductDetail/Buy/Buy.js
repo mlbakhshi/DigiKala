@@ -48,7 +48,7 @@ const Buy=()=>{
                     </span>
                 </div>
                 <div>
-                    <i className='fas fa-truck' style={{color:"red"}}></i>
+                    <i className='fa fa-truck' style={{color:"red"}}></i>
                     <span className={classes.SendDigi}>
                                           ارسال دیجی کالا
                     </span>

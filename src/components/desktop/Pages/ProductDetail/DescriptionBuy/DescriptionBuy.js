@@ -5,7 +5,7 @@ import Description from "../Description/Description";
 import Buy from "../Buy/Buy";
 
 const DescriptionBuy=(props)=>{
-    console.log(props);
+    // console.log(props);
     return(
         <Auxx>
             <div className={classes.Right}>

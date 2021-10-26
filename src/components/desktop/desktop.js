@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {BrowserRouter, Redirect, Route, Switch, withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import "./../../assets/css/desktop/desktop.scss";
@@ -44,7 +44,7 @@ const Desktop = (props) => {
                 <Switch>
                     <Route exact path="/"  ><Main/> </Route>
                     <Route exact path="/detail/:id"  component={ProductDetail}  />
-                    <Route exact path="/cart"    component={Cart} />
+                    <Route exact path="/cart/:id"    component={Cart} />
                     <Route exact path="/Login"   component={Login} />
 
                 </Switch>

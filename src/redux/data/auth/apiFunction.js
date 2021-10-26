@@ -26,7 +26,7 @@ export const logoutMember = async () => {
     return data;
 }
 // SignIn Member Api Call
-export const ticketInfo = async (params) => {
+export const BuyProduct = async (params) => {
     console.log(params);
     const {data}  = await callApi(`ticket/search/`, params, "get");
     return data;

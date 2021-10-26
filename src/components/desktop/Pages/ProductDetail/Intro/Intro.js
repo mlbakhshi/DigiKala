@@ -9,7 +9,7 @@ import Return from "../../../../../assets/SVG/4.png";
 import Orginal from "../../../../../assets/SVG/5.png";
 
 const Intro=(props)=>{
-    console.log(props.detailProduct);
+    // console.log(props.detailProduct);
     return(
         <Auxx>
             <div className={classes.Title}>

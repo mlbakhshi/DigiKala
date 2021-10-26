@@ -29,6 +29,9 @@ padding:calcLen(12);
 .CountView{
  font-size:calcFont(24);
 }
+.CountView i{
+  font-size:calcFont(16);
+}
 .View{
   font-size:calcFont(12);
   color:lightslategray;
@@ -61,5 +64,5 @@ margin-right:calcLen(15);
   width:95%;
   background-color:#ef394e;
   color:white;
-  height:calcLen(30);
+  //height:calcLen(30);
 }
