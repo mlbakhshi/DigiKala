@@ -16,7 +16,7 @@ export const DetailProduct = async (id) => {
 
 // Login Member Api Call
 export const loginMember = async (values) => {
-    const {data}  = await callApi('site/login',values,'post');
+    const {data}  = await callApi('site/login',values,'get');
     return data;
 }
 

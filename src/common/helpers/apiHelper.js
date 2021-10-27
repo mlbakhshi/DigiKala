@@ -56,7 +56,7 @@ let productMode = process.env.NODE_ENV === 'production';
         config.headers = headers;
     }
 
-
+console.log(config);
     return requestApi(config)
 
 };

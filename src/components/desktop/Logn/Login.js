@@ -2,30 +2,25 @@ import React, {useEffect, useState} from "react";
 import classes from './Login.module.scss';
 import digikalaLogo from '../../../assets/SVG/dg.png';
 import {Button} from "react-bootstrap-buttons";
-import {DetailProduct} from "../../../redux/data/auth/apiFunction";
+import {DetailProduct, loginMember} from "../../../redux/data/auth/apiFunction";
+import { connect } from 'react-redux';
 
 
-const Login=({ setToken })=>{
-    async function loginUser(credentials) {
-        return fetch('http://localhost/site/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(credentials)
-        })
-            .then(data => data.json())
-    }
+async function loginUser(credentials) {
+    return loginMember(credentials);
+}
+
+const Login=()=>{
 
     const [username, setUserName] = useState();
-    const [password, setPassword] = useState();
 
     const handleSubmit = async e => {
+        console.log('login');
         e.preventDefault();
         const token = await loginUser({
-            username,
-            password
+            username
         });
+        var store = Redux.createStore(counter)
         setToken(token);
     }
 
@@ -42,7 +37,6 @@ const Login=({ setToken })=>{
                 <div>
                     <div className="d-grid gap-2" >
                         <input  type="text"
-                                style={{width:"85%"}}
                                 placeholder={" شماره موبایل یا ایمیل خود را وارد کنید\n"}
                                 onChange={e => setUserName(e.target.value)}
                         />
@@ -50,22 +44,11 @@ const Login=({ setToken })=>{
                     </div>
                 </div>
 
-                <div>
-                    <div className="d-grid gap-2"  >
-                        <input type="password"
-                               style={{width:"85%"}}
-                               placeholder={"پسورد"}
-                               onChange={e => setPassword(e.target.value)}
-                        />
-
-                    </div>
-
-                </div>
 
                 <div className="d-grid gap-2" >
-                    <Button variant="primary"  style={{width:"85%",backgroundColor:"#ef394e",color:"white"}}>
-                        ورود به دیجی کالا
-                    </Button>
+                    <input type="submit" value="ورود به دیجی کالا"
+                           style={{backgroundColor:"#ef394e",color:"white",border:"none",outline:"none",borderRadius:"2px"}}
+                    />
                 </div>
             </form>
 
