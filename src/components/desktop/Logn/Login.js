@@ -3,8 +3,9 @@ import classes from './Login.module.scss';
 import digikalaLogo from '../../../assets/SVG/dg.png';
 import {Button} from "react-bootstrap-buttons";
 import {DetailProduct, loginMember} from "../../../redux/data/auth/apiFunction";
-import { connect } from 'react-redux';
-
+import {Redirect, Route, useHistory, useLocation} from "react-router-dom";
+import Cart from "../Pages/Cart/Cart";
+import ProductDetail from "../Pages/ProductDetail/ProductDetail";
 
 async function loginUser(credentials) {
     return loginMember(credentials);
@@ -13,15 +14,19 @@ async function loginUser(credentials) {
 const Login=()=>{
 
     const [username, setUserName] = useState();
-
     const handleSubmit = async e => {
-        console.log('login');
         e.preventDefault();
-        const token = await loginUser({
+        const checkToken = await loginUser({
             username
         });
-        var store = Redux.createStore(counter)
-        setToken(token);
+        console.log(checkToken.success);
+        if(checkToken.success){
+            const currentURL= window.location.pathname;
+            console.log(currentURL);
+            return(
+                <Redirect to="currentURL"  />
+            )
+        }
     }
 
 

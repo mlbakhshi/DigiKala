@@ -7,16 +7,15 @@ import Auxx from "../../../../hoc/Auxx/Auxx";
 import Footer from "../../Layout/Footer/footer";
 import {DetailProduct} from "../../../../redux/data/auth/apiFunction";
 import Login from "../../Logn/Login";
-import useToken from './useToken';
+import {connect} from "react-redux";
+import {Modal} from "react-bootstrap";
+import {Button} from "bootstrap";
+// import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
+// import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
 
 
 const Cart=(props)=>{
-
-
-    // const { token, setToken } = useToken();
-const[token,setToken]=useState(false);
-
-    console.log(props);
+    const { auth }  = props;
     let IDD=props.match.params.id;
     const [product,setProduct]=useState([]);
 
@@ -37,11 +36,10 @@ const[token,setToken]=useState(false);
 
     },[]);
 
-console.log(token);
-    if(!token) {
-        return <Login  />
-    }
-    else {
+console.log(auth);
+    if(auth)
+    {
+        console.log(auth);
         return(
             <Auxx>
                 <Toolbar />
@@ -57,8 +55,35 @@ console.log(token);
             </Auxx>
         )
     }
+    else {
+        return(
+           // <Modal.Dialog>
+           //     <Modal.Header closeButton>
+           //         <Modal.Title>Modal title</Modal.Title>
+           //     </Modal.Header>
+           //
+           //     <Modal.Body>
+           //         <p>Modal body text goes here.</p>
+           //     </Modal.Body>
+           //
+           //     <Modal.Footer>
+           //         <Button variant="secondary">Close</Button>
+           //         <Button variant="primary">Save changes</Button>
+           //     </Modal.Footer>
+           // </Modal.Dialog>
+          <Auxx>
+              <Login />
+          </Auxx>
+        )
 
-
+    }
 
 }
-export default Cart;
+const mapStateToProps  = (state) => {
+    console.log(state.auth.isLogin);
+    return {
+        auth: state.auth.isLogin
+    }
+}
+
+export default connect(mapStateToProps, null)(Cart);
