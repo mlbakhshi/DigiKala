@@ -5,7 +5,7 @@ import CartBuy from "./CartContainers/CartBuy/CartBuy";
 import Toolbar from "../../Layout/Header/toolbar/toolbar";
 import Auxx from "../../../../hoc/Auxx/Auxx";
 import Footer from "../../Layout/Footer/footer";
-import {DetailProduct} from "../../../../redux/data/auth/apiFunction";
+import {BuyProduct, DetailProduct} from "../../../../redux/data/auth/apiFunction";
 import Login from "../../Logn/Login";
 import {connect} from "react-redux";
 import {Modal} from "react-bootstrap";
@@ -15,10 +15,10 @@ import {Button} from "bootstrap";
 
 
 const Cart=(props)=>{
-    const { auth }  = props;
+    const { auth,userId }  = props;
     let IDD=props.match.params.id;
     const [product,setProduct]=useState([]);
-
+    const [orderProduct,setOrderProduct]=useState();
     useEffect(async ()=>{
 
         let response=null;
@@ -36,16 +36,34 @@ const Cart=(props)=>{
 
     },[]);
 
-console.log(auth);
+    useEffect(async ()=>{
+console.log(userId);
+        let responseBasket=null;
+        try {
+            responseBasket=await BuyProduct(IDD,userId);
+        }catch (e){
+            console.log('Error')
+        }
+        if(responseBasket?.success===true) {
+            console.log(responseBasket.data)
+            setOrderProduct("true");
+            console.log(orderProduct)
+        }
+
+
+    },[]);
+
+    console.log(auth);
     if(auth)
     {
+
         console.log(auth);
         return(
             <Auxx>
                 <Toolbar />
                 <div className={classes.Cart}>
                     <section className={classes.CartContainers}>
-                        <CartContainers detailProduct={product} />
+                        <CartContainers userId={userId} />
                     </section>
                     <aside className={classes.CartBuy}>
                         <CartBuy />
@@ -57,32 +75,17 @@ console.log(auth);
     }
     else {
         return(
-           // <Modal.Dialog>
-           //     <Modal.Header closeButton>
-           //         <Modal.Title>Modal title</Modal.Title>
-           //     </Modal.Header>
-           //
-           //     <Modal.Body>
-           //         <p>Modal body text goes here.</p>
-           //     </Modal.Body>
-           //
-           //     <Modal.Footer>
-           //         <Button variant="secondary">Close</Button>
-           //         <Button variant="primary">Save changes</Button>
-           //     </Modal.Footer>
-           // </Modal.Dialog>
-          <Auxx>
-              <Login />
-          </Auxx>
+            <Login />
         )
 
     }
 
 }
 const mapStateToProps  = (state) => {
-    console.log(state.auth.isLogin);
+    console.log(state.auth);
     return {
-        auth: state.auth.isLogin
+        auth: state.auth.isLogin,
+        userId:state.auth.userprofile
     }
 }
 

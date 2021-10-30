@@ -2,26 +2,29 @@ import React, {useEffect, useState} from "react";
 import classes from './Login.module.scss';
 import digikalaLogo from '../../../assets/SVG/dg.png';
 import {Button} from "react-bootstrap-buttons";
-import {DetailProduct, loginMember} from "../../../redux/data/auth/apiFunction";
-import {Redirect, Route, useHistory, useLocation} from "react-router-dom";
-import Cart from "../Pages/Cart/Cart";
-import ProductDetail from "../Pages/ProductDetail/ProductDetail";
+import { loginMember} from "../../../redux/data/auth/apiFunction";
+import {Redirect} from "react-router-dom";
+import {connect} from "react-redux";
+import {loginAuthSuccess} from "../../../redux/data/auth/actions";
 
 async function loginUser(credentials) {
     return loginMember(credentials);
 }
 
-const Login=()=>{
-
+const Login=(props)=>{
+    const { ACTION_login_SUCCESS,auth }  = props;
     const [username, setUserName] = useState();
     const handleSubmit = async e => {
         e.preventDefault();
         const checkToken = await loginUser({
             username
         });
-        console.log(checkToken.success);
+        console.log(checkToken);
+        console.log(checkToken.data.id);
+        setUserName(checkToken.success.id);
         if(checkToken.success){
-            const currentURL= window.location.pathname;
+            {ACTION_login_SUCCESS(checkToken.data.id)}
+            const currentURL= window.location.href;
             console.log(currentURL);
             return(
                 <Redirect to="currentURL"  />
@@ -51,7 +54,9 @@ const Login=()=>{
 
 
                 <div className="d-grid gap-2" >
-                    <input type="submit" value="ورود به دیجی کالا"
+                    <input type="submit"
+                           // onClick={ACTION_login_SUCCESS()}
+                           value="ورود به دیجی کالا"
                            style={{backgroundColor:"#ef394e",color:"white",border:"none",outline:"none",borderRadius:"2px"}}
                     />
                 </div>
@@ -63,4 +68,17 @@ const Login=()=>{
         </div>
     )
 }
-export default Login;
+
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+
+        // dispatching actions returned by action creators
+        ACTION_login_SUCCESS: (data) => dispatch(loginAuthSuccess(data)),
+        // decrement: () => dispatch(decrement()),
+        // reset: () => dispatch(reset()),
+
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Login);

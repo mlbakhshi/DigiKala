@@ -27,12 +27,14 @@ export const authReducer = (state = initialState, action) => {
                 message: ""
             }
         case Actions.ACTION_DATA_AUTH_login_SUCCESS:
+            console.log(action)
             return {
                 ...state,
-                userprofile: action.data.auth,
+                userprofile: action.data,
                 isLogin: true,
                 status: Status.STATUS_SUCCESS,
                 message: "",
+
             }
         case Actions.ACTION_DATA_AUTH_login_FAILD:
             return {

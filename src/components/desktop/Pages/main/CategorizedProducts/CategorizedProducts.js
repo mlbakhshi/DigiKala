@@ -15,20 +15,10 @@ const CategorizedProducts=(props)=>{
         try {
             response=await MobileProducts();
 
-            // console.log(response,'CategorizedProducts');
         }catch (e){
             console.log('Error')
         }
-
-        // console.log(response);
-        // if(response?.success===true) {
-        //      console.log('true');
             setProducts(response);
-            // console.log(response);
-        // }
-        // else{
-        //     console.log('false');
-        // }
 
     },[])
 

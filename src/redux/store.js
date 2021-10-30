@@ -2,14 +2,14 @@ import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import createSagaMiddleware from "redux-saga";
 import persistState from "redux-localstorage";
 import Saga from "./saga";
-import { dataReducer } from "./data/DataReducer";
+import DataReducer from "./data/DataReducer";
 
 const initialiseSagaMiddleware = createSagaMiddleware();
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
     combineReducers({
-        data: dataReducer,
+        data: DataReducer,
     }),
     composeEnhancers(applyMiddleware(initialiseSagaMiddleware),
         persistState())

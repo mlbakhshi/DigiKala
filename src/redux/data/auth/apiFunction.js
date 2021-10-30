@@ -26,8 +26,14 @@ export const logoutMember = async () => {
     return data;
 }
 // SignIn Member Api Call
-export const BuyProduct = async (params) => {
-    console.log(params);
-    const {data}  = await callApi(`ticket/search/`, params, "get");
+export const BuyProduct = async (productId,userId) => {
+    console.log(productId);
+    const {data}  = await callApi(`site/payment`, {productId, userId}, "get");
+    return data;
+}
+
+
+export const SuspendProducts = async (userId) => {
+    const {data}  = await callApi(`site/orders`, {userId}, "get");
     return data;
 }
