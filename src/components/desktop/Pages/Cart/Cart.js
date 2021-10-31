@@ -20,7 +20,7 @@ const Cart=(props)=>{
     const [product,setProduct]=useState([]);
     const [orderProduct,setOrderProduct]=useState();
     useEffect(async ()=>{
-
+        let responseBasket=null;
         let response=null;
         try {
             response=await DetailProduct(IDD);
@@ -32,46 +32,38 @@ const Cart=(props)=>{
             setProduct(response.data)
             console.log(product)
         }
-
-
-    },[]);
-
-    useEffect(async ()=>{
-console.log(userId);
-        let responseBasket=null;
         try {
             responseBasket=await BuyProduct(IDD,userId);
         }catch (e){
             console.log('Error')
         }
-        if(responseBasket?.success===true) {
-            console.log(responseBasket.data)
-            setOrderProduct("true");
-            console.log(orderProduct)
-        }
-
+            if (responseBasket?.success === true) {
+                console.log(responseBasket.data)
+                setOrderProduct("true");
+                console.log(orderProduct)
+            }
 
     },[]);
+
 
     console.log(auth);
     if(auth)
     {
 
-        console.log(auth);
-        return(
-            <Auxx>
-                <Toolbar />
-                <div className={classes.Cart}>
-                    <section className={classes.CartContainers}>
-                        <CartContainers userId={userId} />
-                    </section>
-                    <aside className={classes.CartBuy}>
-                        <CartBuy />
-                    </aside>
-                </div>
-                <Footer />
-            </Auxx>
-        )
+            return (
+                <Auxx>
+                    <Toolbar/>
+                    <div className={classes.Cart}>
+                        <section className={classes.CartContainers}>
+                            <CartContainers userId={userId}/>
+                        </section>
+                        <aside className={classes.CartBuy}>
+                            <CartBuy/>
+                        </aside>
+                    </div>
+                    <Footer/>
+                </Auxx>
+            )
     }
     else {
         return(
