@@ -6,19 +6,20 @@ import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
 // Be sure to include styles at some point, probably during your bootstraping
 import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
 import {Link, useHistory} from "react-router-dom";
+import {connect} from "react-redux";
+import {incrementOrder} from "../../../../../redux/data/ordersCount/actions";
 
 const Buy=(props)=>{
     // console.log(props);
     // console.log( props.detailProduct.detailProduct.detailProduct.ID);
+const {increment,counter}=props;
 
-    const history = useHistory();
-    const handleOnClick = () => {
-        history.push("/cart"); // now we're in localhost:3000/login
-    };
+
     return(
         <div className={classes.Buy}>
             <div>
                 فروشنده
+                {counter}
             </div>
 
             <div className={classes.Contentment} >
@@ -76,7 +77,7 @@ const Buy=(props)=>{
                 </div>
                 <div className="d-grid gap-2" >
                     <Link to={`/cart/${props.detailProduct.detailProduct.detailProduct.ID}`} >
-                    <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}} OnClick={handleOnClick}>
+                    <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}} OnClick={increment}>
                         افزودن به سبد خرید
                     </Button>
                     </Link>
@@ -85,4 +86,18 @@ const Buy=(props)=>{
         </div>
     )
 }
-export default Buy;
+
+const mapStateToProps = (state) => {
+    return {
+        counter: state.cntOrder.count,
+    };
+};
+const mapDispatchToProps = (dispatch) => {
+    return {
+        increment: () => dispatch(incrementOrder()),
+        // reset: () => dispatch(reset())
+    };
+};
+export default
+connect(mapStateToProps, mapDispatchToProps)
+(Buy);

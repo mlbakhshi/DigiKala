@@ -1,11 +1,11 @@
 import { combineReducers } from "redux";
-// import  basketReducer  from "./basket/reducers";
 import AuthReducer from './auth'
+import ordersReducer from "./ordersCount";
 
 
 const DataReducer = combineReducers({
     auth: AuthReducer,
-    // basket:basketReducer
+    cntOrder:ordersReducer
 });
 export default DataReducer;
 

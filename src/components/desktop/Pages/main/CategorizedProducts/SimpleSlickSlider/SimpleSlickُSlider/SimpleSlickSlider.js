@@ -47,7 +47,7 @@ const SimpleSlickSlider=(props)=> {
             <SwiperSlide>
                 <SimpleSliderComponent
                     id={productInfo.ID}
-                    mobilePic={productInfo.ProductPicture}
+                    mobilePic={"C:/react/digikala/Upload/1624873752.jpg"}
                     title={productInfo.ProductTitle}
                     price={productInfo.ProductPrice}
 

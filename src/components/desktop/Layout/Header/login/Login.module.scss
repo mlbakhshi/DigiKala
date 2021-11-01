@@ -4,7 +4,7 @@
 .LoginBag{
     display: flex;
 }
-.Login
+.NotLogin
 {
     outline: solid calcLen(1);
     border-radius: calcLen(10);
@@ -18,6 +18,19 @@
     padding: calcLen(8);
     margin-left: calcLen(10);
 }
+.Login
+ {
+
+     margin-top: calcLen(30);
+     display: flex;
+     flex-wrap: wrap;
+     justify-content:flex-start;
+     align-items: stretch;
+     align-content: space-around;
+     padding: calcLen(8);
+     margin-left: calcLen(10);
+ }
+
 .Cart{
     margin-top: calcLen(30);
     display: flex;
@@ -28,4 +41,27 @@
     padding-right: calcLen(6);
     padding-left: calcLen(6);
     margin-left: calcLen(15);
+    color:black;
+}
+.Cart Link{
+    text-decoration:none;
+
+}
+.Cart span:hover{
+    text-decoration:none;
+}
+
+.Cart span{
+    color:black;
+}
+.CountNumber{
+    background-color:red;
+    color:white;
+    border-radius:calcLen(50);
+    justify-content:center;
+    align-items:center;
+    display:inline-flex;
+    width:calcLen(18);
+    height:calcLen(18);
+    font-size:calcFont(10);
 }

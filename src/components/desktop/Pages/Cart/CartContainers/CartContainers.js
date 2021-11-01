@@ -4,9 +4,11 @@ import image from '../../../../../assets/images/mobilePics/Poco F3.jpg';
 import CartContainer from "./CartContainer/CartContainer";
 import {BuyProduct, MobileProducts, SuspendProducts} from "../../../../../redux/data/auth/apiFunction";
 import Auxx from "../../../../../hoc/Auxx/Auxx";
+import {connect} from "react-redux";
 const CartContainers=(props)=>{
     console.log(props);
 const [orders,setOrders]=useState();
+    const {count}=props;
 
     useEffect(async ()=>{
         let response=null;
@@ -18,7 +20,8 @@ const [orders,setOrders]=useState();
         }
         setOrders(response);
 console.log(orders);
-    },[])
+    },[]);
+
     let orderInformation=null;
     if(orders) {
         orderInformation = orders.map(orderInfo =>
@@ -30,6 +33,7 @@ console.log(orders);
                     <CartContainer detailProduct={orderInfo} />
                 </div>
             </div>
+
         )
     }
 
@@ -39,4 +43,7 @@ console.log(orders);
        </Auxx>
     )
 }
-export default CartContainers;
+
+
+
+export default (CartContainers);

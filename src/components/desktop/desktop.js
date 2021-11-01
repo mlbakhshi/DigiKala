@@ -19,6 +19,7 @@ import Cart from "./Pages/Cart/Cart";
 import Main from "./Pages/main/main";
 import Login from "./Logn/Login";
 import {useReduxContext} from "react-redux/lib/hooks/useReduxContext";
+import Basket from "./Pages/Basket/basket";
 
 const Desktop = (props) => {
 
@@ -47,6 +48,7 @@ const Desktop = (props) => {
                     <Route exact path="/detail/:id"  component={ProductDetail}  />
                     <Route exact path="/cart/:id"    component={Cart} />
                     <Route exact path="/Login"   component={Login} />
+                    <Route exact path="/basket"   component={Basket} />
 
                 </Switch>
             </BrowserRouter>

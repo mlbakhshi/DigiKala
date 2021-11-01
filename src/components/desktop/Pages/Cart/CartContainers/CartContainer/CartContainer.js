@@ -5,31 +5,35 @@ import supermarket from '../../../../../../assets/SVG/supermarket-svgrepo-com.sv
 import {DeleteOrder, DetailProduct} from "../../../../../../redux/data/auth/apiFunction";
 import {Link} from "react-router-dom";
 import {Button} from "react-bootstrap";
+import {connect} from "react-redux";
 
 const CartContainer=(props)=>{
-    const [count,setCount]=useState(0);
+    const [countOrder,setCountOrder]=useState(1);
     const [order,setOrder]=useState([]);
 
-    const handleOnclick=(product_id)=>{
-        useEffect(async ()=>{
-            let response=null;
-            try {
-                response=await DeleteOrder(product_id);
-
-            }catch (e){
-                console.log('Error')
-            }
-            if(response?.success===true) {
-                console.log(response.data)
-                console.log(response)
-                setOrder(response.data)
-                console.log(order)
-            }
-
-        },[])}
+    // const handleOnclick=(product_id)=>{
+    //     useEffect(async ()=>{
+    //         let response=null;
+    //         try {
+    //             response=await DeleteOrder(product_id);
+    //
+    //         }catch (e){
+    //             console.log('Error')
+    //         }
+    //         if(response?.success===true) {
+    //             console.log(response.data)
+    //             console.log(response)
+    //             setOrder(response.data)
+    //             console.log(order)
+    //         }
+    //
+    //     },[])}
 
     let CurrencyFormat = require('react-currency-format');
-console.log(props.detailProduct.product_id,"container");
+    console.log(props.detailProduct.product_id,"container");
+
+
+
     useEffect(async ()=>{
         let response=null;
         try {
@@ -45,7 +49,8 @@ console.log(props.detailProduct.product_id,"container");
             console.log(order)
         }
 
-    },[])
+    },[]);
+
     return(
         <Auxx>
             <div className={classes.Title}>
@@ -81,7 +86,7 @@ console.log(props.detailProduct.product_id,"container");
                 <div className={classes.numberOrder}>
                     <div className={classes.incrbtn}>
                         <button style={{border: "none",outline:"none",backgroundColor: "transparent",}}
-                                onClick={() => setCount(count + 1)}
+                                onClick={() => setCountOrder(countOrder + 1)}
                         >
                             <i className="fa fa-plus" ></i>
                         </button>
@@ -90,37 +95,37 @@ console.log(props.detailProduct.product_id,"container");
                         <input
                             className={classes.formControl}
                             style={{padding: "0px",fontSize: "14px",backgroundColor: "transparent",border: "none"}}
-                            disabled value={count}
+                            disabled value={countOrder}
                         />
                     </div>
                     <div className={classes.decrbtn}>
                         <button type="button" style={{border: "none",outline:"none",backgroundColor: "transparent",}}
-                                onClick={() => setCount(count - 1)}
+                                onClick={() => setCountOrder(countOrder - 1)}
                         >
                             <i className="fa fa-minus"></i>
                         </button>
                     </div>
                 </div>
-                <Button onClick={handleOnclick(props.detailProduct.product_id)} >
-                    <div className={classes.Del}>
-                        <div>
-                            <i className="fa fa-trash" aria-hidden="true"></i>
-                        </div>
-                        <span>
+                {/*<Button onClick={handleOnclick(props.detailProduct.product_id)} >*/}
+                <div className={classes.Del}>
+                    <div>
+                        <i className="fa fa-trash" aria-hidden="true"></i>
+                    </div>
+                    <span>
             حذف
         </span>
-                    </div>
-                </Button>
+                </div>
+                {/*</Button>*/}
 
                 <div  className={classes.Price} >
                     {order.ProductOff  === 1
                         ?  <h2><span >  قیمت با تخفیف
-                                    <CurrencyFormat value={count * order.OffPrice} displayType={'text'} thousandSeparator={true} />
+                                    <CurrencyFormat value={countOrder * order.OffPrice} displayType={'text'} thousandSeparator={true} />
 
-                            {count * order.OffPrice}
+                            {countOrder * order.OffPrice}
                         </span> </h2>
                         :  <h2><span >
-                            <CurrencyFormat value={count * order.ProductPrice} displayType={'text'} thousandSeparator={true} />
+                            <CurrencyFormat value={countOrder * order.ProductPrice} displayType={'text'} thousandSeparator={true} />
                         </span> </h2>
                     }
                 </div>
@@ -128,4 +133,5 @@ console.log(props.detailProduct.product_id,"container");
         </Auxx>
     )
 }
-export default CartContainer;
+
+export default (CartContainer);

@@ -3,7 +3,7 @@ import classes from './Login.module.scss';
 import digikalaLogo from '../../../assets/SVG/dg.png';
 import {Button} from "react-bootstrap-buttons";
 import { loginMember} from "../../../redux/data/auth/apiFunction";
-import {Redirect} from "react-router-dom";
+import {Redirect, useHistory} from "react-router-dom";
 import {connect} from "react-redux";
 import {loginAuthSuccess} from "../../../redux/data/auth/actions";
 
@@ -14,6 +14,7 @@ async function loginUser(credentials) {
 const Login=(props)=>{
     const { ACTION_login_SUCCESS,auth }  = props;
     const [username, setUserName] = useState();
+    const history = useHistory();
     const handleSubmit = async e => {
         e.preventDefault();
         const checkToken = await loginUser({
@@ -24,11 +25,20 @@ const Login=(props)=>{
         setUserName(checkToken.success.id);
         if(checkToken.success){
             {ACTION_login_SUCCESS(checkToken.data.id)}
-            const currentURL= window.location.href;
-            console.log(currentURL);
-            return(
-                <Redirect to="currentURL"  />
-            )
+            if(window.location.pathname==="/login"){
+                console.log(window.location.pathname)
+                return (
+                   history.goBack()
+                )
+            }
+            else{
+                const currentURL= window.location.href;
+                console.log(currentURL);
+                return(
+                    <Redirect to="currentURL"  />
+                )
+            }
+
         }
     }
 
