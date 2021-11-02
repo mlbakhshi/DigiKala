@@ -7,15 +7,14 @@ import Pay from "../../../../../assets/SVG/2.png";
 import Allday from "../../../../../assets/SVG/3.png";
 import Return from "../../../../../assets/SVG/4.png";
 import Orginal from "../../../../../assets/SVG/5.png";
+import {BreadcrumbsItem} from "react-breadcrumbs-dynamic";
 
 const Intro=(props)=>{
     // console.log(props.detailProduct);
     return(
         <Auxx>
             <div className={classes.Title}>
-                <div>
-                    breadcrumb
-                </div>
+
                 <h6>
                     {props.detailProduct.ProductNamePr}
                 </h6>

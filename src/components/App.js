@@ -3,20 +3,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './../assets/common/font.scss';
 import React, {useEffect, useState} from "react";
 import { useHistory } from 'react-router-dom'
-// import withAuth from "./common/hoc/withAuth";
 import {ToastContainer, Zoom} from "react-toastify";
+import {
+    BreadcrumbsProvider,
+    Breadcrumbs,
+    BreadcrumbsItem
+} from 'react-breadcrumbs-dynamic'
 
-
-
-// let AppDevice = require(`./component/${process.env.REACT_APP_DEVICE_TYPE}/${process.env.REACT_APP_DEVICE_TYPE}`);
 let AppDevice = require(`./desktop/desktop`);
-// let AppDevice = require(`./mobile/mobile`);
 
 
 function App() {
     const history = useHistory();
-
     const [activePage, setActivePage] = useState("/");
+
 
     useEffect(() => { // EVENT LISTNRE TO URL
 
@@ -29,7 +29,9 @@ function App() {
     return (
         <>
             <AppDevice.default activePage={activePage}/>
+
             <ToastContainer rtl={true} draggable={false} transition={Zoom} autoClose={5000}/>
+
         </>
     );
 

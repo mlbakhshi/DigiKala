@@ -20,6 +20,9 @@ import Main from "./Pages/main/main";
 import Login from "./Logn/Login";
 import {useReduxContext} from "react-redux/lib/hooks/useReduxContext";
 import Basket from "./Pages/Basket/basket";
+import Profile from "./Pages/Profile/Myprofile";
+import MyProfile from "./Pages/Profile/Myprofile";
+import WaitingPayment from "./Pages/Profile/LeftMenu/WaitingPayment/WaitingPayment";
 
 const Desktop = (props) => {
 
@@ -49,6 +52,7 @@ const Desktop = (props) => {
                     <Route exact path="/cart/:id"    component={Cart} />
                     <Route exact path="/Login"   component={Login} />
                     <Route exact path="/basket"   component={Basket} />
+                    <Route exact path="/profile"   component={MyProfile} />
 
                 </Switch>
             </BrowserRouter>

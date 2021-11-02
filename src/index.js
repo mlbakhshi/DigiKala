@@ -7,6 +7,9 @@ import {BrowserRouter} from 'react-router-dom';
 import DataReducer from "../src/redux/data/DataReducer";
 import {createStore} from 'redux';
 import {Provider} from "react-redux";
+import {
+    BreadcrumbsProvider,
+} from 'react-breadcrumbs-dynamic'
 
 const store = createStore(DataReducer);
 ReactDOM.render(
@@ -15,7 +18,9 @@ ReactDOM.render(
   <React.StrictMode>
       <Provider store={store}>
       <BrowserRouter>
+
                   <App />
+        
       </BrowserRouter>
       </Provider>
   </React.StrictMode>,

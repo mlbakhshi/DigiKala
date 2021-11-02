@@ -45,3 +45,9 @@ export const DeleteOrder = async (productId) => {
     const {data}  = await callApi(`site/orders`, productId, "get");
     return data;
 }
+
+export const AllOrders = async (userId) => {
+    console.log(userId)
+    const {data}  = await callApi(`site/allorders`, userId, "get");
+    return data;
+}

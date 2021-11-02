@@ -7,3 +7,24 @@ export const incrementOrder = (data) => {
         data
     }
 }
+
+export const WaitOrder = (data) => {
+    return {
+        type: Actions.ACTION_Wait_Order,
+        data
+    }
+}
+
+export const ProcessOrder = (data) => {
+    return {
+        type: Actions.ACTION_Process_Order,
+        data
+    }
+}
+
+export const DeliverOrder = (data) => {
+    return {
+        type: Actions.ACTION_Deliver_Order,
+        data
+    }
+}

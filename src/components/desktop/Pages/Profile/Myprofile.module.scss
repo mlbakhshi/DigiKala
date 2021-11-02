@@ -1,0 +1,13 @@
+@import '../../../../assets/css/desktop/variables';
+
+
+.Cart{
+  display:flex;
+}
+.CartBuy{
+  width:95%;
+  margin:calcLen(10);
+  border:calcLen(1) solid darkgray;
+  border-radius:calcLen(5);
+  padding:calcLen(10);
+}

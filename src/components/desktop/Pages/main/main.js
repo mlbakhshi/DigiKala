@@ -9,6 +9,7 @@ import BottomBanner from "./BottomBanner/BottomBanner";
 import Footer from "../../Layout/Footer/footer";
 import Auxx from "../../../../hoc/Auxx/Auxx";
 import Toolbar from "../../Layout/Header/toolbar/toolbar";
+import {BreadcrumbsItem} from 'react-breadcrumbs-dynamic';
 
 const Main=(props)=>{
     return(

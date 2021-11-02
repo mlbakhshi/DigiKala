@@ -2,29 +2,44 @@ import React, {useEffect, useState} from "react";
 import classes from './Login.module.scss';
 import digikalaLogo from '../../../assets/SVG/dg.png';
 import {Button} from "react-bootstrap-buttons";
-import { loginMember} from "../../../redux/data/auth/apiFunction";
+import {AllOrders, loginMember} from "../../../redux/data/auth/apiFunction";
 import {Redirect, useHistory} from "react-router-dom";
 import {connect} from "react-redux";
 import {loginAuthSuccess} from "../../../redux/data/auth/actions";
+import {WaitOrder} from "../../../redux/data/ordersCount/actions";
 
 async function loginUser(credentials) {
     return loginMember(credentials);
 }
+async function orders(credentials) {
+    console.log(credentials)
+    return AllOrders(credentials);
+}
 
 const Login=(props)=>{
-    const { ACTION_login_SUCCESS,auth }  = props;
+    const { ACTION_login_SUCCESS,auth,ACTION_Waiting_SUCCESS }  = props;
     const [username, setUserName] = useState();
+    const [userid,setUserid] = useState("0");
     const history = useHistory();
     const handleSubmit = async e => {
         e.preventDefault();
-        const checkToken = await loginUser({
-            username
-        });
+        const checkToken = await loginUser({username});
         console.log(checkToken);
         console.log(checkToken.data.id);
-        setUserName(checkToken.success.id);
+       let id=checkToken.data.id;
+        setUserName(checkToken.data.username);
+        // setUserid(id);
+        // console.log(userid);
+        // console.log(username);
         if(checkToken.success){
             {ACTION_login_SUCCESS(checkToken.data.id)}
+console.log(id);
+            //fetch orders from DB
+                const checkOrders = await orders({id});
+            // if(checkOrders.success){
+console.log(checkOrders);
+                // {ACTION_Waiting_SUCCESS(checkToken.data)}
+            // }
             if(window.location.pathname==="/login"){
                 console.log(window.location.pathname)
                 return (
@@ -85,7 +100,7 @@ const mapDispatchToProps = (dispatch) => {
 
         // dispatching actions returned by action creators
         ACTION_login_SUCCESS: (data) => dispatch(loginAuthSuccess(data)),
-        // decrement: () => dispatch(decrement()),
+        ACTION_Waiting_SUCCESS: (data) => dispatch(WaitOrder(data)),
         // reset: () => dispatch(reset()),
 
     }

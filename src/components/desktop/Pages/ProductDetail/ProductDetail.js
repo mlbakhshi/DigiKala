@@ -9,6 +9,7 @@ import Auxx from "../../../../hoc/Auxx/Auxx";
 import Footer from "../../Layout/Footer/footer";
 import Toolbar from "../../Layout/Header/toolbar/toolbar";
 import {DetailProduct} from "../../../../redux/data/auth/apiFunction";
+import {BreadcrumbsItem} from "react-breadcrumbs-dynamic";
 
 const ProductDetail=(props)=>{
 

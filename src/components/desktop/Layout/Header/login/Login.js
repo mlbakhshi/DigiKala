@@ -49,7 +49,7 @@ const Login=(props)=>{
 
                         <Dropdown.Menu style={{textAlign:"right"}}>
                             <Dropdown.Item  href="#/action-1">مشاهده حساب کاربری</Dropdown.Item>
-                            <Dropdown.Item  href="/basket"><i className="fa fa-mobile-phone"></i> سفارش های من </Dropdown.Item>
+                            <Link to={"/profile"}><Dropdown.Item  ><i className="fa fa-mobile-phone"></i> سفارش های من </Dropdown.Item></Link>
                             <Dropdown.Item  href="#/action-3"><i className="fa fa-sign-out"></i> خروج </Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
