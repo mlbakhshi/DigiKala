@@ -24,9 +24,9 @@ export const ordersReducer = (state = initState, action) => {
                 ...state,
                 status: Status.STATUS_WAIT,
                 userprofile:action.data,
-                isWait: true,
-                isProcess: false,
-                isDeliver: false,
+                // isWait: true,
+                // isProcess: false,
+                // isDeliver: false,
 
             }
         case Actions.ACTION_Process_Order:

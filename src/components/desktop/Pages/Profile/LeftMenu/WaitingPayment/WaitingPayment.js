@@ -4,7 +4,9 @@ import {loginAuthSuccess} from "../../../../../../redux/data/auth/actions";
 import {connect} from "react-redux";
 
 const WaitingPayment=(props)=>{
-
+const {orders,userId}=props;
+console.log(orders);
+console.log(userId);
     return(
         <div>
             {props.children}
@@ -12,6 +14,8 @@ const WaitingPayment=(props)=>{
         </div>
     )
 }
+
+
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -24,4 +28,14 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(WaitingPayment);
+const mapStateToProps  = (state) => {
+    console.log(state,"dfgfgdfgfgdfg");
+    return {
+
+       orders: state.data.cntOrder.userprofile,
+        userId:state.data.auth.userprofile,
+        // counter:state.data.cntOrder.count
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(WaitingPayment);

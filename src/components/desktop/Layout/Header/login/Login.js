@@ -9,19 +9,19 @@ import {Dropdown} from "react-bootstrap";
 const Login=(props)=>{
     const { auth,userId,counter }  = props;
     // const [numOrders,useNumOrder]=useState();
-    useEffect(async ()=>{
-        let response=null;
-        try {
-
-            response=await SuspendProducts(userId);
-        }catch (e){
-            console.log('Error')
-        }
-        // if(response?.success===true) {
-        console.log(response)
-
-        // }
-    },[]);
+    // useEffect(async ()=>{
+    //     let response=null;
+    //     try {
+    //
+    //         response=await SuspendProducts(userId);
+    //     }catch (e){
+    //         console.log('Error')
+    //     }
+    //     // if(response?.success===true) {
+    //     console.log(response)
+    //
+    //     // }
+    // },[]);
 
     if(!auth) {
         return (
@@ -68,12 +68,12 @@ const Login=(props)=>{
 }
 
 const mapStateToProps  = (state) => {
-    console.log(state.auth);
+    console.log(state,"dfgfgdfgfgdfg");
     return {
 
-        auth: state.auth.isLogin,
-        userId:state.auth.userprofile,
-        counter:state.cntOrder.count
+        auth: state.data.auth.isLogin,
+        userId:state.data.auth.userprofile,
+        counter:state.data.cntOrder.count
     }
 }
 export default connect(mapStateToProps, null)(Login);

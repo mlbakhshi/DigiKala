@@ -7,11 +7,9 @@ import {BrowserRouter} from 'react-router-dom';
 import DataReducer from "../src/redux/data/DataReducer";
 import {createStore} from 'redux';
 import {Provider} from "react-redux";
-import {
-    BreadcrumbsProvider,
-} from 'react-breadcrumbs-dynamic'
 
-const store = createStore(DataReducer);
+import store from "./redux/store";
+
 ReactDOM.render(
 
 

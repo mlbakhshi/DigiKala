@@ -1,20 +1,45 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import classes from './Myprofile.module.scss';
 import RightMenu from "./RightMenu/RightMenu";
 import LeftMenu from "./LeftMenu/LeftMenu";
 import Toolbar from "../../Layout/Header/toolbar/toolbar";
-import CartContainers from "../Cart/CartContainers/CartContainers";
-import CartBuy from "../Cart/CartContainers/CartBuy/CartBuy";
 import Footer from "../../Layout/Footer/footer";
-import Auxx from "../../../../hoc/Auxx/Auxx";
 import {connect} from "react-redux";
 import WaitingPayment from "./LeftMenu/WaitingPayment/WaitingPayment";
 import Processing from "./LeftMenu/Processing/Processing";
 import DeliverProcess from "./LeftMenu/DeliverProcess/DeliverProcess";
+import {AllOrders} from "../../../../redux/data/auth/apiFunction";
+import {loginAuthSuccess} from "../../../../redux/data/auth/actions";
+import {WaitOrder} from "../../../../redux/data/ordersCount/actions";
+import Login from "../../Logn/Login";
+
+
 
 const MyProfile=(props)=>{
-    const {auth}=props;
-    const [leftMenu,setLeftMenu]=useState(0)
+    const {auth,userId,ACTION_Orders_SUCCESS}=props;
+    const [leftMenu,setLeftMenu]=useState(0);
+    const [id,setId]=useState();
+
+// setId(userId);
+    console.log(userId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    useEffect(async ()=>{
+        //fetch orders from DB
+        let checkOrders=null;
+        console.log(userId,'profileprofileprofile');
+        try{
+            checkOrders = await AllOrders(userId);
+        }
+        catch (e){
+            console.log('Error')
+        }
+        if(checkOrders?.success===true){
+        console.log(checkOrders);
+            setId(checkOrders.data)
+            console.log(id);
+        ACTION_Orders_SUCCESS(checkOrders.data)
+        }
+    },[]);
 
     const onclickLeftMenu=(event,index)=>{
         event.preventDefault()
@@ -36,26 +61,58 @@ const MyProfile=(props)=>{
     else{
         component=<DeliverProcess />
     }
-    return(
+    console.log(auth);
+    if(auth){
+        return(
 
-        <div>
+            <div>
                 <Toolbar/>
 
-            <div className={classes.Cart}>
-                <aside className={classes.CartContainers}>
-                    <RightMenu/>
-                </aside>
-                <section className={classes.CartBuy}>
-                    <LeftMenu items={leftMenuItems} />
-                    <section>
-                        {component}
+                <div className={classes.Cart}>
+                    <aside className={classes.CartContainers}>
+                        <RightMenu/>
+                    </aside>
+                    <section className={classes.CartBuy}>
+                        <LeftMenu items={leftMenuItems} />
+                        <section>
+                            {component}
+                        </section>
                     </section>
-                </section>
 
-            </div>
+                </div>
                 <Footer/>
-        </div>
-    )
+            </div>
+        )
+    }
+    else {
+        return(
+            <Login />
+            )
+
+    }
+
 }
 
-export default (MyProfile);
+
+const mapStateToProps  = (state) => {
+    console.log(state.auth);
+    return {
+
+        auth: state.data.auth.isLogin,
+        userId:state.data.auth.userprofile,
+        counter:state.data.cntOrder.count
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+
+        // dispatching actions returned by action creators
+        ACTION_login_SUCCESS: (data) => dispatch(loginAuthSuccess(data)),
+        ACTION_Orders_SUCCESS: (data) => dispatch(WaitOrder(data)),
+        // reset: () => dispatch(reset()),
+
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MyProfile);

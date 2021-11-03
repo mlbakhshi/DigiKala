@@ -34,22 +34,22 @@ const CartContainer=(props)=>{
 
 
 
-    useEffect(async ()=>{
-        let response=null;
-        try {
-            response=await DetailProduct(props.detailProduct.product_id);
-
-        }catch (e){
-            console.log('Error')
-        }
-        if(response?.success===true) {
-            console.log(response.data)
-            console.log(response)
-            setOrder(response.data)
-            console.log(order)
-        }
-
-    },[]);
+    // useEffect(async ()=>{
+    //     let response=null;
+    //     try {
+    //         response=await DetailProduct(props.detailProduct.product_id);
+    //
+    //     }catch (e){
+    //         console.log('Error')
+    //     }
+    //     if(response?.success===true) {
+    //         console.log(response.data)
+    //         console.log(response)
+    //         setOrder(response.data)
+    //         console.log(order)
+    //     }
+    //
+    // },[]);
 
     return(
         <Auxx>

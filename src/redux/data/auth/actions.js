@@ -12,7 +12,7 @@ export const loginAuthRequest = (data) => {
 export const loginAuthSuccess = (data) => {
     return {
         type: Actions.ACTION_DATA_AUTH_login_SUCCESS,
-        data
+        data:data
     }
 }
 // When Success !!

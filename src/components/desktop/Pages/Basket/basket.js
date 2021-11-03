@@ -85,8 +85,8 @@ const Basket=(props)=>{
 const mapStateToProps  = (state) => {
     console.log(state.auth);
     return {
-        auth: state.auth.isLogin,
-        userId:state.auth.userprofile
+        auth: state.data.auth.isLogin,
+        userId:state.data.auth.userprofile
     }
 }
 

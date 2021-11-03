@@ -32,12 +32,6 @@ const ProductDetail=(props)=>{
             console.log(response.data)
         }
 
-        // console.log(response,"response");
-        // console.log(response.data[0],"response");
-        // setProduct(response.data[0]);
-        // console.log(product,"product");
-
-
     },[])
 
     return(

@@ -89,7 +89,7 @@ const {increment,counter}=props;
 
 const mapStateToProps = (state) => {
     return {
-        counter: state.cntOrder.count,
+        counter: state.data.cntOrder.count,
     };
 };
 const mapDispatchToProps = (dispatch) => {
