@@ -25,7 +25,7 @@ const Login=(props)=>{
        let id=checkToken.data.id;
         setUserName(checkToken.data.username);
         if(checkToken.success){
-            ACTION_login_SUCCESS(checkToken.data.id)
+            ACTION_login_SUCCESS(checkToken.data)
 console.log(id);
 
             if(window.location.pathname==="/login"){

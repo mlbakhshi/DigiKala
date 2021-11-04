@@ -16,7 +16,7 @@ import {Button} from "bootstrap";
 
 const Basket=(props)=>{
     const { auth,userId }  = props;
-    const [orderProduct,setOrderProduct]=useState("false");
+    // const [orderProduct,setOrderProduct]=useState("false");
     // useEffect(async ()=>{
     //     let response=null;
     //     try {
@@ -31,26 +31,26 @@ const Basket=(props)=>{
     //     }
     // },[]);
 
-    useEffect(async ()=>{
-        let responseBasket=null;
-        try {
-            responseBasket=await SuspendProducts(userId);
-        }catch (e){
-            console.log('Error')
-        }
-        console.log(responseBasket);
-        if (responseBasket?.success === true) {
-            if(responseBasket.data=="false"){
-                console.log(responseBasket.data.data)
-                setOrderProduct("true");
-                console.log(orderProduct)}
-            else{
-                setOrderProduct("false");
-                console.log(orderProduct);
-            }
-        }
-
-    },[]);
+    // useEffect(async ()=>{
+    //     let responseBasket=null;
+    //     try {
+    //         responseBasket=await SuspendProducts(userId);
+    //     }catch (e){
+    //         console.log('Error')
+    //     }
+    //     console.log(responseBasket);
+    //     if (responseBasket?.success === true) {
+    //         if(responseBasket.data=="false"){
+    //             console.log(responseBasket.data.data)
+    //             setOrderProduct("true");
+    //             console.log(orderProduct)}
+    //         else{
+    //             setOrderProduct("false");
+    //             console.log(orderProduct);
+    //         }
+    //     }
+    //
+    // },[]);
 
 
     console.log(auth);
@@ -86,7 +86,8 @@ const mapStateToProps  = (state) => {
     console.log(state.auth);
     return {
         auth: state.data.auth.isLogin,
-        userId:state.data.auth.userprofile
+        userId:state.data.auth.userprofile,
+        orders: state.data.cntOrder.userprofile,
     }
 }
 

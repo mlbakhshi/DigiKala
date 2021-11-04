@@ -48,9 +48,9 @@ const Login=(props)=>{
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu style={{textAlign:"right"}}>
-                            <Dropdown.Item  href="#/action-1">مشاهده حساب کاربری</Dropdown.Item>
-                            <Link to={"/profile"}><Dropdown.Item  ><i className="fa fa-mobile-phone"></i> سفارش های من </Dropdown.Item></Link>
-                            <Dropdown.Item  href="#/action-3"><i className="fa fa-sign-out"></i> خروج </Dropdown.Item>
+                            <Dropdown.Item  href="/account">مشاهده حساب کاربری</Dropdown.Item>
+                           <Dropdown.Item  href="/profile"><i className="fa fa-mobile-phone"></i> سفارش های من </Dropdown.Item>
+                            <Dropdown.Item  href="/logout"><i className="fa fa-sign-out"></i> خروج </Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                 </div>

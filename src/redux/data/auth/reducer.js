@@ -3,6 +3,7 @@ import * as Status from '../../status';
 
 let initState = {
     userprofile: null,
+    userdata:null,
     isLogin: false,
     status: Status.STATUS_NOT_SET,
     message: "",
@@ -30,7 +31,8 @@ export const authReducer = (state = initialState, action) => {
             console.log(action)
             return {
                 ...state,
-                userprofile: action.data,
+                userprofile: action.data.id,
+                userdata: action.data,
                 isLogin: true,
                 status: Status.STATUS_SUCCESS,
                 message: "",

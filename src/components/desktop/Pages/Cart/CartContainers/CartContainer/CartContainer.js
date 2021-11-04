@@ -10,7 +10,8 @@ import {connect} from "react-redux";
 const CartContainer=(props)=>{
     const [countOrder,setCountOrder]=useState(1);
     const [order,setOrder]=useState([]);
-
+    // const {orders,userId}=props;
+console.log(props.detailProduct)
     // const handleOnclick=(product_id)=>{
     //     useEffect(async ()=>{
     //         let response=null;
@@ -30,7 +31,7 @@ const CartContainer=(props)=>{
     //     },[])}
 
     let CurrencyFormat = require('react-currency-format');
-    console.log(props.detailProduct.product_id,"container");
+    // console.log(props.detailProduct.product_id,"container");
 
 
 
@@ -54,7 +55,7 @@ const CartContainer=(props)=>{
     return(
         <Auxx>
             <div className={classes.Title}>
-                {order.ProductNamePr}
+                {props.detailProduct.ProductName}
             </div>
             <div className={classes.Color}>
                 <span className={classes.Dot} style={{backgroundColor:"gray"}}></span>
@@ -76,7 +77,7 @@ const CartContainer=(props)=>{
                 <i className="fa fa-floppy-o" aria-hidden="true" ></i>
 
 
-                {order.ProductCount === 1
+                {props.detailProduct.number_product === 1
                     ? <span >تنها یک عدد در انبار باقی مانده است  </span>
                     : <span > موجود در انبار  </span>
 
@@ -118,20 +119,22 @@ const CartContainer=(props)=>{
                 {/*</Button>*/}
 
                 <div  className={classes.Price} >
-                    {order.ProductOff  === 1
-                        ?  <h2><span >  قیمت با تخفیف
-                                    <CurrencyFormat value={countOrder * order.OffPrice} displayType={'text'} thousandSeparator={true} />
+                    {/*{order.ProductOff  === 1*/}
+                    {/*    ?  <h2><span >  قیمت با تخفیف*/}
+                    {/*                <CurrencyFormat value={countOrder * order.OffPrice} displayType={'text'} thousandSeparator={true} />*/}
 
-                            {countOrder * order.OffPrice}
+                    {/*        {countOrder * order.OffPrice}*/}
+                    {/*    </span> </h2>*/}
+                    {/*    : */}
+                        <h2><span >
+                            <CurrencyFormat value={countOrder * props.detailProduct.ProductPrice} displayType={'text'} thousandSeparator={true} />
                         </span> </h2>
-                        :  <h2><span >
-                            <CurrencyFormat value={countOrder * order.ProductPrice} displayType={'text'} thousandSeparator={true} />
-                        </span> </h2>
-                    }
+                    {/*}*/}
                 </div>
             </div>
         </Auxx>
     )
 }
 
-export default (CartContainer);
+
+export default  (CartContainer);

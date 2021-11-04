@@ -1,6 +1,6 @@
 import React from "react";
 import classes from './LeftMenu.module.scss';
-import NavigationItem from "../../../Layout/Header/NavigationItems/Navigationitem/navigationitem";
+import NavigationItem from "../../../Header/NavigationItems/Navigationitem/navigationitem";
 
 const LeftMenu=(props)=>{
     const {items=[]}=props

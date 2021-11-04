@@ -1,0 +1,53 @@
+@import '../../../../../assets/css/desktop/variables';
+
+
+.Cart{
+  display:flex;
+}
+.CartBuy{
+  width:95%;
+  margin:calcLen(10);
+  border:calcLen(1) solid darkgray;
+  border-radius:calcLen(5);
+  padding:calcLen(10);
+}
+
+.AccountInfo{
+  border-radius:calcLen(5);
+  border:calcLen(1) solid darkgray;
+}
+
+.Title{
+  color:black;
+  display:flex;
+  justify-content:space-between;
+  padding:calcLen(5);
+}
+.Title i{
+  font-size:calcFont(18);
+}
+.value{
+  color:dimgray;
+}
+.Items{
+  display:flex;
+  flex-direction:column;
+}
+
+.EditButton{
+ text-align:left;
+  font-size:calcFont(25);
+  margin-top:calcLen(12);
+  margin-left:calcLen(12);
+}
+.Info{
+  margin-top:calcLen(15);
+}
+.Info input{
+  margin-right:calcLen(15);
+  border:solid calcLen(1) slategray;
+  border-radius:calcLen(5);
+}
+.Info div{
+  margin-top:calcLen(10);
+}

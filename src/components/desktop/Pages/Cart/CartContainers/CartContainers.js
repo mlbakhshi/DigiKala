@@ -8,6 +8,9 @@ import {connect} from "react-redux";
 const CartContainers=(props)=>{
     console.log(props);
 const [orders,setOrders]=useState();
+    const {userId}=props;
+    console.log(orders)
+
     const {count}=props;
 
     useEffect(async ()=>{
@@ -43,7 +46,14 @@ console.log(orders);
        </Auxx>
     )
 }
+const mapStateToProps  = (state) => {
+    console.log(state,"dfgfgdfgfgdfg");
+    return {
 
+        // orders: state.data.cntOrder.userprofile,
+        userId:state.data.auth.userprofile,
+        // counter:state.data.cntOrder.count
+    }
+}
 
-
-export default (CartContainers);
+export default  connect(mapStateToProps, null)(CartContainers);

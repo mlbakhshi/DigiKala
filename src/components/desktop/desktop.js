@@ -20,9 +20,9 @@ import Main from "./Pages/main/main";
 import Login from "./Logn/Login";
 import {useReduxContext} from "react-redux/lib/hooks/useReduxContext";
 import Basket from "./Pages/Basket/basket";
-import Profile from "./Pages/Profile/Myprofile";
-import MyProfile from "./Pages/Profile/Myprofile";
-import WaitingPayment from "./Pages/Profile/LeftMenu/WaitingPayment/WaitingPayment";
+import MyProfile from "./Layout/MyProfile/Profile/Myprofile";
+import account from "./Layout/MyProfile/Account/account";
+import Logout from "./Layout/MyProfile/Logout/logout";
 
 const Desktop = (props) => {
 
@@ -53,6 +53,8 @@ const Desktop = (props) => {
                     <Route exact path="/Login"   component={Login} />
                     <Route exact path="/basket"   component={Basket} />
                     <Route exact path="/profile"   component={MyProfile} />
+                    <Route exact path="/account"   component={account} />
+                    <Route exact path="/logout"   component={Logout} />
 
                 </Switch>
             </BrowserRouter>

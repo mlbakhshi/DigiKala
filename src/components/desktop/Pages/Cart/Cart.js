@@ -10,8 +10,7 @@ import Login from "../../Logn/Login";
 import {connect} from "react-redux";
 import {Modal} from "react-bootstrap";
 import {Button} from "bootstrap";
-// import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
-// import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
+
 
 
 const Cart=(props)=>{
@@ -66,7 +65,9 @@ const Cart=(props)=>{
                     <Toolbar/>
                     <div className={classes.Cart}>
                         <section className={classes.CartContainers}>
-                            <CartContainers userId={userId}/>
+                            {/*<CartContainers userId={userId}/>*/}
+
+                            محصول ثبت شد
                         </section>
                         <aside className={classes.CartBuy}>
                             <CartBuy/>
@@ -77,7 +78,22 @@ const Cart=(props)=>{
             )
         }
         else {
-            console.log("قبلا خریداری شده")
+            return (
+                <Auxx>
+                    <Toolbar/>
+                    <div className={classes.Cart}>
+                        <section className={classes.CartContainers}>
+                            {/*<CartContainers userId={userId}/>*/}
+
+                            قبلا خریداری شده
+                        </section>
+                        <aside className={classes.CartBuy}>
+                            <CartBuy/>
+                        </aside>
+                    </div>
+                    <Footer/>
+                </Auxx>
+            )
         }
 
 

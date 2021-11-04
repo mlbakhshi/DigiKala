@@ -2,16 +2,17 @@ import React, {useEffect, useState} from "react";
 import classes from './Myprofile.module.scss';
 import RightMenu from "./RightMenu/RightMenu";
 import LeftMenu from "./LeftMenu/LeftMenu";
-import Toolbar from "../../Layout/Header/toolbar/toolbar";
-import Footer from "../../Layout/Footer/footer";
+import Toolbar from "../../Header/toolbar/toolbar";
+import Footer from "../../Footer/footer";
 import {connect} from "react-redux";
 import WaitingPayment from "./LeftMenu/WaitingPayment/WaitingPayment";
 import Processing from "./LeftMenu/Processing/Processing";
 import DeliverProcess from "./LeftMenu/DeliverProcess/DeliverProcess";
-import {AllOrders} from "../../../../redux/data/auth/apiFunction";
-import {loginAuthSuccess} from "../../../../redux/data/auth/actions";
-import {WaitOrder} from "../../../../redux/data/ordersCount/actions";
-import Login from "../../Logn/Login";
+import {AllOrders} from "../../../../../redux/data/auth/apiFunction";
+import {loginAuthSuccess} from "../../../../../redux/data/auth/actions";
+import {WaitOrder} from "../../../../../redux/data/ordersCount/actions";
+import Login from "../../../Logn/Login";
+import Account from "../Account/account";
 
 
 
@@ -20,13 +21,12 @@ const MyProfile=(props)=>{
     const [leftMenu,setLeftMenu]=useState(0);
     const [id,setId]=useState();
 
-// setId(userId);
     console.log(userId);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(async ()=>{
         //fetch orders from DB
         let checkOrders=null;
-        console.log(userId,'profileprofileprofile');
+
         try{
             checkOrders = await AllOrders(userId);
         }
@@ -37,7 +37,7 @@ const MyProfile=(props)=>{
         console.log(checkOrders);
             setId(checkOrders.data)
             console.log(id);
-        ACTION_Orders_SUCCESS(checkOrders.data)
+       console.log( ACTION_Orders_SUCCESS(checkOrders.data))
         }
     },[]);
 
@@ -49,7 +49,7 @@ const MyProfile=(props)=>{
     const leftMenuItems=[
         {onClick:(event)=>{onclickLeftMenu(event,1)},children:"در انتظار پرداخت"},
         {onClick:(event)=>{onclickLeftMenu(event,2)},children:" در حال پردازش"},
-        {onClick:(event)=>{onclickLeftMenu(event,3)},children:"تحویل شده"}
+        {onClick:(event)=>{onclickLeftMenu(event,3)},children:"تحویل شده"},
     ]
     let component;
     if(leftMenu===1){
@@ -58,9 +58,10 @@ const MyProfile=(props)=>{
     else if(leftMenu===2){
         component=<Processing />
     }
-    else{
+    else if(leftMenu===3){
         component=<DeliverProcess />
     }
+
     console.log(auth);
     if(auth){
         return(

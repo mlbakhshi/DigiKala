@@ -21,6 +21,8 @@ import { RiPencilLine } from "react-icons/ri";
 //import sidebar css from react-pro-sidebar module and our custom css
 import "react-pro-sidebar/dist/css/styles.css";
 import "./RightMenu.scss";
+import {Link} from "react-router-dom";
+import account from "../../Account/account";
 
 
 const RightMenu = () => {
@@ -55,11 +57,22 @@ const RightMenu = () => {
                     </SidebarHeader>
                     <SidebarContent>
                         <Menu iconShape="square">
-                            <MenuItem active={true} icon={<FaMobile />}>
+                            <Link to='/profile'>
+                            <MenuItem
+                                // primaryText="Profile"
+                                // active={true}
+                                icon={<FaMobile />}>
                                 سفارش های من
                             </MenuItem>
-                            <MenuItem icon={<FaRegComment />}>نظرات</MenuItem>
-                            <MenuItem icon={<FaRegUser />}>اطلاعات حساب</MenuItem>
+                            </Link>
+                            {/*<MenuItem icon={<FaRegComment />}>نظرات</MenuItem>*/}
+                          <Link to='/account'>
+                              <MenuItem
+                                  icon={<FaRegUser />}>
+                                  اطلاعات حساب
+                              </MenuItem>
+                          </Link>
+
                             <MenuItem icon={<FiLogOut />}>خروج</MenuItem>
                         </Menu>
                     </SidebarContent>
