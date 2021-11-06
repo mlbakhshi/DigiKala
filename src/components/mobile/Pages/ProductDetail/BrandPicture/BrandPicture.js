@@ -2,15 +2,16 @@ import React from 'react';
 import classes from './BrandPicture.module.scss';
 import Auxx from "../../../../../hoc/Auxx/Auxx";
 import PicProduct from './../../../../../assets/images/mobilePics/Poco F3.jpg';
-const BrandPicture=()=>{
+const BrandPicture=(props)=>{
+    console.log(props.detail);
     return(
         <Auxx>
             <div className={classes.Title}>
                 <span>
-                    گوشی موبایل شیائومی مدل POCO X3 Pro M2102J20SG دو سیم‌ کارت ظرفیت 256 گیگابایت و 8 گیگابایت رم
+ {props.detail.ProductNamePr}
                 </span>
                 <div className={classes.DesEnglish}>
-                    Xiaomi POCO X3 Pro M2102J20SG Dual SIM 256GB And 8GB RAM Mobile Phone
+                    {props.detail.ProductNameEn}
                 </div>
                 <div className={classes.ProductPic}>
                     <img src={PicProduct} />

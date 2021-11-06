@@ -5,7 +5,7 @@ import NavigationFooterItems from "./NavigationFooteritem/NavigationFooter/Navig
 import DownloadApp from './DownloadApp/downloadApp';
 import Symbols from "./Symbols/symbols";
 import digikalaPrLogo from '../../../../assets/SVG/dg pr.png';
-import SpecialServices from "../../../desktop/Layout/Footer/SpecialServices/SpecialServices";
+import SpecialServices from "../../../mobile/Layout/Footer/SpecialServices/SpecialServices";
 const Footer=()=>{
     return(
         <div className={classes.Footer}>
@@ -28,9 +28,9 @@ const Footer=()=>{
                 <Symbols />
             </div>
             <hr style={{color:"#ddd6d6"}} />
-            <div className={classes.SpecialServices}>
-                <SpecialServices  />
-            </div>
+            {/*<div className={classes.SpecialServices}>*/}
+            {/*    <SpecialServices  />*/}
+            {/*</div>*/}
         </div>
     )
 }

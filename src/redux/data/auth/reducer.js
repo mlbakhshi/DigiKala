@@ -17,6 +17,7 @@ export const authReducer = (state = initialState, action) => {
             return {
                 ...state,
                 userprofile: null,
+                userdata:null,
                 isLogin: false,
                 status: Status.STATUS_SUCCESS,
                 message: "",

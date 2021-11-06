@@ -3,25 +3,30 @@ import '../../../../../assets/icon/style.css';
 import classes from './Login.module.scss';
 import {Link, NavLink} from "react-router-dom";
 import {connect} from "react-redux";
-import {SuspendProducts} from "../../../../../redux/data/auth/apiFunction";
+import {AllOrders, SuspendProducts} from "../../../../../redux/data/auth/apiFunction";
 import {Dropdown} from "react-bootstrap";
+import {loginAuthSuccess} from "../../../../../redux/data/auth/actions";
+import {WaitOrder} from "../../../../../redux/data/ordersCount/actions";
 
 const Login=(props)=>{
-    const { auth,userId,counter }  = props;
-    // const [numOrders,useNumOrder]=useState();
-    // useEffect(async ()=>{
-    //     let response=null;
-    //     try {
-    //
-    //         response=await SuspendProducts(userId);
-    //     }catch (e){
-    //         console.log('Error')
-    //     }
-    //     // if(response?.success===true) {
-    //     console.log(response)
-    //
-    //     // }
-    // },[]);
+    const { auth,userId,counter,orders,ACTION_Orders_SUCCESS }  = props;
+
+    useEffect(async ()=>{
+        //fetch orders from DB
+        let checkOrders=null;
+
+        try{
+            checkOrders = await AllOrders(userId);
+        }
+        catch (e){
+            console.log('Error')
+        }
+        if(checkOrders?.success===true){
+            console.log(checkOrders);
+            console.log( ACTION_Orders_SUCCESS(checkOrders.data))
+            ACTION_Orders_SUCCESS(checkOrders.data);
+        }
+    },[]);
 
     if(!auth) {
         return (
@@ -38,7 +43,7 @@ const Login=(props)=>{
         )
     }
     else {
-        console.log(userId);
+        console.log(orders);
         return (
             <div className={classes.LoginBag}>
                 <div className={classes.Login}>
@@ -57,7 +62,7 @@ const Login=(props)=>{
                 <div className={classes.Cart}>
                     <Link to={"/basket"}>
                     <div className={classes.CountNumber}>
-                        {counter}
+                        {orders.length}
                     </div>
                     <span className="icon-basket" style={{fontSize: "20px"}}></span>
                     </Link>
@@ -73,7 +78,20 @@ const mapStateToProps  = (state) => {
 
         auth: state.data.auth.isLogin,
         userId:state.data.auth.userprofile,
-        counter:state.data.cntOrder.count
+        counter:state.data.cntOrder.count,
+        orders: state.data.cntOrder.userprofile,
+
     }
 }
-export default connect(mapStateToProps, null)(Login);
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+
+        // dispatching actions returned by action creators
+        ACTION_login_SUCCESS: (data) => dispatch(loginAuthSuccess(data)),
+        ACTION_Orders_SUCCESS: (data) => dispatch(WaitOrder(data)),
+        // reset: () => dispatch(reset()),
+
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

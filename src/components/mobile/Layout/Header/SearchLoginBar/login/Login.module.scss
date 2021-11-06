@@ -27,3 +27,32 @@
     padding-left: calcLen(6);
     margin-left: calcLen(15);
 }
+.Cart Link{
+    text-decoration:none;
+}
+.NotLogin {
+    font-size:calcFont(11);
+    display:flex;
+    margin-top:calcLen(4);
+
+}
+.NotLogin i{
+    transform:rotate(180deg);
+    margin-left:calcLen(2);
+}
+.CountNumber{
+    display:flex;
+    color:black;
+    text-decoration:none;
+
+}
+.OrderCount{
+    background-color: red;
+    border-radius: 50%;
+    width: calcLen(15);
+    height: calcLen(15);
+    font-size:calcFont(10);
+    text-align: center;
+    align-items: center;
+    color: white;
+}

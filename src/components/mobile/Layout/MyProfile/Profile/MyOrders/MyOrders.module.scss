@@ -1,0 +1,15 @@
+@import '../../../../../../assets/css/mobile/variables';
+
+
+.Cart{
+  display:flex;
+  flex-direction:column;
+}
+.CartBuy{
+  width:95%;
+  margin:calcLen(10);
+  border:calcLen(1) solid darkgray;
+  border-radius:calcLen(5);
+  padding:calcLen(10);
+  font-size:calcFont(12);
+}

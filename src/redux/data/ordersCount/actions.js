@@ -1,10 +1,10 @@
 import * as Actions from './actionTypes'
 
 // Action for count orders
-export const incrementOrder = (data) => {
+export const incrementOrder = () => {
     return {
         type: Actions.ACTION_Count_Order_INCREMENT,
-        data
+
     }
 }
 
@@ -25,6 +25,12 @@ export const ProcessOrder = (data) => {
 export const DeliverOrder = (data) => {
     return {
         type: Actions.ACTION_Deliver_Order,
+        data
+    }
+}
+export const LogoutOrder = (data) => {
+    return {
+        type: Actions.ACTION_Logout_Order,
         data
     }
 }

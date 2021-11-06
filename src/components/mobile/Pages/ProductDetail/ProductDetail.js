@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import classes from './ProductDetail.module.scss';
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 import Auxx from "../../../../hoc/Auxx/Auxx";
@@ -12,14 +12,38 @@ import Pay from "../../../../assets/SVG/2.png";
 import Allday from "../../../../assets/SVG/3.png";
 import Return from "../../../../assets/SVG/4.png";
 import Orginal from "../../../../assets/SVG/5.png";
-const ProductDetail=()=>{
+import {DetailProduct} from "../../../../redux/data/auth/apiFunction";
+const ProductDetail=(props)=>{
+    console.log(props);
+    const [product,setProduct]=useState([]);
+    let IDD=props.match.params.id;
+
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    useEffect(async ()=>{
+
+        let response=null;
+        try {
+            console.log(IDD);
+            response=await DetailProduct(IDD);
+        }catch (e){
+            console.log('Error')
+        }
+        if(response?.success===true) {
+            console.log(response.data)
+            setProduct(response.data)
+            console.log(response.data)
+        }
+
+    },[])
+
     return(
         <Auxx>
             <Toolbar />
             <article className={classes.dataProduct}>
 
                 <section className={classes.picGallery}>
-                    <BrandPicture />
+                    <BrandPicture detail={product} />
                 </section>
                 <section className={classes.Notification}>
                     <div className={classes.Alamat}>
@@ -33,7 +57,7 @@ const ProductDetail=()=>{
                     </div>
                 </section>
                 <section className={classes.Buy}>
-                    <Buy />
+                    <Buy detail={product}/>
                 </section>
                 <section className={classes.FreeSend}>
                     <div className={classes.Send}>

@@ -4,28 +4,30 @@
 .downloadApp{
   display: flex;
   flex-direction:column;
-  height: calcLen(75);
+  //height: calcLen(75);
   width: 98%;
-  padding-left: calcLen(10);
+  //padding-left: calcLen(10);
   padding-top: calcLen(10);
 }
 .App{
-  margin-left: calcLen(10);
+  //margin-left: calcLen(15);
   margin-top:calcLen(10);
+  //width:25%;
 }
+
 .Smile{
   width:calcLen(40);
-  margin-right: calcLen(14);
+  //margin-right: calcLen(14);
   border-radius: calcLen(10);
 }
 .DownLoad{
- margin-right:calcLen(10);
+ //margin-right:calcLen(10);
   //color:white  ;
   font-size:calcFont(16);
 }
 .DownlaodLogo{
- margin-right:auto;
+ //margin-right:auto;
   display:flex;
   margin-top:calcLen(10);
-  //flex-wrap:wrap;
+  flex-direction:column;
 }

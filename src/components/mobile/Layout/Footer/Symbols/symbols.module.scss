@@ -6,7 +6,7 @@
     flex-direction:column;
     margin-top: calcLen(50);
     margin-left: calcLen(20);
-    order: 2;
+    //order: 2;
 }
 .PicSymbols{
     display: flex;
@@ -29,15 +29,15 @@
 }
 .Picture{
     vertical-align: middle;
-    margin-left: auto;
-    margin-right: auto;
+    //margin-left: auto;
+    //margin-right: auto;
     display: block;
     margin-top: calcLen(10);
 }
 .PicDiv{
     border-radius: calcLen(10);
     //border: solid #bab7b7 calcLen(1);
-    margin-left: calcLen(10);
-    width:calcLen(100);
-    height: calcLen(100);
+    //margin-left: calcLen(10);
+    //width:calcLen(100);
+    //height: calcLen(100);
 }

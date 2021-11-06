@@ -1,0 +1,23 @@
+@import '../../../../../../assets/css/mobile/variables';
+
+
+.NavigationItems {
+  margin-top: calcLen(10);
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 100%;
+  font-size:calcFont(8);
+}
+
+@media (min-width: calcLen(500)) {
+  .NavigationItems {
+    flex-flow: row;
+  }
+}
+.LeftSide li{
+ font-size:calcFont(8);
+}
+

@@ -6,7 +6,13 @@ import classes from "../../App.module.css";
 import ProductDetail from "../mobile/Pages/ProductDetail/ProductDetail";
 import Cart from "../mobile/Pages/Cart/Cart";
 import Main from "../mobile/Pages/main/main";
-import Login from "./Layout/Header/SearchLoginBar/login/Login";
+import Basket from "../mobile/Pages/Basket/basket";
+import MyProfile from "../mobile/Layout/MyProfile/Profile/Myprofile";
+import account from "../mobile/Layout/MyProfile/Account/account";
+import Logout from "../mobile/Layout/MyProfile/Logout/logout";
+import Login from "./Logn/Login";
+import MyOrders from "./Layout/MyProfile/Profile/MyOrders/MyOrders";
+import Account from "./Layout/MyProfile/Profile/Account/account";
 // import {checkLogin, isLogin} from "../../common/helpers/authHelper";
 // import LoadingIndicator from "../../common/components/loadingIndicator/loadingIndicator";
 // import Helmet from "react-helmet";
@@ -86,10 +92,16 @@ const Mobile = (props) => {
             {/*<Layout>*/}
             <BrowserRouter>
                 <Switch>
-                    <Route path="/detail" component={ProductDetail} />
-                    <Route path="/cart" component={Cart} />
+                    <Route exact path="/detail/:id"  component={ProductDetail}  />
+                    <Route exact path="/cart/:id"    component={Cart} />
                     <Route path="/" exact component={Main} />
-                    <Route path="/Login" exact component={Login} />
+                    <Route exact path="/Login"   component={Login} />
+                    <Route exact path="/basket"   component={Basket} />
+                    <Route exact path="/profile"   component={MyProfile} />
+                    <Route exact path="/account"   component={account} />
+                    <Route exact path="/logout"   component={Logout} />
+                    <Route exact path="/MyOrders"   component={MyOrders} />
+                    <Route exact path="/Account"   component={Account} />
 
                 </Switch>
             </BrowserRouter>

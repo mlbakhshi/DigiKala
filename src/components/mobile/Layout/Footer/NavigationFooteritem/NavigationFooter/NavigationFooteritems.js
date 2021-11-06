@@ -53,7 +53,7 @@ const NavigationFooterItems=(props)=>{
         </div>
 
             <div className={classes.Nav} >
-                <div style={{marginLeft:"auto"}}>
+                <div style={{marginLeft:"25px"}}>
                     با ما همراه باشید
                 </div>
                 <NavigationFooterItem link="/orders">

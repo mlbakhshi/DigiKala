@@ -13,18 +13,23 @@ const downloadApp=()=>{
                 دانلود اپلیکیشن دیجی کالا
             </div>
             <div className={classes.DownlaodLogo} >
-                <div className={classes.App} >
-                    <img src={googlePlay} alt="Google Play"/>
+                <div style={{display:"flex",justifyContent:"center"}}>
+                    <div className={classes.App} >
+                        <img src={googlePlay} alt="Google Play"/>
+                    </div>
+                    <div className={classes.App} >
+                        <img src={bazar} alt="Cafe Bazar"  />
+                    </div>
                 </div>
-                <div className={classes.App} >
-                    <img src={bazar} alt="Cafe Bazar"  />
-                </div>
-                <div className={classes.App} >
-                    <img src={myket} alt="Myket"  />
-                </div>
-                <div className={classes.App} >
-                    <img src={sib} alt="Sib App" />
-                </div>
+               <div style={{display:"flex",justifyContent:"center"}}>
+                   <div className={classes.App} >
+                       <img src={myket} alt="Myket"  />
+                   </div>
+                   <div className={classes.App} >
+                       <img src={sib} alt="Sib App" />
+                   </div>
+               </div>
+
             </div>
 
 

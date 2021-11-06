@@ -6,9 +6,22 @@ import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
 // Be sure to include styles at some point, probably during your bootstraping
 import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
 import Auxx from "../../../../../hoc/Auxx/Auxx";
+import {Link} from "react-router-dom";
+import {incrementOrder} from "../../../../../redux/data/ordersCount/actions";
+import {connect} from "react-redux";
 
 // import {Button} from "bootstrap";
-const Buy=()=>{
+const Buy=(props)=>{
+    const {increment,counter}=props;
+    let CurrencyFormat = require('react-currency-format');
+    let price;
+    console.log(props);
+    if(props.detail.ProductOff==1){
+        price=props.detail.OffPrice
+    }
+    else{
+        price=props.detail.ProductPrice;
+    }
     return(
         <Auxx>
             <div>
@@ -32,7 +45,7 @@ const Buy=()=>{
             <hr style={{width:"90%"}}/>
 
             <div className={classes.Guarantee}>
-                <i className="fa fa-check-square"  ></i>
+                <i className="fa fa-check-square-o"></i>
                 <span className={classes.EgtheenMonth}>
                                     گارانتی 18 ماهه دیجی کالا
                 </span>
@@ -59,13 +72,16 @@ const Buy=()=>{
 
             <div>
                 <div className={classes.Price}>
-                    6895000 تومان
+                    <CurrencyFormat value={price} displayType={'text'} thousandSeparator={true} />
+                     تومان
                 </div>
 
                 <div className="d-grid gap-2" >
-                    <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}}>
-                        افزودن به سبد خرید
-                    </Button>
+                    <Link to={`/cart/${props.detail.ID}`} >
+                        <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}} OnClick={increment}>
+                            افزودن به سبد خرید
+                        </Button>
+                    </Link>
                 </div>
 
 
@@ -73,4 +89,18 @@ const Buy=()=>{
         </Auxx>
     )
 }
-export default Buy;
+
+const mapStateToProps = (state) => {
+    return {
+        counter: state.data.cntOrder.count,
+    };
+};
+const mapDispatchToProps = (dispatch) => {
+    return {
+        increment: () => dispatch(incrementOrder()),
+        // reset: () => dispatch(reset())
+    };
+};
+export default
+connect(mapStateToProps, mapDispatchToProps)
+(Buy);

@@ -9,3 +9,7 @@ export const ACTION_Process_Order =
 
 export const ACTION_Deliver_Order =
     "data/ordersCount/DeliverOrder";
+
+export const ACTION_Logout_Order =
+    "data/ordersCount/LogoutOrder";
+

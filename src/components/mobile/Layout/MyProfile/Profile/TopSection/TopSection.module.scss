@@ -1,0 +1,51 @@
+@import '../../../../../../assets/css/mobile/variables';
+
+
+.Cart{
+  display:flex;
+  flex-direction:column;
+  margin:calcLen(15);
+  border:solid calcLen(1) darkgray;
+  border-radius:calcLen(10);
+  padding:calcLen(2);
+  width:90%;
+  font-size:calcFont(10);
+}
+.UserPic svg{
+  width:calcLen(50);
+  height:calcLen(50);
+}
+.UserPic{
+  display:flex;
+  padding:calcLen(2);
+}
+.Info{
+  display:flex;
+  flex-direction:column;
+}
+.Phone{
+  font-size:calcFont(12);
+  color:dimgray;
+}
+.BagCurrency{
+  padding:calcLen(5);
+  display:flex;
+  justify-content:space-between;
+}
+.BagCurrency span{
+  font-size:calcFont(10);
+}
+.Exit {
+  text-decoration: none;
+  color: #00bfd6;
+  border: solid calcLen(1) #00bfd6;
+  border-radius: calcLen(5);
+  width: 20%;
+  margin: auto;
+  text-align: center;
+
+}
+.Exit Link {
+  text-underline:none;
+  text-decoration: none;
+}

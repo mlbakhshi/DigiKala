@@ -5,6 +5,7 @@
   "dependencies": {
     "@brainhubeu/react-carousel": "^2.0.4",
     "@farbenmeer/react-spring-slider": "^1.5.2",
+    "@fortawesome/react-fontawesome": "^0.1.16",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",

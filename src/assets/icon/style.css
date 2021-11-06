@@ -122,6 +122,9 @@
 .icon-basket:before {
   content: "\e93a";
 }
+.icon-login-arrow:before {
+  content: "\ea40";
+}
 .icon-location:before {
   content: "\e947";
 }

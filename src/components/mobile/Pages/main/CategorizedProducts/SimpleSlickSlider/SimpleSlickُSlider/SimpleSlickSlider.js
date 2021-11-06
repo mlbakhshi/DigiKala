@@ -41,12 +41,14 @@ const SimpleSlickSlider=(props)=> {
         rebuildOnUpdate: true,
         shouldSwiperUpdate: true
     }
+    console.log(props.Products)
     let productInformation=props.Products.map(productInfo=>
         <SwiperSlide >
         <SimpleSliderComponent
-            mobilePic={productInfo.mobilePic}
-            title={productInfo.title}
-            price={productInfo.price}
+            id={productInfo.ID}
+            mobilePic={"C:/react/digikala/Upload/1624873752.jpg"}
+            title={productInfo.ProductTitle}
+            price={productInfo.ProductPrice}
 
         />
         </SwiperSlide>
