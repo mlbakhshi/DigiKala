@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import classes from './Myprofile.module.scss';
-import RightMenu from "./RightMenu/RightMenu";
 import LeftMenu from "./LeftMenu/LeftMenu";
 import Toolbar from "../../Header/toolbar/toolbar";
 import Footer from "../../Footer/footer";
@@ -12,7 +11,6 @@ import {AllOrders} from "../../../../../redux/data/auth/apiFunction";
 import {loginAuthSuccess} from "../../../../../redux/data/auth/actions";
 import {WaitOrder} from "../../../../../redux/data/ordersCount/actions";
 import Login from "../../../Logn/Login";
-import Account from "../Account/account";
 import TopSection from "./TopSection/TopSection";
 import MiddlePic from "./MiddlePic/MiddlePic";
 import BottomMenu from "../BottomMenu/BottomMenu";

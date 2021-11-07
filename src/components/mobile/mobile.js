@@ -8,7 +8,6 @@ import Cart from "../mobile/Pages/Cart/Cart";
 import Main from "../mobile/Pages/main/main";
 import Basket from "../mobile/Pages/Basket/basket";
 import MyProfile from "../mobile/Layout/MyProfile/Profile/Myprofile";
-import account from "../mobile/Layout/MyProfile/Account/account";
 import Logout from "../mobile/Layout/MyProfile/Logout/logout";
 import Login from "./Logn/Login";
 import MyOrders from "./Layout/MyProfile/Profile/MyOrders/MyOrders";
@@ -98,7 +97,6 @@ const Mobile = (props) => {
                     <Route exact path="/Login"   component={Login} />
                     <Route exact path="/basket"   component={Basket} />
                     <Route exact path="/profile"   component={MyProfile} />
-                    <Route exact path="/account"   component={account} />
                     <Route exact path="/logout"   component={Logout} />
                     <Route exact path="/MyOrders"   component={MyOrders} />
                     <Route exact path="/Account"   component={Account} />

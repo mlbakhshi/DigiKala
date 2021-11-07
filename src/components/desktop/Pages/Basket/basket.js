@@ -17,7 +17,7 @@ import {WaitOrder} from "../../../../redux/data/ordersCount/actions";
 
 
 const Basket=(props)=>{
-    const { auth,userId }  = props;
+    const { auth,userId,orders }  = props;
 
     // useEffect(async ()=>{
     //     //fetch orders from DB
@@ -37,7 +37,7 @@ const Basket=(props)=>{
     // },[]);
 
 
-    console.log(auth);
+    console.log(orders);
     if(auth)
     {
 
@@ -46,7 +46,7 @@ const Basket=(props)=>{
                     <Toolbar/>
                     <div className={classes.Cart}>
                         <section className={classes.CartContainers}>
-                            <CartContainers userId={userId}/>
+                            <CartContainers OrdersList={orders}/>
                         </section>
                         <aside className={classes.CartBuy}>
                             <CartBuy/>
@@ -71,7 +71,7 @@ const mapStateToProps  = (state) => {
     return {
         auth: state.data.auth.isLogin,
         userId:state.data.auth.userprofile,
-        orders: state.data.cntOrder.userprofile,
+        orders: state.data.cntOrder.orderProfile,
     }
 }
 

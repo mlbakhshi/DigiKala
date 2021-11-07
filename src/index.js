@@ -4,8 +4,6 @@ import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
-import DataReducer from "../src/redux/data/DataReducer";
-import {createStore} from 'redux';
 import {Provider} from "react-redux";
 
 import store from "./redux/store";

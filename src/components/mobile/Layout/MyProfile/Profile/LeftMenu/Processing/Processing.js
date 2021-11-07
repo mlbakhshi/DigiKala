@@ -60,7 +60,7 @@ const mapStateToProps  = (state) => {
     console.log(state,"dfgfgdfgfgdfg");
     return {
 
-        orders: state.data.cntOrder.userprofile,
+        orders: state.data.cntOrder.orderProfile,
         userId:state.data.auth.userprofile,
         // counter:state.data.cntOrder.count
     }

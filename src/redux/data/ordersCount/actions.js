@@ -34,3 +34,9 @@ export const LogoutOrder = (data) => {
         data
     }
 }
+export const DelOrder = (data) => {
+    return {
+        type: Actions.ACTION_Delete_Order,
+        data
+    }
+}

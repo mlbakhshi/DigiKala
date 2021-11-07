@@ -98,7 +98,7 @@ const mapStateToProps  = (state) => {
         auth: state.data.auth.isLogin,
         userId:state.data.auth.userprofile,
         counter:state.data.cntOrder.count,
-        orders: state.data.cntOrder.userprofile,
+        orders: state.data.cntOrder.orderProfile,
 
     }
 }

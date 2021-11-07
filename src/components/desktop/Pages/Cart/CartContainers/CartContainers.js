@@ -9,25 +9,30 @@ const CartContainers=(props)=>{
     console.log(props);
 const [orders,setOrders]=useState();
     const {userId}=props;
-    console.log(orders)
+    console.log(props.OrdersList)
 
     const {count}=props;
 
-    useEffect(async ()=>{
-        let response=null;
-        try {
-            response=await SuspendProducts(props);
-
-        }catch (e){
-            console.log('Error')
-        }
-        setOrders(response);
-console.log(orders);
-    },[]);
+//     useEffect(async ()=>{
+//         let response=null;
+//         try {
+//             response=await SuspendProducts(props);
+//
+//         }catch (e){
+//             console.log('Error')
+//         }
+//         setOrders(response);
+// console.log(orders);
+//     },[]);
+    Object.keys(props.OrdersList).reduce((array, key) => {
+        return [...array, {key: props.OrdersList[key]}]
+    }, [])
 
     let orderInformation=null;
-    if(orders) {
-        orderInformation = orders.map(orderInfo =>
+    if(props.OrdersList) {
+        orderInformation = Object.keys(props.OrdersList).reduce((array, key) => {
+            return [...array, {key: props.OrdersList[key]}]
+        }, []).map(orderInfo =>
             <div className={classes.CartContainers}>
                 <div className={classes.Image} >
                     <img src={image} />

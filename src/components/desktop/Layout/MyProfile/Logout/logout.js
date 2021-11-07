@@ -6,7 +6,7 @@ import {LogoutOrder} from "../../../../../redux/data/ordersCount/actions";
 
 
 const Logout = (props) => {
-    const { ACTION_logout_SUCCESS,ACTION_logout_ORDERS }  = props;
+    const { ACTION_logout_SUCCESS,ACTION_logout_ORDERS,auth }  = props;
     ACTION_logout_SUCCESS();
     ACTION_logout_ORDERS();
     // useEffect(() => {
@@ -24,7 +24,7 @@ const Logout = (props) => {
     // if (loginStatus.redirect) {
     //     return <Redirect to={loginStatus.redirect} push/>;
     // }
-
+console.log(auth)
     return (
         <div >
             <Redirect to="/" />
@@ -33,6 +33,14 @@ const Logout = (props) => {
 
 };
 
+const mapStateToProps  = (state) => {
+    console.log(state,"dfgfgdfgfgdfg");
+    return {
+
+        auth: state.data.auth.isLogin,
+
+    }
+}
 const mapDispatchToProps = dispatch => {
     return {
         ACTION_logout_SUCCESS: (data) => dispatch(logoutAuthSuccess(data)),
@@ -40,5 +48,5 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default   connect(null,mapDispatchToProps)(Logout);
+export default   connect(mapStateToProps,mapDispatchToProps)(Logout);
 

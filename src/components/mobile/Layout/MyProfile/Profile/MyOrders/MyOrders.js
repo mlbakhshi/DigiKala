@@ -4,12 +4,13 @@ import {AllOrders} from "../../../../../../redux/data/auth/apiFunction";
 import WaitingPayment from "../LeftMenu/WaitingPayment/WaitingPayment";
 import Processing from "../LeftMenu/Processing/Processing";
 import DeliverProcess from "../LeftMenu/DeliverProcess/DeliverProcess";
-import LeftMenu from "../../../../../desktop/Layout/MyProfile/Profile/LeftMenu/LeftMenu";
 import {loginAuthSuccess} from "../../../../../../redux/data/auth/actions";
 import {WaitOrder} from "../../../../../../redux/data/ordersCount/actions";
 import {connect} from "react-redux";
 import Toolbar from "../../../Header/toolbar/toolbar";
 import Footer from "../../../Footer/footer";
+import {Link} from "react-router-dom";
+import LeftMenu from "../LeftMenu/LeftMenu";
 
 const MyOrders=(props)=>{
     const {auth,userId,ACTION_Orders_SUCCESS}=props;
@@ -62,6 +63,13 @@ const MyOrders=(props)=>{
         <div>
             <Toolbar />
             <section className={classes.CartBuy}>
+                <Link to={"/profile"}>
+                    <div>
+                        <i className='fa fa-arrow-right'></i>
+                        سفارشات من
+                    </div>
+                </Link>
+
                 <LeftMenu items={leftMenuItems} />
                 <section>
                     {component}

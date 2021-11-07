@@ -1,0 +1,26 @@
+@import '../../../../../assets/css/mobile/variables';
+
+
+.BottomMenu{
+  background-color:#ffffff;
+  width:90%;
+  border:solid calcLen(1) rgb(0 0 0 / 9%);
+  border-radius:calcLen(9);
+  margin: calcLen(15) auto auto;
+  padding-right:calcLen(15);
+  padding-bottom:calcLen(15);
+  padding-left:calcLen(15);
+
+}
+.BottomMenu a{
+  text-decoration:none;
+color:black;
+}
+
+.BottomMenu div{
+ padding-right:calcLen(20);
+ padding-left:calcLen(7);
+}
+.Sign{
+margin-right:auto;
+}

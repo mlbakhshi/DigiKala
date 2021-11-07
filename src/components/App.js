@@ -10,8 +10,8 @@ import {
     BreadcrumbsItem
 } from 'react-breadcrumbs-dynamic'
 
-// let AppDevice = require(`./desktop/desktop`);
-let AppDevice = require(`./mobile/mobile`);
+let AppDevice = require(`./desktop/desktop`);
+// let AppDevice = require(`./mobile/mobile`);
 
 
 function App() {

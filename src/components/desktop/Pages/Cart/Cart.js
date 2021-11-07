@@ -19,44 +19,45 @@ const Cart=(props)=>{
     const { auth,userId,ACTION_Orders_INCREMENT,ACTION_Orders_SUCCESS }  = props;
     let IDD=props.match.params.id;
     // const [product,setProduct]=useState([]);
-    const [orderProduct,setOrderProduct]=useState("false");
-    // useEffect(async ()=>{
-    //     let response=null;
-    //     try {
-    //         response=await DetailProduct(IDD);
-    //     }catch (e){
-    //         console.log('Error')
-    //     }
-    //     if(response?.success===true) {
-    //         console.log(response.data)
-    //         setProduct(response.data)
-    //         console.log(product)
-    //     }
-    // },[]);
-
+    const [orderProduct,setOrderProduct]=useState();
     useEffect(async ()=>{
-        let responseBasket=null;
+        let response=null;
         try {
-            responseBasket=await BuyProduct(IDD,userId);
+            response=await DetailProduct(IDD);
         }catch (e){
             console.log('Error')
         }
-        console.log(responseBasket);
-            if (responseBasket?.success === true) {
-                ACTION_Orders_INCREMENT();
-                if(responseBasket.data=="false"){
-                console.log(responseBasket.data.data)
-                setOrderProduct("true");
-                console.log(orderProduct)
+        if(response?.success===true) {
+            console.log(response.data)
+            {ACTION_Orders_SUCCESS(response.data)}
 
-                }
-                else{
-                    setOrderProduct("false");
-                    console.log(orderProduct);
-                }
-            }
-
+            // console.log(product)
+        }
     },[]);
+
+    // useEffect(async ()=>{
+    //     let responseBasket=null;
+    //     try {
+    //         responseBasket=await BuyProduct(IDD,userId);
+    //     }catch (e){
+    //         console.log('Error')
+    //     }
+    //     console.log(responseBasket);
+    //         if (responseBasket?.success === true) {
+    //             ACTION_Orders_INCREMENT();
+    //             if(responseBasket.data=="false"){
+    //             console.log(responseBasket.data.data)
+    //             setOrderProduct("true");
+    //             console.log(orderProduct)
+    //
+    //             }
+    //             else{
+    //                 setOrderProduct("false");
+    //                 console.log(orderProduct);
+    //             }
+    //         }
+    //
+    // },[]);
 
 
     console.log(auth);
@@ -115,7 +116,8 @@ const mapStateToProps  = (state) => {
     console.log(state.auth);
     return {
         auth: state.data.auth.isLogin,
-        userId:state.data.auth.userprofile
+        userId:state.data.auth.userprofile,
+        // orderProduct:state.data.cntOrder.orderProfile,
     }
 }
 
@@ -125,7 +127,7 @@ const mapDispatchToProps = (dispatch) => {
         // dispatching actions returned by action creators
         ACTION_login_SUCCESS: (data) => dispatch(loginAuthSuccess(data)),
         ACTION_Orders_SUCCESS: (data) => dispatch(WaitOrder(data)),
-        ACTION_Orders_INCREMENT: (data) => dispatch(incrementOrder(data)),
+        // ACTION_Orders_INCREMENT: (data) => dispatch(incrementOrder(data)),
         // reset: () => dispatch(reset()),
 
     }

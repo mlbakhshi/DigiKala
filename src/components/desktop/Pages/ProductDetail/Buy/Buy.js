@@ -7,13 +7,15 @@ import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
 import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
 import {Link, useHistory} from "react-router-dom";
 import {connect} from "react-redux";
-import {incrementOrder} from "../../../../../redux/data/ordersCount/actions";
+import {incrementOrder, WaitOrder} from "../../../../../redux/data/ordersCount/actions";
 
 const Buy=(props)=>{
     // console.log(props);
     // console.log( props.detailProduct.detailProduct.detailProduct.ID);
-const {increment,counter}=props;
+const {increment,counter,ACTION_Orders_SUCCESS}=props;
+const handleBuyProduct=()=>{
 
+}
 
     return(
         <div className={classes.Buy}>
@@ -79,6 +81,7 @@ const {increment,counter}=props;
                     <Link to={`/cart/${props.detailProduct.detailProduct.detailProduct.ID}`} >
                     <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}} OnClick={increment}>
                         افزودن به سبد خرید
+
                     </Button>
                     </Link>
                 </div>
@@ -95,6 +98,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         increment: () => dispatch(incrementOrder()),
+        ACTION_Orders_SUCCESS: (data) => dispatch(WaitOrder(data)),
         // reset: () => dispatch(reset())
     };
 };

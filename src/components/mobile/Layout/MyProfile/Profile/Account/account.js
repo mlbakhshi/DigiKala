@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from "react";
 import classes from './account.module.scss'
-import RightMenu from "../Profile/RightMenu/RightMenu";
-import Toolbar from "../../Header/toolbar/toolbar";
-import Footer from "../../Footer/footer";
+import Toolbar from "../../../Header/toolbar/toolbar";
+import Footer from "../../../Footer/footer";
 import {connect} from "react-redux";
-import {loginAuthSuccess} from "../../../../../redux/data/auth/actions";
-import {WaitOrder} from "../../../../../redux/data/ordersCount/actions";
-import Login from "../../../Logn/Login";
+import {loginAuthSuccess} from "../../../../../../redux/data/auth/actions";
+import {WaitOrder} from "../../../../../../redux/data/ordersCount/actions";
+import Login from "../../../../Logn/Login";
 import {Button, Col, Container, Modal, Row} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 
 
@@ -53,13 +53,15 @@ const Account=(props)=>{
                 <Toolbar/>
 
                 <div className={classes.Cart}>
-                    <aside className={classes.CartContainers}>
-                        <RightMenu/>
-                    </aside>
                     <section className={classes.CartBuy}>
-                        <span style={{color:"red"}}>
-                                                    ویرایش اطلاعات
-                        </span>
+                        <Link to={"/profile"}>
+                            <div>
+                                <i className='fa fa-arrow-right'></i>
+                              اطلاعات شخصی
+                            </div>
+                        </Link>
+
+
 
                         <Modal show={show} onHide={handleClose} style={{direction:"rtl"}}>
                             <Modal.Header closeButton>
@@ -67,30 +69,29 @@ const Account=(props)=>{
                             </Modal.Header>
                             <Modal.Body>
                                 <div className={classes.Info}>
-
-                                <div>
-                                    نام:
-                                    <input  name="fname" placeholder={userdata.FirstName}/>
-                                </div>
-                                <div>
-                                    نام خانوادگی:
-                                    <input name="lname" placeholder={userdata.LastName}/>
-                                </div>
-                                <div>
-                                    شماره موبایل:
-                                    <input name="mobile" placeholder={userdata.PhoneNumber}/>
-                                </div>
-                                <div>
-                                آدرس ایمیل:
-                                <input name="email" placeholder={userdata.email}/>
-                                </div>
+                                    <div>
+                                        نام:
+                                        <input  name="fname" placeholder={userdata.FirstName}/>
+                                    </div>
+                                    <div>
+                                        نام خانوادگی:
+                                        <input name="lname" placeholder={userdata.LastName}/>
+                                    </div>
+                                    <div>
+                                        شماره موبایل:
+                                        <input name="mobile" placeholder={userdata.PhoneNumber}/>
+                                    </div>
+                                    <div>
+                                        آدرس ایمیل:
+                                        <input name="email" placeholder={userdata.email}/>
+                                    </div>
                                 </div>
 
 
                             </Modal.Body>
                             <Modal.Footer>
                                 <Button onClick={handleSave}>
-                                   ذخیره تغییرات
+                                    ذخیره تغییرات
                                 </Button>
                                 <Button variant="secondary" onClick={handleClose}>
                                     بستن
@@ -100,6 +101,13 @@ const Account=(props)=>{
                         </Modal>
 
                         <section>
+                              <span style={{    color: "#030a16",
+                                  lineHeight: "1.375",
+                                  fontWeight: "700",
+                                  flexGrow: "1",
+                             }}>
+اطلاعات شخصی
+                        </span>
                             <Container>
                                 <Row>
                                     <Col sm style={{padding:"0"}}>
@@ -114,6 +122,7 @@ const Account=(props)=>{
                                                 {userdata.FirstName}
                                             </div>
                                         </div>
+                                        <hr />
 
                                     </Col>
                                     <Col sm style={{padding:"0"}}>
@@ -128,6 +137,7 @@ const Account=(props)=>{
                                                 {userdata.LastName}
                                             </div>
                                         </div>
+                                        <hr />
 
                                     </Col>
                                 </Row>
@@ -144,6 +154,7 @@ const Account=(props)=>{
                                                 {userdata.PhoneNumber}
                                             </div>
                                         </div>
+                                        <hr />
 
                                     </Col>
                                     <Col sm style={{padding:"0"}}>
@@ -158,6 +169,7 @@ const Account=(props)=>{
                                                 {userdata.email}
                                             </div>
                                         </div>
+                                        <hr />
 
                                     </Col>
                                 </Row>

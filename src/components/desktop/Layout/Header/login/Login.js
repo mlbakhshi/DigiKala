@@ -11,22 +11,22 @@ import {WaitOrder} from "../../../../../redux/data/ordersCount/actions";
 const Login=(props)=>{
     const { auth,userId,counter,orders,ACTION_Orders_SUCCESS }  = props;
 
-    useEffect(async ()=>{
-        //fetch orders from DB
-        let checkOrders=null;
-
-        try{
-            checkOrders = await AllOrders(userId);
-        }
-        catch (e){
-            console.log('Error')
-        }
-        if(checkOrders?.success===true){
-            console.log(checkOrders);
-            console.log( ACTION_Orders_SUCCESS(checkOrders.data))
-            ACTION_Orders_SUCCESS(checkOrders.data);
-        }
-    },[]);
+    // useEffect(async ()=>{
+    //     //fetch orders from DB
+    //     let checkOrders=null;
+    //
+    //     try{
+    //         checkOrders = await AllOrders(userId);
+    //     }
+    //     catch (e){
+    //         console.log('Error')
+    //     }
+    //     if(checkOrders?.success===true){
+    //         console.log(checkOrders);
+    //         console.log( ACTION_Orders_SUCCESS(checkOrders.data))
+    //         ACTION_Orders_SUCCESS(checkOrders.data);
+    //     }
+    // },[]);
 
     if(!auth) {
         return (
@@ -43,7 +43,7 @@ const Login=(props)=>{
         )
     }
     else {
-        console.log(orders);
+        console.log(counter);
         return (
             <div className={classes.LoginBag}>
                 <div className={classes.Login}>
@@ -62,7 +62,7 @@ const Login=(props)=>{
                 <div className={classes.Cart}>
                     <Link to={"/basket"}>
                     <div className={classes.CountNumber}>
-                        {orders.length}
+                        {counter}
                     </div>
                     <span className="icon-basket" style={{fontSize: "20px"}}></span>
                     </Link>
@@ -79,7 +79,7 @@ const mapStateToProps  = (state) => {
         auth: state.data.auth.isLogin,
         userId:state.data.auth.userprofile,
         counter:state.data.cntOrder.count,
-        orders: state.data.cntOrder.userprofile,
+        orders: state.data.cntOrder.orderProfile,
 
     }
 }

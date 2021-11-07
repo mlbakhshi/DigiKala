@@ -71,7 +71,7 @@ const mapStateToProps  = (state) => {
     return {
         auth: state.data.auth.isLogin,
         userId:state.data.auth.userprofile,
-        orders: state.data.cntOrder.userprofile,
+        orders: state.data.cntOrder.orderProfile,
     }
 }
 

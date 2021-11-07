@@ -4,6 +4,13 @@
 .LoginBag{
     display: flex;
 }
+
+.LoginBag a{
+    text-underline:none;
+    text-decoration: none;
+    color:black;
+}
+
 .Login
 {
     border-color: #decfcf;

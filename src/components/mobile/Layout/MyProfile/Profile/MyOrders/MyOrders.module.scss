@@ -11,5 +11,16 @@
   border:calcLen(1) solid darkgray;
   border-radius:calcLen(5);
   padding:calcLen(10);
-  font-size:calcFont(12);
+  font-size:calcFont(15);
+
+}
+.CartBuy a{
+  text-underline:none;
+  text-decoration: none;
+  color:black;
+
+}
+.CartBuy i{
+ margin-left:calcLen(5);
+
 }

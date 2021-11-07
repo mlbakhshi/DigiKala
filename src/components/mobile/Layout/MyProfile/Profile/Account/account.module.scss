@@ -1,4 +1,4 @@
-@import '../../../../../assets/css/desktop/variables';
+@import '../../../../../../assets/css/mobile/variables';
 
 
 .Cart{
@@ -6,12 +6,21 @@
 }
 .CartBuy{
   width:95%;
-  margin:calcLen(10);
-  border:calcLen(1) solid darkgray;
-  border-radius:calcLen(5);
+  margin:calcLen(20);
+  //border:calcLen(1) solid darkgray;
+  //border-radius:calcLen(5);
   padding:calcLen(10);
 }
+.CartBuy a{
+  text-underline:none;
+  text-decoration: none;
+  color:black;
+font-size:calcFont(18);
+}
+.CartBuy i{
+  margin-left:calcLen(5);
 
+}
 .AccountInfo{
   border-radius:calcLen(5);
   border:calcLen(1) solid darkgray;

@@ -2,16 +2,18 @@ import React, {useEffect, useState} from "react";
 import classes from './CartContainer.module.scss';
 import Auxx from "../../../../../../hoc/Auxx/Auxx";
 import supermarket from '../../../../../../assets/SVG/supermarket-svgrepo-com.svg';
-import {DeleteOrder, DetailProduct} from "../../../../../../redux/data/auth/apiFunction";
+import {DetailProduct} from "../../../../../../redux/data/auth/apiFunction";
 import {Link} from "react-router-dom";
 import {Button} from "react-bootstrap";
 import {connect} from "react-redux";
+import {DelOrder} from "../../../../../../redux/data/ordersCount/actions";
 
 const CartContainer=(props)=>{
+    const {ACTION_Orders_DELETE}=props;
     const [countOrder,setCountOrder]=useState(1);
     const [order,setOrder]=useState([]);
     // const {orders,userId}=props;
-console.log(props.detailProduct)
+    console.log(props)
     // const handleOnclick=(product_id)=>{
     //     useEffect(async ()=>{
     //         let response=null;
@@ -51,11 +53,13 @@ console.log(props.detailProduct)
     //     }
     //
     // },[]);
-
+const handleDelete=(id)=>{
+    ACTION_Orders_DELETE(id)
+    }
     return(
         <Auxx>
             <div className={classes.Title}>
-                {props.detailProduct.ProductName}
+                {props.detailProduct.key.ProductTitle}
             </div>
             <div className={classes.Color}>
                 <span className={classes.Dot} style={{backgroundColor:"gray"}}></span>
@@ -77,7 +81,7 @@ console.log(props.detailProduct)
                 <i className="fa fa-floppy-o" aria-hidden="true" ></i>
 
 
-                {props.detailProduct.number_product === 1
+                {props.detailProduct.key.ProductCount === 1
                     ? <span >تنها یک عدد در انبار باقی مانده است  </span>
                     : <span > موجود در انبار  </span>
 
@@ -112,29 +116,40 @@ console.log(props.detailProduct)
                     <div>
                         <i className="fa fa-trash" aria-hidden="true"></i>
                     </div>
-                    <span>
+                    {/*<button onClick={handleDelete(props.detailProduct.key.ID)}>*/}
+                         <span>
             حذف
         </span>
+                    {/*</button>*/}
+
                 </div>
                 {/*</Button>*/}
 
                 <div  className={classes.Price} >
-                    {/*{order.ProductOff  === 1*/}
-                    {/*    ?  <h2><span >  قیمت با تخفیف*/}
-                    {/*                <CurrencyFormat value={countOrder * order.OffPrice} displayType={'text'} thousandSeparator={true} />*/}
+                    {props.detailProduct.key.ProductOff  === 1
+                        ?  <h2><span >  قیمت با تخفیف
+                                    <CurrencyFormat value={countOrder * props.detailProduct.key.OffPrice} displayType={'text'} thousandSeparator={true} />
 
-                    {/*        {countOrder * order.OffPrice}*/}
-                    {/*    </span> </h2>*/}
-                    {/*    : */}
-                        <h2><span >
-                            <CurrencyFormat value={countOrder * props.detailProduct.ProductPrice} displayType={'text'} thousandSeparator={true} />
+                            {countOrder * order.OffPrice}
                         </span> </h2>
-                    {/*}*/}
+                        :
+                        <h2><span >
+                            <CurrencyFormat value={countOrder * props.detailProduct.key.ProductPrice} displayType={'text'} thousandSeparator={true} />
+                        </span> </h2>
+                    }
                 </div>
             </div>
         </Auxx>
     )
 }
+const mapDispatchToProps = (dispatch) => {
+    return {
 
+        // dispatching actions returned by action creators
+        ACTION_Orders_DELETE: (data) => dispatch(DelOrder(data)),
+        // reset: () => dispatch(reset()),
 
-export default  (CartContainer);
+    }
+}
+
+export default  connect(null,mapDispatchToProps)(CartContainer);

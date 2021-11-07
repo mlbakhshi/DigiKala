@@ -6,7 +6,7 @@
     box-sizing: border-box;
     display: block;
     width: 100%;
-    font-size: calcFont(8);
+    font-size: calcFont(12);
 }
 @media (min-width: calcLen(850)) {
     .NavigationItems a {
