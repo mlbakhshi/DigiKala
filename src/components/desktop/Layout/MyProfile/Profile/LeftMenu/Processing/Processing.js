@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from "react";
-// import classes from './WaitingProcess.module.scss';
+import React from "react";
 import classes from '../../../../../Pages/Cart/CartContainers/CartContainers.module.scss';
 import {loginAuthSuccess} from "../../../../../../../redux/data/auth/actions";
 import {connect} from "react-redux";
@@ -7,7 +6,7 @@ import image from "../../../../../../../assets/images/mobilePics/Poco F3.jpg";
 import CartContainer from "../../../../../Pages/Cart/CartContainers/CartContainer/CartContainer";
 
 const WaitingPayment=(props)=>{
-    const {orders,userId}=props;
+    const {orders}=props;
     let PackOrders=[];
     let j=0;
     console.log(orders);
@@ -50,8 +49,7 @@ const mapDispatchToProps = (dispatch) => {
 
         // dispatching actions returned by action creators
         ACTION_login_SUCCESS: (data) => dispatch(loginAuthSuccess(data)),
-        // decrement: () => dispatch(decrement()),
-        // reset: () => dispatch(reset()),
+
 
     }
 }
@@ -62,7 +60,7 @@ const mapStateToProps  = (state) => {
 
         orders: state.data.cntOrder.orderProfile,
         userId:state.data.auth.userprofile,
-        // counter:state.data.cntOrder.count
+
     }
 }
 

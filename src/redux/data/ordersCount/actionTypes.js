@@ -4,8 +4,8 @@ export const ACTION_Count_Order_INCREMENT =
 export const ACTION_Wait_Order =
     "data/ordersCount/WaitOrder";
 
-export const ACTION_Process_Order =
-    "data/ordersCount/ProcessOrder";
+export const ACTION_All_Order =
+    "data/ordersCount/AllOrder";
 
 export const ACTION_Deliver_Order =
     "data/ordersCount/DeliverOrder";

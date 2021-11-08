@@ -4,7 +4,6 @@ import  googlePlay  from '../../../../../assets/SVG/googleplay.png';
 import bazar  from '../../../../../assets/SVG/bazar.png';
 import sib from '../../../../../assets/SVG/sib.png';
 import  myket from '../../../../../assets/SVG/myket.png';
-import SmileLogo from '../../../../../assets/SVG/labkhand.png';
 
 const downloadApp=()=>{
     return(

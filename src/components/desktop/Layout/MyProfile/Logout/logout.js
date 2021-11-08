@@ -9,22 +9,7 @@ const Logout = (props) => {
     const { ACTION_logout_SUCCESS,ACTION_logout_ORDERS,auth }  = props;
     ACTION_logout_SUCCESS();
     ACTION_logout_ORDERS();
-    // useEffect(() => {
-    //
-    //     props.dataChargeActions.clearChargeBuyProps();
-    //     props.dataInternetActions.clearInternetBuyProps();
-    //
-    //     props.dataCommonActions.getSiteSettings();
-    //
-    //     //eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, []);
 
-    // let loginStatus = checkLogin(props);
-
-    // if (loginStatus.redirect) {
-    //     return <Redirect to={loginStatus.redirect} push/>;
-    // }
-console.log(auth)
     return (
         <div >
             <Redirect to="/" />

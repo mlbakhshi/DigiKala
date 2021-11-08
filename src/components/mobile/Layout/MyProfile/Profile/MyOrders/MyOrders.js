@@ -13,7 +13,7 @@ import {Link} from "react-router-dom";
 import LeftMenu from "../LeftMenu/LeftMenu";
 
 const MyOrders=(props)=>{
-    const {auth,userId,ACTION_Orders_SUCCESS}=props;
+    const {userId,ACTION_Orders_SUCCESS}=props;
     const [leftMenu,setLeftMenu]=useState(0);
     const [id,setId]=useState();
 
@@ -80,7 +80,6 @@ const MyOrders=(props)=>{
     )
 }
 const mapStateToProps  = (state) => {
-    console.log(state.auth);
     return {
 
         auth: state.data.auth.isLogin,
@@ -91,11 +90,8 @@ const mapStateToProps  = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-
-        // dispatching actions returned by action creators
         ACTION_login_SUCCESS: (data) => dispatch(loginAuthSuccess(data)),
         ACTION_Orders_SUCCESS: (data) => dispatch(WaitOrder(data)),
-        // reset: () => dispatch(reset()),
 
     }
 }

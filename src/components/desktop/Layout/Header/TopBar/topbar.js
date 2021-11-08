@@ -9,10 +9,10 @@ const TopBar=()=>{
             <div>
                 <Logo />
             </div>
-            <div style={{width:"40%"}}>
+            <div className={classes.Search} >
                 <Search/>
             </div>
-            <div style={{marginRight:"auto"}}>
+            <div className={classes.Login} >
                 <Login />
             </div>
         </div>

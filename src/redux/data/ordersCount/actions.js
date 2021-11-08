@@ -15,9 +15,9 @@ export const WaitOrder = (data) => {
     }
 }
 
-export const ProcessOrder = (data) => {
+export const AllOrder = (data) => {
     return {
-        type: Actions.ACTION_Process_Order,
+        type: Actions.ACTION_All_Order,
         data
     }
 }

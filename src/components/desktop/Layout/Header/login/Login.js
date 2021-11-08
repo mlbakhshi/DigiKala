@@ -1,32 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import '../../../../../assets/icon/style.css';
 import classes from './Login.module.scss';
 import {Link, NavLink} from "react-router-dom";
 import {connect} from "react-redux";
-import {AllOrders, SuspendProducts} from "../../../../../redux/data/auth/apiFunction";
 import {Dropdown} from "react-bootstrap";
 import {loginAuthSuccess} from "../../../../../redux/data/auth/actions";
-import {WaitOrder} from "../../../../../redux/data/ordersCount/actions";
 
 const Login=(props)=>{
-    const { auth,userId,counter,orders,ACTION_Orders_SUCCESS }  = props;
-
-    // useEffect(async ()=>{
-    //     //fetch orders from DB
-    //     let checkOrders=null;
-    //
-    //     try{
-    //         checkOrders = await AllOrders(userId);
-    //     }
-    //     catch (e){
-    //         console.log('Error')
-    //     }
-    //     if(checkOrders?.success===true){
-    //         console.log(checkOrders);
-    //         console.log( ACTION_Orders_SUCCESS(checkOrders.data))
-    //         ACTION_Orders_SUCCESS(checkOrders.data);
-    //     }
-    // },[]);
+    const { auth,counter }  = props;
 
     if(!auth) {
         return (
@@ -89,8 +70,6 @@ const mapDispatchToProps = (dispatch) => {
 
         // dispatching actions returned by action creators
         ACTION_login_SUCCESS: (data) => dispatch(loginAuthSuccess(data)),
-        ACTION_Orders_SUCCESS: (data) => dispatch(WaitOrder(data)),
-        // reset: () => dispatch(reset()),
 
     }
 }

@@ -6,7 +6,6 @@
     flex-direction:column;
     margin-top: calcLen(50);
     margin-left: calcLen(20);
-    //order: 2;
 }
 .PicSymbols{
     display: flex;
@@ -14,8 +13,6 @@
     justify-content: center;
 }
 .Comment{
-    //padding-left: calcLen(50);
-    //margin-left: calcLen(50);
     color: #928888;
 
 }
@@ -29,15 +26,9 @@
 }
 .Picture{
     vertical-align: middle;
-    //margin-left: auto;
-    //margin-right: auto;
     display: block;
     margin-top: calcLen(10);
 }
 .PicDiv{
     border-radius: calcLen(10);
-    //border: solid #bab7b7 calcLen(1);
-    //margin-left: calcLen(10);
-    //width:calcLen(100);
-    //height: calcLen(100);
 }

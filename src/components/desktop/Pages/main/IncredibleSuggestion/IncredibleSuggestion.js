@@ -1,5 +1,4 @@
 import React from "react";
-import classes from './IncredibleSuggestion.scss';
 import incredibleSuggestImage from '../../../../../assets/images/incredibleSuggestion/incredibleSuggestionImage.png';
 import Pic1 from "../../../../../assets/images/incredibleSuggestion/1.jpg";
 import Pic2 from "../../../../../assets/images/incredibleSuggestion/2.jpg";

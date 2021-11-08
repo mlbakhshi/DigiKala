@@ -39,15 +39,10 @@ const RightMenu = () => {
     return (
         <>
             <div id="header">
-                {/* collapsed props to change menu size using menucollapse state */}
                 <ProSidebar collapsed={menuCollapse}>
                     <SidebarHeader>
-                        {/*<div className="logotext">*/}
-                        {/*    /!* small and big change using menucollapse state *!/*/}
-                        {/*    <p>{menuCollapse ? "Logo" : "Big Logo"}</p>*/}
-                        {/*</div>*/}
+
                         <div className="closemenu" onClick={menuIconClick}>
-                            {/* changing menu collapse icon on click */}
                             {menuCollapse ? (
                                 <FiArrowRightCircle/>
                             ) : (
@@ -59,13 +54,10 @@ const RightMenu = () => {
                         <Menu iconShape="square">
                             <Link to='/profile'>
                             <MenuItem
-                                // primaryText="Profile"
-                                // active={true}
                                 icon={<FaMobile />}>
                                 سفارش های من
                             </MenuItem>
                             </Link>
-                            {/*<MenuItem icon={<FaRegComment />}>نظرات</MenuItem>*/}
                           <Link to='/account'>
                               <MenuItem
                                   icon={<FaRegUser />}>
@@ -76,11 +68,6 @@ const RightMenu = () => {
                             <MenuItem icon={<FiLogOut />}>خروج</MenuItem>
                         </Menu>
                     </SidebarContent>
-                    {/*<SidebarFooter>*/}
-                    {/*    <Menu iconShape="square">*/}
-                    {/*      */}
-                    {/*    </Menu>*/}
-                    {/*</SidebarFooter>*/}
                 </ProSidebar>
             </div>
         </>

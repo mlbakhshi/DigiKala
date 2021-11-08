@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
 import classes from './TopSection.module.scss';
-import Footer from "../../../Footer/footer";
 import {connect} from "react-redux";
 import {loginAuthSuccess} from "../../../../../../redux/data/auth/actions";
 import {WaitOrder} from "../../../../../../redux/data/ordersCount/actions";
@@ -10,16 +9,9 @@ import {Link, Redirect} from "react-router-dom";
 
 
 const MyProfile=(props)=>{
-    const {auth,userId,ACTION_Orders_SUCCESS,userData}=props;
-    const [leftMenu,setLeftMenu]=useState(0);
-    const [id,setId]=useState();
-const logoutHandler=()=>{
-    <Redirect to="/Logout" />
-}
+    const {auth,userData}=props;
 
-
-    console.log( userData);
-    if(auth){
+ if(auth){
         return(
 
             <div>
@@ -42,7 +34,7 @@ const logoutHandler=()=>{
                         <div >350 تومان</div>
                     </div>
                     <hr />
-                    <div className={classes.BagCurrency}  className="d-flex justify-content-between">
+                    <div className={classes.BagCurrency} >
                         <div >
                             <span className="icon-Dg-club" ></span>
                             دیجی کلاب
@@ -83,12 +75,8 @@ const mapStateToProps  = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-
-        // dispatching actions returned by action creators
-        ACTION_login_SUCCESS: (data) => dispatch(loginAuthSuccess(data)),
+  ACTION_login_SUCCESS: (data) => dispatch(loginAuthSuccess(data)),
         ACTION_Orders_SUCCESS: (data) => dispatch(WaitOrder(data)),
-        // reset: () => dispatch(reset()),
-
     }
 }
 

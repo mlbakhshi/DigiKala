@@ -2,7 +2,6 @@ import React from "react";
 import classes from './CartBuy.module.scss';
 import SendPic from "../../../../../../assets/images/send.png";
 import {Button} from "react-bootstrap-buttons";
-import Auxx from "../../../../../../hoc/Auxx/Auxx";
 const CartBuy=()=>{
     return(
 

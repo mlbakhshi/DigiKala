@@ -1,25 +1,20 @@
 import React, {useEffect, useState} from 'react';
-import classes from './Cart.module.scss';
-import CartContainers from "./CartContainers/CartContainers";
-import CartBuy from "./CartContainers/CartBuy/CartBuy";
-import Toolbar from "../../Layout/Header/toolbar/toolbar";
 import Auxx from "../../../../hoc/Auxx/Auxx";
-import Footer from "../../Layout/Footer/footer";
-import {BuyProduct, DetailProduct} from "../../../../redux/data/auth/apiFunction";
+import { DetailProduct} from "../../../../redux/data/auth/apiFunction";
 import Login from "../../Logn/Login";
 import {connect} from "react-redux";
-import {Modal} from "react-bootstrap";
-import {Button} from "bootstrap";
 import {loginAuthSuccess} from "../../../../redux/data/auth/actions";
-import {incrementOrder, WaitOrder} from "../../../../redux/data/ordersCount/actions";
+import { WaitOrder} from "../../../../redux/data/ordersCount/actions";
+import ProductDetail from "../ProductDetail/ProductDetail";
+import Basket from "../Basket/basket";
 
 
 
 const Cart=(props)=>{
-    const { auth,userId,ACTION_Orders_INCREMENT,ACTION_Orders_SUCCESS }  = props;
+    const { auth,orderProducts,ACTION_Orders_SUCCESS,count }  = props;
     let IDD=props.match.params.id;
-    // const [product,setProduct]=useState([]);
-    const [orderProduct,setOrderProduct]=useState();
+    const [iterateProduct,setIterateProduct]=useState(false);
+    let tekrari=false
     useEffect(async ()=>{
         let response=null;
         try {
@@ -29,75 +24,40 @@ const Cart=(props)=>{
         }
         if(response?.success===true) {
             console.log(response.data)
-            {ACTION_Orders_SUCCESS(response.data)}
-
-            // console.log(product)
+            const order=  Object.keys(orderProducts).reduce((array, key) => {
+                return [...array, {key: orderProducts[key]}]
+            }, [])
+            if(order.length>0 ) {
+                for (let i = 0; i < count; i++) {
+                    if (order[i].key.ID === IDD) {
+                        setIterateProduct(true);
+                        tekrari=true;
+                        break
+                    }
+                }
+            }
+            console.log(iterateProduct);
+            if(!tekrari){
+                console.log("iterate nist")
+                {ACTION_Orders_SUCCESS(response.data)}
+            }
         }
     },[]);
 
-    // useEffect(async ()=>{
-    //     let responseBasket=null;
-    //     try {
-    //         responseBasket=await BuyProduct(IDD,userId);
-    //     }catch (e){
-    //         console.log('Error')
-    //     }
-    //     console.log(responseBasket);
-    //         if (responseBasket?.success === true) {
-    //             ACTION_Orders_INCREMENT();
-    //             if(responseBasket.data=="false"){
-    //             console.log(responseBasket.data.data)
-    //             setOrderProduct("true");
-    //             console.log(orderProduct)
-    //
-    //             }
-    //             else{
-    //                 setOrderProduct("false");
-    //                 console.log(orderProduct);
-    //             }
-    //         }
-    //
-    // },[]);
 
-
-    console.log(auth);
     if(auth)
     {
-        console.log(orderProduct);
-        if(orderProduct)
+        if(!iterateProduct)
         {
             return (
-                <Auxx>
-                    <Toolbar/>
-                    <div className={classes.Cart}>
-                        <section className={classes.CartContainers}>
-                            {/*<CartContainers userId={userId}/>*/}
-
-                            محصول ثبت شد
-                        </section>
-                        <aside className={classes.CartBuy}>
-                            <CartBuy/>
-                        </aside>
-                    </div>
-                    <Footer/>
-                </Auxx>
+                <ProductDetail flagbuy={true} id={IDD}/>
             )
         }
         else {
             return (
                 <Auxx>
-                    <Toolbar/>
-                    <div className={classes.Cart}>
-                        <section className={classes.CartContainers}>
-                            {/*<CartContainers userId={userId}/>*/}
-
-                            قبلا خریداری شده
-                        </section>
-                        <aside className={classes.CartBuy}>
-                            <CartBuy/>
-                        </aside>
-                    </div>
-                    <Footer/>
+                    <Basket />
+                    این محصول قبلا خریداری شده و در سبد خرید شما موجود است.
                 </Auxx>
             )
         }
@@ -117,19 +77,16 @@ const mapStateToProps  = (state) => {
     return {
         auth: state.data.auth.isLogin,
         userId:state.data.auth.userprofile,
-        // orderProduct:state.data.cntOrder.orderProfile,
+        orderProducts:state.data.cntOrder.orderProfile,
+        count:state.data.cntOrder.count,
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
 
-        // dispatching actions returned by action creators
         ACTION_login_SUCCESS: (data) => dispatch(loginAuthSuccess(data)),
         ACTION_Orders_SUCCESS: (data) => dispatch(WaitOrder(data)),
-        // ACTION_Orders_INCREMENT: (data) => dispatch(incrementOrder(data)),
-        // reset: () => dispatch(reset()),
-
     }
 }
 

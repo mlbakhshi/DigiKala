@@ -1,27 +1,27 @@
-import React, {useCallback} from "react";
+import React, {useState} from "react";
 import classes from './Buy.module.scss';
 import Labkhand from '../../../../../assets/images/labkhand.png';
-import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
-
-// Be sure to include styles at some point, probably during your bootstraping
+import { Button} from 'react-bootstrap-buttons';
 import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
-import {Link, useHistory} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {connect} from "react-redux";
-import {incrementOrder, WaitOrder} from "../../../../../redux/data/ordersCount/actions";
+import {DelOrder} from "../../../../../redux/data/ordersCount/actions";
 
 const Buy=(props)=>{
-    // console.log(props);
-    // console.log( props.detailProduct.detailProduct.detailProduct.ID);
-const {increment,counter,ACTION_Orders_SUCCESS}=props;
-const handleBuyProduct=()=>{
+    const {ACTION_Orders_DELETE} = props;
+    const [delBuy,setDelBuy]=useState(true);
+    const handleDelete=(id)=>{
+        console.log(id);
+        ACTION_Orders_DELETE(id)
+        props.onRemoveItem&&props.onRemoveItem()
+        setDelBuy(false);
+    }
 
-}
 
     return(
         <div className={classes.Buy}>
             <div>
                 فروشنده
-                {counter}
             </div>
 
             <div className={classes.Contentment} >
@@ -78,12 +78,19 @@ const handleBuyProduct=()=>{
                     </span>
                 </div>
                 <div className="d-grid gap-2" >
-                    <Link to={`/cart/${props.detailProduct.detailProduct.detailProduct.ID}`} >
-                    <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}} OnClick={increment}>
-                        افزودن به سبد خرید
+                    {(!props.flagbuy || !delBuy) ? <Link to={`/cart/${props.detailProduct.detailProduct.detailProduct.ID}`} >
+                        <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}} >
+                            افزودن به سبد خرید
 
-                    </Button>
+                        </Button>
                     </Link>
+                    :
+                        <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}}
+                                onClick={() => handleDelete(props.detailProduct.detailProduct.detailProduct.ID)}>
+                            حذف از سبد خرید
+                        </Button>
+                    }
+
                 </div>
             </div>
         </div>
@@ -97,9 +104,7 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
     return {
-        increment: () => dispatch(incrementOrder()),
-        ACTION_Orders_SUCCESS: (data) => dispatch(WaitOrder(data)),
-        // reset: () => dispatch(reset())
+        ACTION_Orders_DELETE: (data) => dispatch(DelOrder(data)),
     };
 };
 export default

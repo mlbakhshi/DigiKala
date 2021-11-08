@@ -30,9 +30,7 @@ const ProductDetail=(props)=>{
             console.log('Error')
         }
         if(response?.success===true) {
-            console.log(response.data)
             setProduct(response.data)
-            console.log(response.data)
         }
 
     },[])

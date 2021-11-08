@@ -5,7 +5,6 @@ import 'swiper/swiper.min.css';
 import SimpleSliderComponent from "../../../SimpleSliderComponent/SimpleSliderComponent";
 
 const SimpleSlickSlider=(props)=> {
-    // const {SuperProductsPics}= props;
     const swiperParams = {
         slidesPerView: 5,
         grabCursor: true,
@@ -47,7 +46,7 @@ const SimpleSlickSlider=(props)=> {
             <SwiperSlide>
                 <SimpleSliderComponent
                     id={productInfo.ID}
-                    mobilePic={"C:/react/digikala/Upload/1624873752.jpg"}
+                    mobilePic={productInfo.ProductPicture}
                     title={productInfo.ProductTitle}
                     price={productInfo.ProductPrice}
 

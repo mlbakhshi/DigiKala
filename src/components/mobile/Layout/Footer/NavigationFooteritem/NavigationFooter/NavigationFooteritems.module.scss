@@ -3,8 +3,6 @@
 
 .footerContainer{
     display:flex;
-    //align-items:start;
-    //justify-content:space-between;
     width: 90%;
 }
 .inputEmail{
@@ -13,7 +11,6 @@
     border:none;
     color:darkgray;
     height:calcLen(50);
-    //padding-right:calcLen(10);
     margin-left:calcLen(15);
     width:55%;
     font-size:calcFont(11);
@@ -29,8 +26,6 @@
 .Nav{
     display:flex;
     align-items:center;
-    //flex-direction:row;
-    //padding-top:calcLen(10);
 }
 .footerContainer ul{
     font-size:calcFont(12)!important;

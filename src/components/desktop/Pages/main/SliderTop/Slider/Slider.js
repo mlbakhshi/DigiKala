@@ -1,6 +1,6 @@
 import React from "react";
 
-import Carousel, { autoplayPlugin } from '@brainhubeu/react-carousel';
+import Carousel  from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import classes from './Slider.module.scss';
 import slider1 from '../../../../../../assets/images/slider/1.jpg';

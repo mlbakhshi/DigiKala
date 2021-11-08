@@ -1,5 +1,4 @@
 import React from 'react';
-import  classes from './SpecialServices.module.scss';
 import '../../../../../assets/icon/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

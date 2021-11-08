@@ -14,7 +14,6 @@
 .Login
 {
     border-color: #decfcf;
-    //margin-top: calcLen(30);
     display: flex;
     flex-wrap: wrap;
     justify-content:flex-start;
@@ -24,7 +23,6 @@
     margin-left: calcLen(10);
 }
 .Cart{
-    //margin-top: calcLen(30);
     display: flex;
     flex-wrap: wrap;
     justify-content:flex-start;
@@ -40,8 +38,11 @@
 .NotLogin {
     font-size:calcFont(11);
     display:flex;
-    margin-top:calcLen(4);
+    margin-top:calcLen(8);
 
+}
+.LoginSymbol{
+    margin-top:calcLen(5);
 }
 .NotLogin i{
     transform:rotate(180deg);

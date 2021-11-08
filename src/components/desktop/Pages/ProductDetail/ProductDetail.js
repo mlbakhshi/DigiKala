@@ -11,9 +11,15 @@ import Toolbar from "../../Layout/Header/toolbar/toolbar";
 import {DetailProduct} from "../../../../redux/data/auth/apiFunction";
 
 const ProductDetail=(props)=>{
-
+    let IDD=null;
     const [product,setProduct]=useState([]);
-    let IDD=props.match.params.id;
+    if(props.flagbuy!==true){
+         IDD=props.match.params.id;
+    }
+    else {
+         IDD=props.id;
+    }
+
 
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -43,7 +49,7 @@ const ProductDetail=(props)=>{
                 </section>
 
                 <section className={classes.Detail}>
-                    <Intro  detailProduct={product}/>
+                    <Intro  flagbuy={props.flagbuy} detailProduct={product}/>
                 </section>
             </article>
             <section className={classes.Suggestion}>

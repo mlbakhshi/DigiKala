@@ -12,9 +12,7 @@ import {Link} from "react-router-dom";
 
 
 const Account=(props)=>{
-    const {auth,userId,userdata,ACTION_Orders_SUCCESS}=props;
-    const [leftMenu,setLeftMenu]=useState(0);
-    const [id,setId]=useState();
+    const {auth,userdata}=props;
     //Modal
     const [show, setShow] = useState(false);
 
@@ -22,30 +20,6 @@ const Account=(props)=>{
     const handleShow = () => setShow(true);
     const handleSave = () => setShow(true);
 
-
-// setId(userId);
-    console.log(userdata.FirstName);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    // useEffect(async ()=>{
-    //     //fetch orders from DB
-    //     let checkOrders=null;
-    //     // console.log(userId,'profileprofileprofile');
-    //     try{
-    //         checkOrders = await AllOrders(userId);
-    //     }
-    //     catch (e){
-    //         console.log('Error')
-    //     }
-    //     if(checkOrders?.success===true){
-    //         console.log(checkOrders);
-    //         setId(checkOrders.data)
-    //         console.log(id);
-    //         console.log( ACTION_Orders_SUCCESS(checkOrders.data))
-    //     }
-    // },[]);
-    //
-
-    console.log(auth);
     if(auth){
         return(
 
@@ -213,12 +187,8 @@ const mapStateToProps  = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-
-        // dispatching actions returned by action creators
-        ACTION_login_SUCCESS: (data) => dispatch(loginAuthSuccess(data)),
+  ACTION_login_SUCCESS: (data) => dispatch(loginAuthSuccess(data)),
         ACTION_Orders_SUCCESS: (data) => dispatch(WaitOrder(data)),
-        // reset: () => dispatch(reset()),
-
     }
 }
 

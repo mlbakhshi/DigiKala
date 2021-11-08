@@ -14,7 +14,7 @@ async function loginUser(credentials) {
 
 
 const Login=(props)=>{
-    const { ACTION_login_SUCCESS,auth,ACTION_Waiting_SUCCESS }  = props;
+    const { ACTION_login_SUCCESS,auth }  = props;
     const [username, setUserName] = useState();
     const history = useHistory();
     const handleSubmit = async e => {
@@ -26,10 +26,8 @@ const Login=(props)=>{
         setUserName(checkToken.data.username);
         if(checkToken.success){
             ACTION_login_SUCCESS(checkToken.data)
-console.log(id);
 
             if(window.location.pathname==="/login"){
-                console.log(window.location.pathname)
                 return (
                    history.goBack()
                 )
@@ -88,7 +86,7 @@ const mapDispatchToProps = (dispatch) => {
 
         // dispatching actions returned by action creators
         ACTION_login_SUCCESS: (data) => dispatch(loginAuthSuccess(data)),
-        ACTION_Waiting_SUCCESS: (data) => dispatch(WaitOrder(data)),
+        // ACTION_Waiting_SUCCESS: (data) => dispatch(WaitOrder(data)),
         // reset: () => dispatch(reset()),
 
     }

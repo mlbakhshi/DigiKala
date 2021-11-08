@@ -18,14 +18,9 @@ const CategorizedProducts=(props)=>{
         }catch (e){
             console.log('Error')
         }
-        console.log(response);
             setProducts(response);
-
     },[])
 
-
-
-    // if(Upload.length > 0) {
         return (
 
             <section className={classes.Category}>
@@ -38,16 +33,11 @@ const CategorizedProducts=(props)=>{
               </span>
                 </div>
                 <div>
-                    <SimpleSlickSlider Products={products}
-                        // ProductsPics={SuperProductsPics}
-                    />
+                    <SimpleSlickSlider Products={products}/>
                 </div>
             </section>
 
         );
-    // } else {
-    //     return (<> Loading ... </> )
-    // }
 
 }
 export default CategorizedProducts;

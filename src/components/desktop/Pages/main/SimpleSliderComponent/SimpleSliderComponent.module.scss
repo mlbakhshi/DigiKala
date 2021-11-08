@@ -12,6 +12,10 @@
   height:calcLen(350);
   padding:calcLen(10);
 }
+.Card a{
+  text-decoration:none;
+  text-underline:none;
+}
 .ProductImage{
   width:80%;
   display:flex;

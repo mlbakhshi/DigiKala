@@ -1,11 +1,9 @@
 import React from 'react'
-import prd2 from "../../../../../assets/images/incredibleSuper/2.jpg";
 import '../../../../../assets/icon/style.css';
 import classes  from './SliderComponent.module.scss';
 const SliderComponent=(props)=>{
     return(
         <div className={classes.Card} >
-            {/*<div style={{backgroundImage:`url("${props.SuperProductsPics}")`}} className={classes.ProductImage}>H</div>*/}
             <img className={classes.ProductImage}  src={props.src} />
             <div className={classes.ProductDescription}  >
                 {props.description}

@@ -2,7 +2,6 @@ import React from 'react';
 import NavigationFooterItem from "../NavigationFooteritem";
 import classes from './NavigationFooteritems.module.scss';
 import '../../../../../../assets/icon/style.css';
-import Auxx from "../../../../../../hoc/Auxx/Auxx";
 
 
 const NavigationFooterItems=(props)=>{

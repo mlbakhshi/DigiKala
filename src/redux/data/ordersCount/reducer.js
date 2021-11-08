@@ -12,12 +12,12 @@ let initState = {
 
 export const ordersReducer = (state = initState, action) => {
     switch (action.type) {
-        // case Actions.ACTION_Count_Order_INCREMENT:
-        //     console.log("reducer");
-            // return {
-            //     ...state,
-            //     count: state.count+1,
-            // }
+        case Actions.ACTION_Count_Order_INCREMENT:
+            console.log("reducer");
+            return {
+                ...state,
+                count: state.count+1,
+            }
         case Actions.ACTION_Wait_Order:
             console.log(action.data)
             return {
@@ -35,24 +35,26 @@ export const ordersReducer = (state = initState, action) => {
             }
         case Actions.ACTION_Delete_Order:
             console.log()
+            let temp=state.orderProfile
+            delete temp[action.data]
             return {
                 ...state,
                 status: Status.STATUS_WAIT,
-                orderProfile:Object.values(state.orderProfile).filter(i => i.id !== action.data),
+                orderProfile:temp,
                 count:state.count-1,
                 // isWait: true,
                 // isProcess: false,
                 // isDeliver: false,
 
             }
-        case Actions.ACTION_Process_Order:
+        case Actions.ACTION_All_Order:
             return {
                 ...state,
                 status: Status.STATUS_PROCESS,
-                orderProfile:action.data,
-                isWait: false,
-                isProcess: true,
-                isDeliver: false,
+                // orderProfile:action.data,
+                // isWait: false,
+                // isProcess: true,
+                // isDeliver: false,
             }
         case Actions.ACTION_Deliver_Order:
             return {

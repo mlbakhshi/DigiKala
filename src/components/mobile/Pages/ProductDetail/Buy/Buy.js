@@ -1,18 +1,15 @@
 import React from "react";
 import classes from './Buy.module.scss';
 import Labkhand from '../../../../../assets/images/labkhand.png';
-import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
-
-// Be sure to include styles at some point, probably during your bootstraping
+import { Button } from 'react-bootstrap-buttons';
 import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
 import Auxx from "../../../../../hoc/Auxx/Auxx";
 import {Link} from "react-router-dom";
 import {incrementOrder} from "../../../../../redux/data/ordersCount/actions";
 import {connect} from "react-redux";
 
-// import {Button} from "bootstrap";
 const Buy=(props)=>{
-    const {increment,counter}=props;
+    const {increment}=props;
     let CurrencyFormat = require('react-currency-format');
     let price;
     console.log(props);
@@ -98,7 +95,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         increment: () => dispatch(incrementOrder()),
-        // reset: () => dispatch(reset())
     };
 };
 export default

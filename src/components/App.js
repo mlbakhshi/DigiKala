@@ -4,14 +4,9 @@ import './../assets/common/font.scss';
 import React, {useEffect, useState} from "react";
 import { useHistory } from 'react-router-dom'
 import {ToastContainer, Zoom} from "react-toastify";
-import {
-    BreadcrumbsProvider,
-    Breadcrumbs,
-    BreadcrumbsItem
-} from 'react-breadcrumbs-dynamic'
 
-let AppDevice = require(`./desktop/desktop`);
-// let AppDevice = require(`./mobile/mobile`);
+// let AppDevice = require(`./desktop/desktop`);
+let AppDevice = require(`./mobile/mobile`);
 
 
 function App() {
@@ -40,6 +35,4 @@ function App() {
 }
 
 
-// export default connect(mapStateToProps, null)(App);
 export default App;
-// export default App;

@@ -2,7 +2,6 @@ import React from "react";
 import classes from './Description.module.scss';
 import Auxx from "../../../../../hoc/Auxx/Auxx";
 import 'font-awesome/css/font-awesome.min.css';
-import NavigationFooterItem from "../../../Layout/Footer/NavigationFooteritem/NavigationFooteritem";
 import '../../../../../assets/icon/style.css';
 import SendPic from '../../../../../assets/images/send.png';
 
@@ -15,7 +14,6 @@ const Description=(props)=>{
         <Auxx>
             <div className={classes.DesEnglish}>
                 {props.detailProduct.detailProduct.detailProduct.ProductNameEn}
-                {/*Xiaomi POCO X3 Pro M2102J20SG Dual SIM 256GB And 8GB RAM Mobile Phone*/}
             </div>
             <div className={classes.Like}>
                 <div className={classes.LikeFont}>
