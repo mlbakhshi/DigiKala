@@ -1,13 +1,13 @@
 @import '../../../../../../assets/css/desktop/variables';
 .images{
   border-radius: calcLen(20);
-  width: calcLen(320);
+  width: calcLen(380);
   height: 50%;
 
 }
 .sliderLeft
 {
-  margin-top: calcLen(20);
+  //margin-top: calcLen(3);
   display: flex;
   flex-direction:column ;
 }

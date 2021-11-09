@@ -13,6 +13,7 @@ import Allday from "../../../../assets/SVG/3.png";
 import Return from "../../../../assets/SVG/4.png";
 import Orginal from "../../../../assets/SVG/5.png";
 import {DetailProduct} from "../../../../redux/data/auth/apiFunction";
+import Intro from "./Intro/Intro";
 const ProductDetail=(props)=>{
     console.log(props);
     const [product,setProduct]=useState([]);
@@ -21,7 +22,7 @@ const ProductDetail=(props)=>{
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(async ()=>{
-
+        window.scrollTo(0,0)
         let response=null;
         try {
             response=await DetailProduct(IDD);
@@ -32,7 +33,7 @@ const ProductDetail=(props)=>{
             setProduct(response.data)
         }
 
-    },[])
+    },[IDD])
 
     return(
         <Auxx>
@@ -53,13 +54,17 @@ const ProductDetail=(props)=>{
                         امکان برگشت کالا در گروه موبایل با دلیل "انصراف از خرید" تنها در صورتی مورد قبول است که پلمپ کالا باز نشده باشد.
                     </div>
                 </section>
+
+<section>
+    <Intro flagbuy={props.flagbuy} detailProduct={product} />
+</section>
                 <section className={classes.Buy}>
                     <Buy detail={product}/>
                 </section>
                 <section className={classes.FreeSend}>
                     <div className={classes.Send}>
                         <div>
-                            <i className='fa fa-truck' style={{fontSize:"24px",color:"red"}}></i>
+                            <i className='fa fa-truck' ></i>
                             ارسال رایگان سفارش
                         </div>
                         <span >

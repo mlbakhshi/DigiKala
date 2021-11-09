@@ -4,12 +4,15 @@
 .LoginBag{
     display: flex;
 }
+.Cart span{
+   font-size: calcFont(20);
+}
 .NotLogin
 {
     outline: solid calcLen(1);
     border-radius: calcLen(10);
     border-color: #decfcf;
-    margin-top: calcLen(30);
+    margin-top: calcLen(20);
     display: flex;
     flex-wrap: wrap;
     justify-content:flex-start;
@@ -21,7 +24,7 @@
 .Login
  {
 
-     margin-top: calcLen(30);
+     margin-top: calcLen(20);
      display: flex;
      flex-wrap: wrap;
      justify-content:flex-start;
@@ -32,7 +35,7 @@
  }
 
 .Cart{
-    margin-top: calcLen(30);
+    margin-top: calcLen(20);
     display: flex;
     flex-wrap: wrap;
     justify-content:flex-start;

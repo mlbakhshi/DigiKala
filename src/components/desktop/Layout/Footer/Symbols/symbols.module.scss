@@ -19,11 +19,14 @@
 
 }
 .Comment h3{
-   color:black;
+    color:black;
     font-size:calcFont(15);
 }
 .Comment p{
-    color:black;
+    line-height: calcLen(26);
+    font-weight: 300;
+    letter-spacing: calcLen(-0.3);
+    color: #81858b;
     font-size:calcFont(12);
 }
 .Picture{
@@ -37,6 +40,6 @@
     border-radius: calcLen(10);
     border: solid #bab7b7 calcLen(1);
     margin-left: calcLen(10);
-    width:calcLen(150);
+    width:calcLen(120);
     height: calcLen(150);
 }

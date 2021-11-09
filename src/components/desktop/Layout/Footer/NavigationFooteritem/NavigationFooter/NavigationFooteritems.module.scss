@@ -7,6 +7,17 @@
     justify-content:space-between;
     width: 90%;
 }
+.footerContainer span{
+    font-size:calcFont(14);
+color:#81858b;
+}
+.Titr{
+    font-size: 1.143rem;
+    line-height: calcFont(34.4);
+    color: #424750;
+    font-weight: 700;
+}
+
 .inputEmail{
     background-color:#f8f4f4;
     border-radius:calcLen(10);
@@ -29,6 +40,9 @@
     display:flex;
     flex-direction:row;
     padding-top:calcLen(10);
+}
+.Nav span{
+    font-size:calcFont(25);
 }
 .footerContainer ul{
     font-size:calcFont(14)!important;

@@ -7,7 +7,7 @@ import {WaitOrder} from "../../../../../../redux/data/ordersCount/actions";
 import 'font-awesome/css/font-awesome.min.css';
 import {connect} from "react-redux";
 const Login=(props)=>{
-    const { auth,counter,orders }  = props;
+    const { auth,counter }  = props;
 
     if(!auth) {
         return (
@@ -22,7 +22,7 @@ const Login=(props)=>{
                     </div>
                 </div>
                 <div className={classes.Cart}>
-                    <span class="icon-basket" style={{fontSize: "20px"}}></span>
+                    <span class="icon-basket" ></span>
                 </div>
             </div>
         )
@@ -49,7 +49,7 @@ const Login=(props)=>{
                                 {counter}
                             </div>
                             <div>
-                                <span className="icon-basket" style={{fontSize: "20px"}}></span>
+                                <span className="icon-basket" ></span>
                             </div>
                         </div>
                     </Link>

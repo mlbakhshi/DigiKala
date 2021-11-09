@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from "../../../../hoc/Layout/layout.module.css";
+import classes from "./main.module.scss";
 import ContainerHome from "./SliderTop/ContainerHome";
 import Incredible from "./Incredible/incredible";
 import Commercial from "./Comercial NavBar/Comercial";

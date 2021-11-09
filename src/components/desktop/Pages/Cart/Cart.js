@@ -7,22 +7,28 @@ import {loginAuthSuccess} from "../../../../redux/data/auth/actions";
 import { WaitOrder} from "../../../../redux/data/ordersCount/actions";
 import ProductDetail from "../ProductDetail/ProductDetail";
 import Basket from "../Basket/basket";
+import InnerImageZoom from "react-inner-image-zoom";
+import testimg from "../../../../assets/images/mobilePics/Samsung A12.jpg";
+import Snipper from "../../../../common/snipper/snipper";
 
 
 
 const Cart=(props)=>{
     const { auth,orderProducts,ACTION_Orders_SUCCESS,count }  = props;
+    const [loding,setLoading]=useState(false);
     let IDD=props.match.params.id;
     const [iterateProduct,setIterateProduct]=useState(false);
     let tekrari=false
     useEffect(async ()=>{
         let response=null;
+        setLoading(true)
         try {
             response=await DetailProduct(IDD);
         }catch (e){
             console.log('Error')
         }
         if(response?.success===true) {
+            setLoading(false)
             const order=  Object.keys(orderProducts).reduce((array, key) => {
                 return [...array, {key: orderProducts[key]}]
             }, [])
@@ -47,14 +53,23 @@ const Cart=(props)=>{
         if(!iterateProduct)
         {
             return (
-                <ProductDetail flagbuy={true} id={IDD}/>
+                <div>
+                    {!loding&& <ProductDetail flagbuy={true} id={IDD}/>}
+                    {loding&&<Snipper />}
+                </div>
+
+
             )
         }
         else {
             return (
                 <Auxx>
                     <Basket />
-                    این محصول قبلا خریداری شده و در سبد خرید شما موجود است.
+                    {!loding&&<span>
+                            این محصول قبلا خریداری شده و در سبد خرید شما موجود است.
+                    </span>}
+                    {loding&&<Snipper />}
+
                 </Auxx>
             )
         }

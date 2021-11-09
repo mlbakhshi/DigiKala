@@ -1,8 +1,11 @@
+
+
 .App {
   text-align: right;
   direction: rtl;
   margin: 0;
-  padding: 0;
+  padding-right:15px;
+  padding-left:15px;
   font-family: 'IRANSans_FaNum','Yekan', 'Iran Serif', serif;
 }
 

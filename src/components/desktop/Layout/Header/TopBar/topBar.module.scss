@@ -3,9 +3,10 @@
 
 .TopBar{
     display: flex;
+  padding:calcLen(14) 0;
 }
 .Search{
-    width:40%;
+    width:45%;
 }
 
 .Login{

@@ -32,13 +32,16 @@
     padding-left: calcLen(6);
     margin-left: calcLen(15);
 }
+.Cart span{
+   font-size: calcLen(20);
+}
 .Cart Link{
     text-decoration:none;
 }
 .NotLogin {
     font-size:calcFont(11);
     display:flex;
-    margin-top:calcLen(8);
+    margin-top:calcLen(7);
 
 }
 .LoginSymbol{

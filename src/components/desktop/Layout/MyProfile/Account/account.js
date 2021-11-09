@@ -79,7 +79,7 @@ const MyProfile=(props)=>{
                             <Container>
                                 <Row>
                                     <Col sm style={{padding:"0"}}>
-                                        <div className={classes.Items} style={{padding:"2px"}}>
+                                        <div className={classes.Items} >
                                             <div className={classes.Title}>
                                                 <div>
                                                     نام
@@ -93,7 +93,7 @@ const MyProfile=(props)=>{
 
                                     </Col>
                                     <Col sm style={{padding:"0"}}>
-                                        <div className={classes.Items} style={{padding:"2px"}}>
+                                        <div className={classes.Items}>
                                             <div className={classes.Title}>
                                                 <div>
                                                     نام خانوادگی
@@ -109,7 +109,7 @@ const MyProfile=(props)=>{
                                 </Row>
                                 <Row>
                                     <Col sm style={{padding:"0"}}>
-                                        <div className={classes.Items} style={{padding:"2px"}}>
+                                        <div className={classes.Items} >
                                             <div className={classes.Title}>
                                                 <div>
                                                     شماره موبایل
@@ -123,7 +123,7 @@ const MyProfile=(props)=>{
 
                                     </Col>
                                     <Col sm style={{padding:"0"}}>
-                                        <div className={classes.Items} style={{padding:"2px"}}>
+                                        <div className={classes.Items} >
                                             <div className={classes.Title}>
                                                 <div>
                                                     پست الکترونیک

@@ -8,58 +8,90 @@ const NavigationFooterItems=(props)=>{
     return(
         <div className={classes.footerContainer}  >
             <nav>
-                <ul>
-                    با دیجی کالا
+                <ul >
+                    <span className={classes.Titr}>
+                          با دیجی کالا
+                    </span>
+
                     <NavigationFooterItem link="/orders">
-                        اتاق خبر دیجی کالا
+                      <span>
+                          اتاق خبر دیجی کالا
+                      </span>
                     </NavigationFooterItem>
                     <NavigationFooterItem link="/orders">
-                        فروش در دیجی کالا
+                       <span>
+                            فروش در دیجی کالا
+                       </span>
                     </NavigationFooterItem>
                     <NavigationFooterItem link="/orders">
-                        فرصت های شغلی
+                        <span>
+                            فرصت های شغلی
+                        </span>
                     </NavigationFooterItem>
                     <NavigationFooterItem link="/orders">
-                        تماس با دیجی کالا
+                        <span>
+                            تماس با دیجی کالا
+                        </span>
                     </NavigationFooterItem>
                     <NavigationFooterItem link="/orders">
-                        درباره دیجی کالا
+                        <span>
+                            درباره دیجی کالا
+                        </span>
                     </NavigationFooterItem>
                 </ul>
             </nav>
 
             <nav>
                 <ul>
+                     <span className={classes.Titr}>
                     خدمات مشتریان
-                    <NavigationFooterItem link="/orders">
-                        پاسخ به پرسش های متدوال
+                     </span>
+                         <NavigationFooterItem link="/orders">
+                             <span>
+                                                        پاسخ به پرسش های متدوال
+                             </span>
                     </NavigationFooterItem>
-                    <NavigationFooterItem link="/orders">
+                    <NavigationFooterItem link="/orders"><span>
                         رویه های باز گرداندن کالا
+                    </span>
                     </NavigationFooterItem>
                     <NavigationFooterItem link="/orders">
-                        شرایط استفاده
+                       <span>
+                            شرایط استفاده
+                       </span>
                     </NavigationFooterItem>
                     <NavigationFooterItem link="/orders">
-                        حریم خصوصی
+                        <span>
+                            حریم خصوصی
+                        </span>
                     </NavigationFooterItem>
                     <NavigationFooterItem link="/orders">
-                        گزارش باگ
+                       <span>
+                            گزارش باگ
+                       </span>
                     </NavigationFooterItem>
                 </ul>
             </nav>
 
             <nav>
                 <ul>
+                     <span className={classes.Titr}>
                     راهنمای خرید از دیجی کالا
+                     </span>
                     <NavigationFooterItem link="/orders">
-                        نحوه ثبت سفارش
+                       <span>
+                            نحوه ثبت سفارش
+                       </span>
                     </NavigationFooterItem>
                     <NavigationFooterItem link="/orders">
-                        رویه ارسال سفارش
+                       <span>
+                            رویه ارسال سفارش
+                       </span>
                     </NavigationFooterItem>
                     <NavigationFooterItem link="/orders">
-                        شیوه های پرداخت
+                       <span>
+                            شیوه های پرداخت
+                       </span>
                     </NavigationFooterItem>
 
                 </ul>
@@ -67,7 +99,9 @@ const NavigationFooterItems=(props)=>{
 
             <nav>
                 <ul>
+                     <span className={classes.Titr}>
                     با ما همراه باشید
+                     </span>
                     <div className={classes.Nav} >
                         <NavigationFooterItem link="/orders">
                             <span className="icon-instagram"></span>
@@ -78,12 +112,14 @@ const NavigationFooterItems=(props)=>{
                         <NavigationFooterItem link="/orders">
                             <span className="icon-linkedin"></span>
                         </NavigationFooterItem>
-                        <NavigationFooterItem link="/orders">
-                            <span className="icon-aparat"></span>
-                        </NavigationFooterItem>
+                        {/*<NavigationFooterItem link="/orders">*/}
+                        {/*    <span   className="icon-aparat"></span>*/}
+                        {/*</NavigationFooterItem>*/}
                     </div>
                     <div style={{paddingTop:"20px"}}>
+                       <span className={classes.Titr}>
                         از جدیدترین تخفیف ها بهره مند شوید
+                       </span>
                         <div style={{paddingTop:"20px",display:"flex"}}>
                             <input  className={classes.inputEmail} placeholder="ادرس ایمیل خود را وارد کنید" />
                             <button className={classes.inputButton}  >ثبت  </button>

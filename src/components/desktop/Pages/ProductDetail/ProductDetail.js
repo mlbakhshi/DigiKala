@@ -9,11 +9,13 @@ import Auxx from "../../../../hoc/Auxx/Auxx";
 import Footer from "../../Layout/Footer/footer";
 import Toolbar from "../../Layout/Header/toolbar/toolbar";
 import {DetailProduct} from "../../../../redux/data/auth/apiFunction";
+import Snipper from "../../../../common/snipper/snipper";
 
 const ProductDetail=(props)=>{
     let IDD=null;
     let picturePath=null;
     const [product,setProduct]=useState([]);
+    const [loding,setLoading]=useState(false);
     if(props.flagbuy!==true){
          IDD=props.match.params.id;
     }
@@ -25,18 +27,21 @@ const ProductDetail=(props)=>{
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(async ()=>{
-
+        window.scrollTo(0,0)
         let response=null;
+        setLoading(true)
         try {
             response=await DetailProduct(IDD);
         }catch (e){
             console.log('Error')
         }
+        setLoading(false)
         if(response?.success===true) {
             setProduct(response.data)
         }
 
-    },[])
+
+    },[IDD])
 
 
 
@@ -46,11 +51,13 @@ const ProductDetail=(props)=>{
             <article className={classes.dataProduct}>
 
                 <section className={classes.picGallery}>
-                    <InnerImageZoom src={testimg} />
+                    {!loding&&<InnerImageZoom src={testimg} />}
+                    {loding&&<Snipper />}
                 </section>
 
                 <section className={classes.Detail}>
-                    <Intro  flagbuy={props.flagbuy} detailProduct={product}/>
+                    {!loding&&<Intro  flagbuy={props.flagbuy} detailProduct={product}/>}
+                    {loding&&<Snipper />}
                 </section>
             </article>
             <section className={classes.Suggestion}>

@@ -1,0 +1,8 @@
+@import '../../../../../assets/css/desktop/variables';
+
+.BottomBanner img{
+  margin-left:calcLen(10);
+  margin-right:calcLen(10);
+  border-radius:calcLen(20);
+  width:98%;
+}

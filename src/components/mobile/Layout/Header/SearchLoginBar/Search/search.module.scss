@@ -2,7 +2,7 @@
 
 
 .Search{
-    background-color: #f0f0f1;
+    background-color: #ebebeb;
     border-radius: calcLen(10);
     display: flex;
     justify-content:flex-start;
@@ -11,14 +11,21 @@
     flex-wrap: wrap;
     flex-direction: row;
     height: calcLen(35);
+    margin-top: calcLen(2);
     margin-right: calcLen(10);
-    margin-left: calcLen(5);
-    width:75%;
-    padding: calcLen(6);
+    margin-left: calcLen(10);
+    width:100%;
+    padding-right: calcLen(8);
+    padding-top: calcLen(20);
 
 }
 .Search input{
     border: none;
-    background-color: #f0f0f1;
+    background-color: transparent;
     outline: none;
+    //margin-top: calcLen(35);
 }
+
+//.Search div{
+//    margin-top: calcLen(35);
+//}

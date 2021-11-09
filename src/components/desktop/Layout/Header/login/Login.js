@@ -18,7 +18,7 @@ const Login=(props)=>{
                     <NavLink to="/login" style={{textDecoration: "none"}}> ورود به حساب کاربری</NavLink>
                 </div>
                 <div className={classes.Cart}>
-                    <span class="icon-basket" style={{fontSize: "20px"}}></span>
+                    <span class="icon-basket" ></span>
                 </div>
             </div>
         )
@@ -44,7 +44,7 @@ const Login=(props)=>{
                     <div className={classes.CountNumber}>
                         {counter}
                     </div>
-                    <span className="icon-basket" style={{fontSize: "20px"}}></span>
+                    <span className="icon-basket" ></span>
                     </Link>
                 </div>
             </div>

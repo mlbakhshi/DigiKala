@@ -4,8 +4,17 @@
 
 .Description{
   display:flex;
-  flex-direction:row;
-  margin-top:calcLen(12);
+  flex-direction:column;
+  background-color:white;
+  border-radius:calcLen(5);
+  padding:calcLen(10);
+  margin:calcLen(10);
+  font-size:calcFont(10);
+}
+.DescriptionTitle{
+
+  margin-bottom:calcLen(10);
+  font-size:calcFont(14);
 }
 .PNGLogo{
   display: flex;

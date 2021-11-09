@@ -13,7 +13,7 @@ const SimpleSliderComponent=(props)=>{
                         {props.title}
                     </div>
 
-                    <div style={{textAlign:"left",marginTop:"10px"}}>
+                    <div className={classes.Price} >
 
                         <CurrencyFormat value={props.price} displayType={'text'} thousandSeparator={true} />
                         تومان

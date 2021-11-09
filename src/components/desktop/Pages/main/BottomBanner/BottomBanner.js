@@ -1,9 +1,10 @@
 import React from 'react';
+import classes from './BottomBanner.module.scss';
 import BottomBannerPic from '../../../../../assets/images/BottomBanner.jpg';
 const BottomBanner=()=>{
     return(
-        <div >
-            <img  style={{marginLeft:"10px",marginRight:"10px",borderRadius:"20px",width:"100%"}} src={BottomBannerPic} />
+        <div className={classes.BottomBanner}>
+            <img   src={BottomBannerPic} />
         </div>
     )
 }

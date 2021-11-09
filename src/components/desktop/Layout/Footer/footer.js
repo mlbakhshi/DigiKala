@@ -15,14 +15,13 @@ const Footer=()=>{
     return(
         <div className={classes.Footer}>
             <div className={classes.PrLogo}>
-                {/*<span className="icon-DigikalaPr"></span>*/}
-                <img src={digikalaPrLogo} style={{width:"120px"}} />
+                <img src={digikalaPrLogo}  />
             </div>
             <div className={classes.About}>
                 <div>تلفن پشتیبانی : </div>
-                <div>42920000-021 </div>
-                <div>  | </div>
-                <div>  هفت روز هفته، ۲۴ ساعت شبانه‌روز پاسخگوی شما هستیم. </div>
+                <div className={classes.Backup}>42920000-021 </div>
+                <div className={classes.VeticalLine}>  | </div>
+                <div >  هفت روز هفته، ۲۴ ساعت شبانه‌روز پاسخگوی شما هستیم. </div>
             </div>
 
             <div className={classes.PNGLogo}>

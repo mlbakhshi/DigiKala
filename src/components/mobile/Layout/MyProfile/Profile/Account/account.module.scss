@@ -39,6 +39,7 @@ font-size:calcFont(18);
 .Items{
   display:flex;
   flex-direction:column;
+  padding:calcLen(2);
 }
 
 .EditButton{

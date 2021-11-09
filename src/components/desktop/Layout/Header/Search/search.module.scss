@@ -2,7 +2,7 @@
 
 
 .Search{
-    background-color: #faf5f5;
+    background-color: #f0f0f1;
     border-radius: calcLen(10);
     display: flex;
     justify-content:flex-start;
@@ -10,15 +10,19 @@
     align-content: space-around;
     flex-wrap: wrap;
     flex-direction: row;
-    height: calcLen(35);
-    margin-top: calcLen(30);
+    height: calcLen(45);
+    margin-top: calcLen(25);
     margin-right: calcLen(10);
     width:100%;
-    padding: calcLen(6);
+    padding-right: calcLen(8);
+    padding-top: calcLen(20);
 
 }
 .Search input{
     border: none;
-    background-color: #faf5f5;
+    background-color: transparent;
     outline: none;
+    color:#474747;
+    font-size:calcFont(12);
 }
+

@@ -9,18 +9,19 @@
   width:100%;
   border-radius:calcLen(10);
   margin:auto;
-  height:calcLen(350);
+  height:calcLen(400);
   padding:calcLen(10);
 }
 .ProductImage{
-  width:80%;
+  width:100%;
   display:flex;
   justify-content:center;
 }
 .ProductDescription{
-  font-size:calcFont(14);
+  font-size:calcFont(11);
   color:#4a5f73;
   margin-top:calcLen(15);
+  min-height:calcLen(35);
 }
 .DigiPay{
  margin-top:calcLen(15);

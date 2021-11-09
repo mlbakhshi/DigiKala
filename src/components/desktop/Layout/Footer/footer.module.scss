@@ -11,10 +11,21 @@
 .PrLogo{
 margin-top: calcLen(20);
 }
+.PrLogo img{
+    width:calcLen(120);
+}
+
 .About{
     display: flex;
     margin-top: calcLen(20);
-
+font-size:calcLen(12);
+}
+.Backup{
+    margin-right:calcLen(10);
+}
+.VeticalLine{
+    margin-right:calcLen(10);
+    margin-left:calcLen(10);
 }
 .PNGLogo{
     display: flex;

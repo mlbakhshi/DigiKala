@@ -85,7 +85,7 @@ const Account=(props)=>{
                             <Container>
                                 <Row>
                                     <Col sm style={{padding:"0"}}>
-                                        <div className={classes.Items} style={{padding:"2px"}}>
+                                        <div className={classes.Items} >
                                             <div className={classes.Title}>
                                                 <div>
                                                     نام
@@ -100,7 +100,7 @@ const Account=(props)=>{
 
                                     </Col>
                                     <Col sm style={{padding:"0"}}>
-                                        <div className={classes.Items} style={{padding:"2px"}}>
+                                        <div className={classes.Items} >
                                             <div className={classes.Title}>
                                                 <div>
                                                     نام خانوادگی
@@ -117,7 +117,7 @@ const Account=(props)=>{
                                 </Row>
                                 <Row>
                                     <Col sm style={{padding:"0"}}>
-                                        <div className={classes.Items} style={{padding:"2px"}}>
+                                        <div className={classes.Items} >
                                             <div className={classes.Title}>
                                                 <div>
                                                     شماره موبایل
@@ -132,7 +132,7 @@ const Account=(props)=>{
 
                                     </Col>
                                     <Col sm style={{padding:"0"}}>
-                                        <div className={classes.Items} style={{padding:"2px"}}>
+                                        <div className={classes.Items} >
                                             <div className={classes.Title}>
                                                 <div>
                                                     پست الکترونیک

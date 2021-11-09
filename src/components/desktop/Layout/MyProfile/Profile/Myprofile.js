@@ -31,7 +31,7 @@ const MyProfile=(props)=>{
     ]
     let component;
     if(leftMenu===1){
-        component=<WaitingPayment />
+        component=<WaitingPayment  />
     }
     else if(leftMenu===2){
         component=<Processing />

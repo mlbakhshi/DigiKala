@@ -15,9 +15,9 @@ export default function Nav(){
         <div>
             <div className="navigation">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact us</li>
+                    <li>خانه</li>
+                    <li>درباره ما</li>
+                    <li>ارتباط با ما</li>
 
 
                 </ul>
