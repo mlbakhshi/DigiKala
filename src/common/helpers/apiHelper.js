@@ -7,12 +7,9 @@ export const  BaseUrl="http://localhost/"
 export const ApiCallTimeout = 40 * 1000; //mili seconds
 
 export const callApi= (url, params = {}, method = "get") => {
-console.log(params);
 let productMode = process.env.NODE_ENV === 'production';
 
-    /*if(!productMode){
-        method='get'
-    }*/
+
 
     let config = {
         method: method,
@@ -56,7 +53,6 @@ let productMode = process.env.NODE_ENV === 'production';
         config.headers = headers;
     }
 
-console.log(config);
     return requestApi(config)
 
 };
@@ -78,13 +74,11 @@ const requestApi = async (config)=>{
             if(error.response.status===403){
                 // store.dispatch(logoutAuthSuccess())
                 toast.error("نشست شما منقضی شده است لطفا دوباره وارد شوید")
-                // toast.error("برای خریط بلیط ابتدا فرایند ثبت نام را تکمیل کنید .")
             }
             if(error.response.status===406){
 
                 toast(error.response.data.message);
                 // toast.error("نشست شما منقضی شده است لطفا دوباره وارد شوید")
-                //toast.error.
             }
         } else if (error.request) {
             console.log(error.request, "Request Error")

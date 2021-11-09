@@ -39,7 +39,6 @@ const SimpleSlickSlider=(props)=> {
         rebuildOnUpdate: true,
         shouldSwiperUpdate: true
     }
-    console.log(props.Products)
     let productInformation=props.Products.map(productInfo=>
         <SwiperSlide >
         <SimpleSliderComponent

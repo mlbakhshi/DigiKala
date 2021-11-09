@@ -20,8 +20,6 @@ const Login=(props)=>{
     const handleSubmit = async e => {
         e.preventDefault();
         const checkToken = await loginUser({username});
-        console.log(checkToken);
-        console.log(checkToken.data.id);
        let id=checkToken.data.id;
         setUserName(checkToken.data.username);
         if(checkToken.success){
@@ -34,7 +32,6 @@ const Login=(props)=>{
             }
             else{
                 const currentURL= window.location.href;
-                console.log(currentURL);
                 return(
                     <Redirect to="currentURL"  />
                 )

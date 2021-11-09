@@ -165,7 +165,6 @@ const MyProfile=(props)=>{
 
 
 const mapStateToProps  = (state) => {
-    console.log(state.data);
     return {
 
         auth: state.data.auth.isLogin,

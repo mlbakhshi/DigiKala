@@ -40,7 +40,6 @@ const MyProfile=(props)=>{
         component=<DeliverProcess />
     }
 
-    console.log(auth);
     if(auth){
         return(
 
@@ -74,7 +73,6 @@ const MyProfile=(props)=>{
 
 
 const mapStateToProps  = (state) => {
-    console.log(state.auth);
     return {
 
         auth: state.data.auth.isLogin,

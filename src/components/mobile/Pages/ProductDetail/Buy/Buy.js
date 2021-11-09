@@ -12,8 +12,8 @@ const Buy=(props)=>{
     const {increment}=props;
     let CurrencyFormat = require('react-currency-format');
     let price;
-    console.log(props);
-    if(props.detail.ProductOff==1){
+
+    if(props.detail.ProductOff===1){
         price=props.detail.OffPrice
     }
     else{

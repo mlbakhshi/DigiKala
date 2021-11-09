@@ -16,11 +16,9 @@ const MyOrders=(props)=>{
     const {userId,ACTION_Orders_SUCCESS}=props;
     const [leftMenu,setLeftMenu]=useState(0);
     const [id,setId]=useState();
-
-    console.log(userId);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(async ()=>{
-        //fetch orders from DB
+
         let checkOrders=null;
 
         try{
@@ -30,10 +28,7 @@ const MyOrders=(props)=>{
             console.log('Error')
         }
         if(checkOrders?.success===true){
-            console.log(checkOrders);
             setId(checkOrders.data)
-            console.log(id);
-            console.log( ACTION_Orders_SUCCESS(checkOrders.data))
         }
     },[]);
 

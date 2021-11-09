@@ -69,18 +69,14 @@ const CartContainer=(props)=>{
                         </button>
                     </div>
                 </div>
-                {
-                    <div className={classes.Del}>
-                        <button style={{border: "none",backgroundColor: "transparent"}} onClick={() => handleDelete(props.detailProduct.ID)}>
+                    <div className={classes.Del} onClick={() => handleDelete(props.detailProduct.ID)}>
                             <div>
                                 <i className="fa fa-trash" aria-hidden="true"></i>
                             </div>
                             <span>
                                  حذف
                             </span>
-                        </button>
                     </div>
-                }
 
                 <div className={classes.Price}>
                     {props.detailProduct.ProductOff === 1

@@ -8,8 +8,6 @@ import SendPic from '../../../../../assets/images/send.png';
 
 const Description=(props)=>{
 
-  console.log(props);
-
     return(
         <Auxx>
             <div className={classes.DesEnglish}>

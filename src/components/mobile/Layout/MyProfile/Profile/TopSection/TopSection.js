@@ -63,7 +63,6 @@ const MyProfile=(props)=>{
 
 
 const mapStateToProps  = (state) => {
-    console.log(state.auth);
     return {
 
         auth: state.data.auth.isLogin,

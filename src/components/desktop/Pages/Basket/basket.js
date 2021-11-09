@@ -18,7 +18,6 @@ const Basket=(props)=>{
         setState(new Date().getTime())
     }
 
-    console.log(orders);
     if(auth)
     {
             return (

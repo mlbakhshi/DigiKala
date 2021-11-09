@@ -19,7 +19,6 @@ const Logout = (props) => {
 };
 
 const mapStateToProps  = (state) => {
-    console.log(state,"dfgfgdfgfgdfg");
     return {
 
         auth: state.data.auth.isLogin,

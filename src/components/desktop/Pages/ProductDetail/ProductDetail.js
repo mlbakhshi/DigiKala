@@ -12,6 +12,7 @@ import {DetailProduct} from "../../../../redux/data/auth/apiFunction";
 
 const ProductDetail=(props)=>{
     let IDD=null;
+    let picturePath=null;
     const [product,setProduct]=useState([]);
     if(props.flagbuy!==true){
          IDD=props.match.params.id;
@@ -32,12 +33,12 @@ const ProductDetail=(props)=>{
             console.log('Error')
         }
         if(response?.success===true) {
-            console.log(response.data)
             setProduct(response.data)
-            console.log(response.data)
         }
 
     },[])
+
+
 
     return(
         <Auxx>

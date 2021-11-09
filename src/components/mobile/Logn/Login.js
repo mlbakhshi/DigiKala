@@ -19,8 +19,6 @@ const Login=(props)=>{
     const handleSubmit = async e => {
         e.preventDefault();
         const checkToken = await loginUser({username});
-        console.log(checkToken);
-        console.log(checkToken.data.id);
        let id=checkToken.data.id;
         setUserName(checkToken.data.username);
         if(checkToken.success){
@@ -33,7 +31,6 @@ const Login=(props)=>{
             }
             else{
                 const currentURL= window.location.href;
-                console.log(currentURL);
                 return(
                     <Redirect to="currentURL"  />
                 )
@@ -65,7 +62,6 @@ const Login=(props)=>{
 
                 <div className="d-grid gap-2" >
                     <input type="submit"
-                           // onClick={ACTION_login_SUCCESS()}
                            value="ورود به دیجی کالا"
                            style={{backgroundColor:"#ef394e",color:"white",border:"none",outline:"none",borderRadius:"2px"}}
                     />

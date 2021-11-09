@@ -24,7 +24,6 @@ const ProductDetail=(props)=>{
 
         let response=null;
         try {
-            console.log(IDD);
             response=await DetailProduct(IDD);
         }catch (e){
             console.log('Error')

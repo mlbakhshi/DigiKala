@@ -11,14 +11,11 @@ const WaitingPayment=(props)=>{
     let j=0;
     console.log(orders);
     for(let i=0;i<orders.length;i++){
-        console.log(orders[i].PackStatus);
-        if(orders[i].PackStatus==1 ){
+        if(orders[i].PackStatus===1 ){
             PackOrders[j]=orders[i];
-            // waitingOrders[j]=orders[i];
             j++;
         }
     }
-    console.log(PackOrders);
     let orderInformation=null;
     if(orders) {
         orderInformation = PackOrders.map(orderInfo =>

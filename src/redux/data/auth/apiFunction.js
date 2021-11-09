@@ -10,7 +10,6 @@ export const MobileProducts = async () => {
 
 // Login Member Api Call
 export const DetailProduct = async (id) => {
-    console.log(id,"detail");
     const  {data}  = await callApi('product/index',{id},'get');
     return data;
 }
@@ -28,26 +27,23 @@ export const logoutMember = async () => {
 }
 // SignIn Member Api Call
 export const BuyProduct = async (productId,userId) => {
-    console.log("BuyProduct");
     const {data}  = await callApi(`site/payment`, {productId, userId}, "get");
     return data;
 }
 
 
 export const SuspendProducts = async (userId) => {
-    console.log(userId)
     const {data}  = await callApi(`site/orders`, userId, "get");
     return data;
 }
 
 export const DeleteOrder = async (productId) => {
-    console.log(productId)
     const {data}  = await callApi(`site/orders`, productId, "get");
     return data;
 }
 
 export const AllOrders = async (userId) => {
-    console.log(userId)
+
     const {data}  = await callApi(`site/all-orders`, {userId}, "get");
     return data;
 }

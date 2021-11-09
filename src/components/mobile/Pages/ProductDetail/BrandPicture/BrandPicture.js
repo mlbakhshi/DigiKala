@@ -3,7 +3,7 @@ import classes from './BrandPicture.module.scss';
 import Auxx from "../../../../../hoc/Auxx/Auxx";
 import PicProduct from './../../../../../assets/images/mobilePics/Poco F3.jpg';
 const BrandPicture=(props)=>{
-    console.log(props.detail);
+
     return(
         <Auxx>
             <div className={classes.Title}>

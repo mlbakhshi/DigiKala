@@ -13,13 +13,11 @@ let initState = {
 export const ordersReducer = (state = initState, action) => {
     switch (action.type) {
         case Actions.ACTION_Count_Order_INCREMENT:
-            console.log("reducer");
             return {
                 ...state,
                 count: state.count+1,
             }
         case Actions.ACTION_Wait_Order:
-            console.log(action.data)
             return {
                 ...state,
                 status: Status.STATUS_WAIT,
@@ -34,7 +32,6 @@ export const ordersReducer = (state = initState, action) => {
 
             }
         case Actions.ACTION_Delete_Order:
-            console.log()
             let temp=state.orderProfile
             delete temp[action.data]
             return {
@@ -66,7 +63,7 @@ export const ordersReducer = (state = initState, action) => {
                 isDeliver: true,
             }
         case Actions.ACTION_Logout_Order:
-            console.log("reducer");
+
             return {
                 ...state,
                 status: Status.STATUS_SUCCESS,

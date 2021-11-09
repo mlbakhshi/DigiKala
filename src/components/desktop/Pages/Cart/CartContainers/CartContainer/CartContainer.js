@@ -71,8 +71,7 @@ const CartContainer = (props) => {
                         </button>
                     </div>
                 </div>
-                { <button onClick={() => handleDelete(props.detailProduct.ID)}>
-                    <div className={classes.Del}>
+                    <div className={classes.Del} onClick={() => handleDelete(props.detailProduct.ID)}>
                         <div>
                             <i className="fa fa-trash" aria-hidden="true"></i>
                         </div>
@@ -81,8 +80,6 @@ const CartContainer = (props) => {
             حذف
         </span>
                     </div>
-                    </button>
-                }
 
                 <div className={classes.Price}>
                     {props.detailProduct.ProductOff === 1

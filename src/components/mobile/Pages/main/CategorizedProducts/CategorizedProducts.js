@@ -17,7 +17,6 @@ const CategorizedProducts=(props)=>{
         }catch (e){
             console.log('Error')
         }
-        console.log(response);
         setProducts(response);
 
     },[])

@@ -11,7 +11,6 @@ const Buy=(props)=>{
     const {ACTION_Orders_DELETE} = props;
     const [delBuy,setDelBuy]=useState(true);
     const handleDelete=(id)=>{
-        console.log(id);
         ACTION_Orders_DELETE(id)
         props.onRemoveItem&&props.onRemoveItem()
         setDelBuy(false);

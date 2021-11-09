@@ -9,7 +9,6 @@ const WaitingPayment=(props)=>{
 const {orders}=props;
 let waitingOrders=[];
 
-console.log(waitingOrders);
 let orderInformation=null;
     if(orders) {
         orderInformation = Object.keys(props.orders).reduce((array, key) => {
@@ -48,7 +47,6 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps  = (state) => {
-    console.log(state,"dfgfgdfgfgdfg");
     return {
 
        orders: state.data.cntOrder.orderProfile,

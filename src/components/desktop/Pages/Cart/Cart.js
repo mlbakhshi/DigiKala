@@ -23,7 +23,6 @@ const Cart=(props)=>{
             console.log('Error')
         }
         if(response?.success===true) {
-            console.log(response.data)
             const order=  Object.keys(orderProducts).reduce((array, key) => {
                 return [...array, {key: orderProducts[key]}]
             }, [])
@@ -36,9 +35,7 @@ const Cart=(props)=>{
                     }
                 }
             }
-            console.log(iterateProduct);
             if(!tekrari){
-                console.log("iterate nist")
                 {ACTION_Orders_SUCCESS(response.data)}
             }
         }
@@ -73,7 +70,6 @@ const Cart=(props)=>{
 
 }
 const mapStateToProps  = (state) => {
-    console.log(state.auth);
     return {
         auth: state.data.auth.isLogin,
         userId:state.data.auth.userprofile,

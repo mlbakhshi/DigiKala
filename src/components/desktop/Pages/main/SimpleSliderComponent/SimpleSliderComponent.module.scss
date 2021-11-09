@@ -12,6 +12,13 @@
   height:calcLen(350);
   padding:calcLen(10);
 }
+.Card img{
+  width: 75%;
+  display: flex;
+  justify-content:center;
+  margin-right: auto;
+  margin-left: auto;
+}
 .Card a{
   text-decoration:none;
   text-underline:none;

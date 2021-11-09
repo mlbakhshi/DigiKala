@@ -24,7 +24,6 @@ const Login=(props)=>{
         )
     }
     else {
-        console.log(counter);
         return (
             <div className={classes.LoginBag}>
                 <div className={classes.Login}>
@@ -54,7 +53,6 @@ const Login=(props)=>{
 }
 
 const mapStateToProps  = (state) => {
-    console.log(state,"dfgfgdfgfgdfg");
     return {
 
         auth: state.data.auth.isLogin,
