@@ -1,75 +1,35 @@
 //import useState hook to create menu collapse state
 import React, { useState } from "react";
-
-//import react pro sidebar components
-import {
-    ProSidebar,
-    Menu,
-    MenuItem,
-    SidebarHeader,
-    SidebarFooter,
-    SidebarContent,
-} from "react-pro-sidebar";
-
-//import icons from react icons
-import {FaList, FaMobile, FaRegComment, FaRegHeart, FaRegUser} from "react-icons/fa";
-import { FiHome, FiLogOut, FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
-import { RiPencilLine } from "react-icons/ri";
-// import { BiCog } from "react-icons/bi";
-
-
-//import sidebar css from react-pro-sidebar module and our custom css
+import { FaMobile, FaRegUser} from "react-icons/fa";
+import { FiLogOut } from "react-icons/fi";
 import "react-pro-sidebar/dist/css/styles.css";
-import "./RightMenu.scss";
-import {Link} from "react-router-dom";
-import account from "../../Account/account";
-
+import "./RightMenu.module.scss";
+import NavigationItem from "./Navigationitem/navigationitem";
+import classes from './RightMenu.module.scss';
 
 const RightMenu = () => {
-
-    //create initial menuCollapse state using useState hook
-    const [menuCollapse, setMenuCollapse] = useState(false)
-
-    //create a custom function that will change menucollapse state from false to true and true to false
-    const menuIconClick = () => {
-        //condition checking to change state from true to false and vice versa
-        menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
-    };
-
     return (
-        <>
-            <div id="header">
-                <ProSidebar collapsed={menuCollapse}>
-                    <SidebarHeader>
+<>
+    <div style={{display:"flex",flexDirection:"row"}}>
+        <ul className={classes.NavigationItems}>
+            <NavigationItem  >
+                <span className="icon-menu"></span>
+                دیجی کلاب
+            </NavigationItem>
+            <NavigationItem link="/profile" >
+                <FaMobile />
+                سفارش های من
+            </NavigationItem>
+            <NavigationItem link="/account" >
+                <FaRegUser />
+                اطلاعات حساب
+            </NavigationItem>
+            <NavigationItem link="/logout" >
+                <FiLogOut />
+                خروج</NavigationItem>
 
-                        <div className="closemenu" onClick={menuIconClick}>
-                            {menuCollapse ? (
-                                <FiArrowRightCircle/>
-                            ) : (
-                                <FiArrowLeftCircle/>
-                            )}
-                        </div>
-                    </SidebarHeader>
-                    <SidebarContent>
-                        <Menu iconShape="square">
-                            <Link to='/profile'>
-                            <MenuItem
-                                icon={<FaMobile />}>
-                                سفارش های من
-                            </MenuItem>
-                            </Link>
-                          <Link to='/account'>
-                              <MenuItem
-                                  icon={<FaRegUser />}>
-                                  اطلاعات حساب
-                              </MenuItem>
-                          </Link>
-
-                            <MenuItem icon={<FiLogOut />}>خروج</MenuItem>
-                        </Menu>
-                    </SidebarContent>
-                </ProSidebar>
-            </div>
+        </ul>
+    </div>
         </>
     );
 };

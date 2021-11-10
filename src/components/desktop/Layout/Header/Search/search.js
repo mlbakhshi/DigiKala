@@ -20,7 +20,7 @@ const Search=()=>{
         }
         let j=0;
         for(let i=0;i<response.length;i++){
-            if(response[i].ProductTitle.toLowerCase().includes(searchTerm)){
+            if(response[i].ProductNamePr.toLowerCase().includes(searchTerm)){
                 searchResults[j]=response[i];
                 j++
             }

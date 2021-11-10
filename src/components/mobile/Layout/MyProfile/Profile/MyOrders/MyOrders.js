@@ -16,6 +16,12 @@ const MyOrders=(props)=>{
     const {userId,ACTION_Orders_SUCCESS}=props;
     const [leftMenu,setLeftMenu]=useState(0);
     const [id,setId]=useState();
+    const [state,setState]=useState(new Date().getTime())
+
+    const onRemoveItem=()=>{
+        setState(new Date().getTime())
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(async ()=>{
 
@@ -44,7 +50,7 @@ const MyOrders=(props)=>{
     ]
     let component;
     if(leftMenu===1){
-        component=<WaitingPayment />
+        component=<WaitingPayment onRemoveItem={onRemoveItem} />
     }
     else if(leftMenu===2){
         component=<Processing />

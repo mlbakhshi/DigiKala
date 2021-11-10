@@ -2,6 +2,7 @@ import React from 'react';
 import NavigationFooterItem from "../NavigationFooteritem";
 import classes from './NavigationFooteritems.module.scss';
 import '../../../../../../assets/icon/style.css';
+import {Link} from "react-router-dom";
 
 
 const NavigationFooterItems=(props)=>{
@@ -9,50 +10,79 @@ const NavigationFooterItems=(props)=>{
         <div>
         <div className={classes.footerContainer}  >
             <nav>
-                <ul>
-                    با دیجی کالا
-                    <NavigationFooterItem link="/orders">
-                        اتاق خبر دیجی کالا
-                    </NavigationFooterItem>
-                    <NavigationFooterItem link="/orders">
-                        فروش در دیجی کالا
-                    </NavigationFooterItem>
-                    <NavigationFooterItem link="/orders">
-                        فرصت های شغلی
-                    </NavigationFooterItem>
-                    <NavigationFooterItem link="/orders">
-                        تماس با دیجی کالا
-                    </NavigationFooterItem>
-                    <NavigationFooterItem link="/orders">
-                        درباره دیجی کالا
-                    </NavigationFooterItem>
+                <ul >
+                    <span className={classes.Titr}>
+                                           با دیجی کالا
+
+                    </span>
+                    <li >
+                        <Link to={"/"}>
+                            اتاق خبر دیجی کالا
+                        </Link>
+                    </li>
+                    <li >
+                        <Link to={"/"}>
+                            فروش در دیجی کالا
+                        </Link>
+                    </li>
+                    <li >
+                        <Link to={"/"}>
+                            فرصت های شغلی
+                        </Link>
+
+                    </li>
+                    <li >
+                        <Link to={"/"}>
+                            تماس با دیجی کالا                        </Link>
+
+                    </li>
+                    <li >
+                        <Link to={"/"}>
+                            درباره دیجی کالا
+                        </Link>
+                    </li>
                 </ul>
             </nav>
 
-            <nav>
+            <nav style={{marginRight:"auto"}}>
                 <ul>
+                    <span className={classes.Titr}>
                     خدمات مشتریان
-                    <NavigationFooterItem link="/orders">
-                        پاسخ به پرسش های متدوال
-                    </NavigationFooterItem>
-                    <NavigationFooterItem link="/orders">
-                        رویه های باز گرداندن کالا
-                    </NavigationFooterItem>
-                    <NavigationFooterItem link="/orders">
-                        شرایط استفاده
-                    </NavigationFooterItem>
-                    <NavigationFooterItem link="/orders">
-                        حریم خصوصی
-                    </NavigationFooterItem>
-                    <NavigationFooterItem link="/orders">
-                        گزارش باگ
-                    </NavigationFooterItem>
+
+                    </span>
+                    <li >
+                        <Link to={"/"}>
+                            پاسخ به پرسش های متدوال
+                        </Link>
+                    </li>
+                    <li >
+                        <Link to={"/"}>
+                            رویه های باز گرداندن کالا
+                        </Link>
+                    </li>
+
+                    <li >
+                        <Link to={"/"}>
+                            شرایط استفاده
+                        </Link>
+                    </li>
+                    <li >
+                        <Link to={"/"}>
+                            حریم خصوصی
+                        </Link>
+                    </li>
+                    <li >
+                        <Link to={"/"}>
+                            گزارش باگ
+                        </Link>
+                    </li>
+
                 </ul>
             </nav>
         </div>
 
             <div className={classes.Nav} >
-                <div style={{marginLeft:"25px"}}>
+                <div style={{marginLeft:"30px"}}>
                     با ما همراه باشید
                 </div>
                 <NavigationFooterItem link="/orders">
@@ -64,9 +94,9 @@ const NavigationFooterItems=(props)=>{
                 <NavigationFooterItem link="/orders">
                     <span className="icon-linkedin"></span>
                 </NavigationFooterItem>
-                <NavigationFooterItem link="/orders">
-                    <span className="icon-aparat"></span>
-                </NavigationFooterItem>
+                {/*<NavigationFooterItem link="/orders">*/}
+                {/*    <span className="icon-aparat"></span>*/}
+                {/*</NavigationFooterItem>*/}
             </div>
                 <div className={classes.EmailInput} >
                     <input  className={classes.inputEmail} placeholder="برای دریافت اخبار ایمیل خود را وارد کنید" />

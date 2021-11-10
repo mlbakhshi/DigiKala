@@ -20,7 +20,7 @@
     align-items: stretch;
     align-content: space-around;
     padding: calcLen(8);
-    margin-left: calcLen(10);
+    //margin-left: calcLen(10);
 }
 .Cart{
     display: flex;
@@ -39,10 +39,11 @@
     text-decoration:none;
 }
 .NotLogin {
-    font-size:calcFont(11);
+    font-size:calcFont(12.5);
     display:flex;
-    margin-top:calcLen(7);
-
+    margin-top:calcLen(11);
+margin-right:calcLen(12);
+margin-left:calcLen(12);
 }
 .LoginSymbol{
     margin-top:calcLen(5);

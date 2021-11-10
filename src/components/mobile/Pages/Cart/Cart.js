@@ -9,22 +9,28 @@ import Login from "../../../mobile/Logn/Login";
 import {loginAuthSuccess} from "../../../../redux/data/auth/actions";
 import { WaitOrder} from "../../../../redux/data/ordersCount/actions";
 import {connect} from "react-redux";
+import {Spinner} from "react-bootstrap";
+import ProductDetail from "../ProductDetail/ProductDetail";
+import Basket from "../Basket/basket";
 
 const Cart=(props)=>{
 
     const { auth,orderProducts,ACTION_Orders_SUCCESS,count }  = props;
+    const [loding,setLoading]=useState(false);
     let IDD=props.match.params.id;
     const [iterateProduct,setIterateProduct]=useState(false);
     let tekrari=false;
 
     useEffect(async ()=>{
         let response=null;
+        setLoading(true)
         try {
             response=await DetailProduct(IDD);
         }catch (e){
             console.log('Error')
         }
         if(response?.success===true) {
+            setLoading(false)
             const order=  Object.keys(orderProducts).reduce((array, key) => {
                 return [...array, {key: orderProducts[key]}]
             }, [])
@@ -52,32 +58,27 @@ const Cart=(props)=>{
         if(!iterateProduct)
         {
             return (
-                <Auxx>
-                    <Toolbar/>
-                    <div className={classes.Cart}>
-                        <section className={classes.CartContainers}>
-                            محصول ثبت شد
-                        </section>
-                        <aside className={classes.CartBuy}>
-                            <CartBuy/>
-                        </aside>
-                    </div>
-                    <Footer/>
-                </Auxx>
+                <div>
+
+                    {!loding&&<ProductDetail flagbuy={true} id={IDD}/>}
+                    {loding&&<Spinner animation="border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </Spinner>}
+                </div>
             )
         }
         else {
             return (
                 <Auxx>
-                    <Toolbar/>
-                    <div className={classes.Cart}>
-                        <section className={classes.CartContainers}>
-                            این محصول قبلا خریداری شده و در سبد خرید شما موجود است.                        </section>
-                        <aside className={classes.CartBuy}>
-                            <CartBuy/>
-                        </aside>
-                    </div>
-                    <Footer/>
+                    <Basket />
+
+                    {!loding&&<span>
+                            این محصول قبلا خریداری شده و در سبد خرید شما موجود است.
+                    </span>}
+                    {loding&&<Spinner animation="border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </Spinner>}
+
                 </Auxx>
             )
         }

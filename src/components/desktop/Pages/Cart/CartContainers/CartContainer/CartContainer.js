@@ -19,7 +19,7 @@ const CartContainer = (props) => {
     return (
         <Auxx>
             <div className={classes.Title}>
-                {props.detailProduct.ProductTitle}
+                {props.detailProduct.ProductNamePr}
             </div>
             <div className={classes.Color}>
                 <span className={classes.Dot} style={{backgroundColor: "gray"}}></span>

@@ -21,10 +21,10 @@ const Incredible=()=>{
     // const SuperProductsPics=[{src:"Pic1"},{src:"Pic2"},{src:"Pic3"},{src:"Pic4"},{src:"Pic5"},{src:"Pic6"}];
     return(
         <section className={classes.incredibleSec}>
-            <div style={{width:"30%"}}>
+            <div style={{width:"40%"}}>
                 <img src={incredibleSuperImage} className={classes.Image}/>
             </div>
-            <div style={{margin:"auto",width:"70%"}}>
+            <div style={{margin:"auto",width:"60%"}}>
                 <SlickSlide Products={SuperProducts}
                             // ProductsPics={SuperProductsPics}
                 />

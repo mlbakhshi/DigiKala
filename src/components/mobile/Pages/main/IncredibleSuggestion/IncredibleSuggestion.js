@@ -25,15 +25,15 @@ return(
         display: "flex",
         height: "20%"
     }}>
-        <div style={{width:"30%"}}>
-            <img src={incredibleSuggestImage} style={{width: "60%",
+        <div style={{width:"40%"}}>
+            <img src={incredibleSuggestImage} style={{width: "100%",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 marginTop: "60%",
                 marginRight: "15%"}}/>
         </div>
-        <div style={{margin:"2%",width:"70%"}}>
+        <div style={{margin:"2%",width:"60%"}}>
             <SlickSlide Products={IncredibleProducts}
                         // ProductsPics={Pic}
             />

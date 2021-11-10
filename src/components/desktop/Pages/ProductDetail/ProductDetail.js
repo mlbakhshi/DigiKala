@@ -10,10 +10,10 @@ import Footer from "../../Layout/Footer/footer";
 import Toolbar from "../../Layout/Header/toolbar/toolbar";
 import {DetailProduct} from "../../../../redux/data/auth/apiFunction";
 import Snipper from "../../../../common/snipper/snipper";
+import {Spinner} from "react-bootstrap";
 
 const ProductDetail=(props)=>{
     let IDD=null;
-    let picturePath=null;
     const [product,setProduct]=useState([]);
     const [loding,setLoading]=useState(false);
     if(props.flagbuy!==true){
@@ -52,12 +52,18 @@ const ProductDetail=(props)=>{
 
                 <section className={classes.picGallery}>
                     {!loding&&<InnerImageZoom src={testimg} />}
-                    {loding&&<Snipper />}
+                    {loding&&<Spinner animation="border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </Spinner>}
                 </section>
 
                 <section className={classes.Detail}>
                     {!loding&&<Intro  flagbuy={props.flagbuy} detailProduct={product}/>}
-                    {loding&&<Snipper />}
+                    {loding&&
+                    <Spinner animation="border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </Spinner>
+                    }
                 </section>
             </article>
             <section className={classes.Suggestion}>

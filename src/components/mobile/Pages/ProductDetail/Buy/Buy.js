@@ -1,14 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import classes from './Buy.module.scss';
 import Labkhand from '../../../../../assets/images/labkhand.png';
 import { Button } from 'react-bootstrap-buttons';
 import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
 import Auxx from "../../../../../hoc/Auxx/Auxx";
 import {Link} from "react-router-dom";
-import {incrementOrder} from "../../../../../redux/data/ordersCount/actions";
+import {DelOrder, incrementOrder} from "../../../../../redux/data/ordersCount/actions";
 import {connect} from "react-redux";
 
 const Buy=(props)=>{
+    const {ACTION_Orders_DELETE} = props;
+    const [delBuy,setDelBuy]=useState(true);
+    const handleDelete=(id)=>{
+        ACTION_Orders_DELETE(id)
+        props.onRemoveItem&&props.onRemoveItem()
+        setDelBuy(false);
+    }
     const {increment}=props;
     let CurrencyFormat = require('react-currency-format');
     let price;
@@ -74,11 +81,18 @@ const Buy=(props)=>{
                 </div>
 
                 <div className="d-grid gap-2" >
-                    <Link to={`/cart/${props.detail.ID}`} >
-                        <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}} OnClick={increment}>
-                            افزودن به سبد خرید
+                    {(!props.flagbuy || !delBuy) ? <Link to={`/cart/${props.detail.ID}`} >
+                            <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}} >
+                                افزودن به سبد خرید
+
+                            </Button>
+                        </Link>
+                        :
+                        <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}}
+                                onClick={() => handleDelete(props.detail.ID)}>
+                            حذف از سبد خرید
                         </Button>
-                    </Link>
+                    }
                 </div>
 
 
@@ -95,6 +109,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         increment: () => dispatch(incrementOrder()),
+        ACTION_Orders_DELETE: (data) => dispatch(DelOrder(data)),
     };
 };
 export default

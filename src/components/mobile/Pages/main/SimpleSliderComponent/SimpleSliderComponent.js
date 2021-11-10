@@ -3,6 +3,7 @@ import '../../../../../assets/icon/style.css';
 import classes  from './SimpleSliderComponent.module.scss';
 import {Link} from "react-router-dom";
 const SimpleSliderComponent=(props)=>{
+
     let graphImage = require('../../../../../assets/Upload/' + props.mobilePic)
     let CurrencyFormat = require('react-currency-format');
     return(

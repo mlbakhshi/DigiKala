@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from './downloadApp.module.scss';
-import  googlePlay  from '../../../../../assets/SVG/googleplay.png';
-import bazar  from '../../../../../assets/SVG/bazar.png';
-import sib from '../../../../../assets/SVG/sib.png';
-import  myket from '../../../../../assets/SVG/myket.png';
+import  googlePlay  from '../../../../../assets/Google.png';
+import bazar  from '../../../../../assets/Bazar.png';
+import sib from '../../../../../assets/Sib App.png';
+import  myket from '../../../../../assets/Myket.png';
 
 const downloadApp=()=>{
     return(

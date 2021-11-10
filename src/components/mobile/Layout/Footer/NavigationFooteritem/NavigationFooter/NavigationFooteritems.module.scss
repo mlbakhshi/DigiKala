@@ -1,9 +1,24 @@
 @import '../../../../../../assets/css/mobile/variables';
 
+.Titr{
+    font-size: calcLen(14);
 
+}
+.footerContainer li a{
+    font-size: .857rem;
+    line-height: calcLen(35);
+    color: #81858b;
+    text-underline:none;
+    text-decoration:none;
+
+}
+
+.footerContainer li {
+    list-style-type: none;
+}
 .footerContainer{
     display:flex;
-    width: 90%;
+    width: 100%;
 }
 .inputEmail{
     background-color:#f8f4f4;
@@ -11,8 +26,8 @@
     border:none;
     color:darkgray;
     height:calcLen(50);
-    margin-left:calcLen(15);
-    width:55%;
+    margin-left:calcLen(5);
+    width:80%;
     font-size:calcFont(11);
 }
 .inputButton{
@@ -21,7 +36,7 @@
     border:none;
     color:white;
     width:18%;
-    margin-right:calcLen(15);
+    margin-right:calcLen(5);
 }
 .Nav{
     display:flex;

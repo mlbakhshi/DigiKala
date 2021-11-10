@@ -32,7 +32,7 @@ const Login=(props)=>{
             <div className={classes.LoginBag}>
                 <div className={classes.Login}>
 
-                    <div className={classes.NotLogin}>
+                    <div className={classes.Login}>
                         <Link to={"/profile"}>
                         <div>
                             <i className="fas fa-user-alt"></i>

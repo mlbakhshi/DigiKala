@@ -2,22 +2,26 @@ import React, {useEffect, useState} from 'react';
 import classes from './CategorizedProducts.module.scss';
 import SimpleSlickSlider from "./SimpleSlickSlider/SimpleSlickُSlider/SimpleSlickSlider";
 import {MobileProducts} from "../../../../../redux/data/auth/apiFunction";
+import ProductDetail from "../../ProductDetail/ProductDetail";
+import {Spinner} from "react-bootstrap";
 
 
 const CategorizedProducts=(props)=>{
 
     const [products,setProducts]=useState([]);
-
+    const [loding,setLoading]=useState(false);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(async ()=>{
         let response=null;
+        setLoading(true)
         try {
             response=await MobileProducts();
 
         }catch (e){
             console.log('Error')
         }
+        setLoading(false)
             setProducts(response);
     },[])
 
@@ -33,7 +37,14 @@ const CategorizedProducts=(props)=>{
               </span>
                 </div>
                 <div>
-                    <SimpleSlickSlider Products={products}/>
+
+
+                    {!loding&& <SimpleSlickSlider Products={products}/>}
+                    {loding&&<Spinner animation="border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </Spinner>}
+
+
                 </div>
             </section>
 

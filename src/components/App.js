@@ -5,9 +5,9 @@ import React, {useEffect, useState} from "react";
 import { useHistory } from 'react-router-dom'
 import {ToastContainer, Zoom} from "react-toastify";
 
-let AppDevice = require(`./desktop/desktop`);
-// let AppDevice = require(`./mobile/mobile`);
-//
+// let AppDevice = require(`./desktop/desktop`);
+let AppDevice = require(`./mobile/mobile`);
+
 
 function App() {
     const history = useHistory();

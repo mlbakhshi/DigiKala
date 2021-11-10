@@ -29,21 +29,21 @@ const SlickSlide=(props)=> {
         },
         breakpoints: {
             480: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 10
             },
-            400: {
+            300: {
                 slidesPerView: 1,
                 spaceBetween: 10
             },
 
             // when window width is <= 1024px
             1024: {
-                slidesPerView: 4,
+                slidesPerView: 2,
                 spaceBetween: 15
             },
             900: {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 15
             },
         },

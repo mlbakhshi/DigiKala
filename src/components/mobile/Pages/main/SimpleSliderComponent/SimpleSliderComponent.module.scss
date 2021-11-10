@@ -9,7 +9,7 @@
   width:100%;
   border-radius:calcLen(10);
   margin:auto;
-  height:calcLen(200);
+  height:calcLen(220);
   padding:calcLen(5);
 }
 .Card a{
@@ -20,11 +20,13 @@
   width:75%;
   display:flex;
   justify-content:center;
+  margin-right:calcLen(15);
 }
 .ProductDescription{
   font-size:calcFont(11);
   color:#4a5f73;
   margin-top:calcLen(15);
+  min-height:calcLen(65);
 }
 .Card:hover{
   border:calcLen(2) solid #d3d3d6;

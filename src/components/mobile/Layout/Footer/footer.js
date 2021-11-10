@@ -7,11 +7,23 @@ import Symbols from "./Symbols/symbols";
 import digikalaPrLogo from '../../../../assets/SVG/dg pr.png';
 
 const Footer=()=>{
+    const handleUp=()=>{
+        window.scrollTo(0,0)
+    }
     return(
         <div className={classes.Footer}>
-            <div className={classes.PrLogo}>
-                <img src={digikalaPrLogo} />
+            <div className={classes.LogoUp}>
+                <div className={classes.PrLogo}>
+                    <img src={digikalaPrLogo} />
+                </div>
+                <div className={classes.UpButton}>
+                    <button onClick={()=>handleUp()}>
+                        بازگشت به بالا
+                        <i className="fa fa-chevron-up"></i>
+                    </button>
+                </div>
             </div>
+
             <div className={classes.About}>
                 <div>تلفن پشتیبانی : </div>
                 <div>42920000-021 </div>

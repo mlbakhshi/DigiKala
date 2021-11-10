@@ -14,21 +14,32 @@ import Return from "../../../../assets/SVG/4.png";
 import Orginal from "../../../../assets/SVG/5.png";
 import {DetailProduct} from "../../../../redux/data/auth/apiFunction";
 import Intro from "./Intro/Intro";
+import InnerImageZoom from "react-inner-image-zoom";
+import testimg from "../../../../assets/images/mobilePics/Samsung A12.jpg";
+import {Spinner} from "react-bootstrap";
 const ProductDetail=(props)=>{
-    console.log(props);
+    let IDD=null;
+    const [loding,setLoading]=useState(false);
     const [product,setProduct]=useState([]);
-    let IDD=props.match.params.id;
+    if(props.flagbuy!==true){
+        IDD=props.match.params.id;
+    }
+    else {
+        IDD=props.id;
+    }
 
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(async ()=>{
         window.scrollTo(0,0)
         let response=null;
+        setLoading(true)
         try {
             response=await DetailProduct(IDD);
         }catch (e){
             console.log('Error')
         }
+        setLoading(false)
         if(response?.success===true) {
             setProduct(response.data)
         }
@@ -56,10 +67,14 @@ const ProductDetail=(props)=>{
                 </section>
 
 <section>
-    <Intro flagbuy={props.flagbuy} detailProduct={product} />
+    {!loding&&<Intro  detailProduct={product} />}
+    {loding&&<Spinner animation="border" role="status">
+        <span className="visually-hidden">Loading...</span>
+    </Spinner>}
+
 </section>
                 <section className={classes.Buy}>
-                    <Buy detail={product}/>
+                    <Buy  flagbuy={props.flagbuy} detail={product}/>
                 </section>
                 <section className={classes.FreeSend}>
                     <div className={classes.Send}>

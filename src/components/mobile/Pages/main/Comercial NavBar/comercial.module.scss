@@ -4,7 +4,8 @@
 .Commercial{
   display:flex;
   justify-content:space-around;
-  padding:calcLen(20);
+  padding-top:calcLen(10);
+  padding-bottom:calcLen(10);
 }
 .comImage{
   border-radius:calcLen(20);

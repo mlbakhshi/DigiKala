@@ -10,6 +10,7 @@ import Basket from "../Basket/basket";
 import InnerImageZoom from "react-inner-image-zoom";
 import testimg from "../../../../assets/images/mobilePics/Samsung A12.jpg";
 import Snipper from "../../../../common/snipper/snipper";
+import {Spinner} from "react-bootstrap";
 
 
 
@@ -54,8 +55,11 @@ const Cart=(props)=>{
         {
             return (
                 <div>
-                    {!loding&& <ProductDetail flagbuy={true} id={IDD}/>}
-                    {loding&&<Snipper />}
+
+                    {!loding&&<ProductDetail flagbuy={true} id={IDD}/>}
+                    {loding&&<Spinner animation="border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </Spinner>}
                 </div>
 
 
@@ -65,10 +69,13 @@ const Cart=(props)=>{
             return (
                 <Auxx>
                     <Basket />
+
                     {!loding&&<span>
                             این محصول قبلا خریداری شده و در سبد خرید شما موجود است.
                     </span>}
-                    {loding&&<Snipper />}
+                    {loding&&<Spinner animation="border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </Spinner>}
 
                 </Auxx>
             )

@@ -17,7 +17,7 @@ const CartContainer=(props)=>{
     return (
         <Auxx>
             <div className={classes.Title}>
-                {props.detailProduct.ProductTitle}
+                {props.detailProduct.ProductNamePr}
             </div>
             <div className={classes.Color}>
                 <span className={classes.Dot} style={{backgroundColor: "gray"}}></span>
@@ -69,14 +69,6 @@ const CartContainer=(props)=>{
                         </button>
                     </div>
                 </div>
-                    <div className={classes.Del} onClick={() => handleDelete(props.detailProduct.ID)}>
-                            <div>
-                                <i className="fa fa-trash" aria-hidden="true"></i>
-                            </div>
-                            <span>
-                                 حذف
-                            </span>
-                    </div>
 
                 <div className={classes.Price}>
                     {props.detailProduct.ProductOff === 1

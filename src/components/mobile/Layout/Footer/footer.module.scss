@@ -1,6 +1,21 @@
 @import '../../../../assets/css/mobile/variables';
 
+.LogoUp{
+    display:flex;
+}
+.UpButton{
+   margin-top:calcLen(20);
+    margin-right:auto;
+    background-color:transparent;
+}
+.UpButton button{
+    background-color:transparent;
+    font-size:calcFont(14);
+    border:solid calcLen(1) darkgray;
+    border-radius:calcLen(5);
+    height:calcLen(25);
 
+}
 .Footer{
     font-size: calcFont(16) !important;
     padding-right:calcLen(20);
@@ -13,15 +28,16 @@ margin-top: calcLen(20);
 
 }
 .PrLogo img{
-    width:calcLen(50);
+    width:calcLen(91);
+    height:calcLen(24);
 }
 .About{
     display: flex;
     margin-top: calcLen(5);
-font-size:calcFont(10);
+font-size:calcFont(12);
 }
 .Alldays{
-    font-size:calcFont(10);
+    font-size:calcFont(12);
 }
 .PNGLogo{
     display: flex;

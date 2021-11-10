@@ -1,0 +1,16 @@
+@import '../../../../../assets/css/mobile/variables';
+
+.Location{
+  margin-top:auto;
+  margin-bottom:calcLen(5);
+  font-size:calcFont(12);
+}
+.Location i{
+  color:#f9a825;
+  font-size:calcFont(18);
+}
+
+
+.Location span{
+ margin-right:calcLen(10);
+}

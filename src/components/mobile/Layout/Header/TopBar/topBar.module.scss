@@ -3,11 +3,20 @@
 
 .TopBar{
     display: flex;
-    margin-top:calcLen(30);
-    justify-content:space-around;
+    margin-top:calcLen(28);
+    margin-bottom:calcLen(10);
+    justify-content:space-between;
   height:calcLen(28);
 }
 .Question{
-   font-size:calcFont(10);
-  margin-top:calcLen(6);
+   font-size:calcFont(14);
+  margin-top:calcLen(4.5);
+  width:calcLen(25);
+  //justify-content:start;
+  border:solid calcLen(1.25) gray;
+  border-radius:calcLen(5);
+  text-align:center;
+  justify-content:center;
+  justify-items:center;
+//padding:calcLen(5);
 }

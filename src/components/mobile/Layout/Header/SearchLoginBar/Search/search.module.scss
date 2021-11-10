@@ -6,17 +6,17 @@
     border-radius: calcLen(10);
     display: flex;
     justify-content:flex-start;
-    align-items: stretch;
+    //align-items: stretch;
     align-content: space-around;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
     flex-direction: row;
-    height: calcLen(35);
-    margin-top: calcLen(2);
-    margin-right: calcLen(10);
+    height: calcLen(50);
+    //margin-top: calcLen(2);
+    //margin-right: calcLen(10);
     margin-left: calcLen(10);
     width:100%;
     padding-right: calcLen(8);
-    padding-top: calcLen(20);
+    padding-top: calcLen(10);
 
 }
 .Search input{
