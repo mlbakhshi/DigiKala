@@ -1,6 +1,8 @@
 @import '../../../../../../assets/css/desktop/variables';
 
-
+.Title{
+  font-size:calcFont(16);
+}
 .Dot{
   height: calcLen(17);
   width: calcLen(17);
@@ -13,11 +15,11 @@
 }
 .Color{
   font-size:calcFont(12);
-color: #737272;
+color: #62666d;
 }
 .Guarantee{
     margin-right:calcLen(10);
-  color:#737272;
+  color:#62666d;
   margin-top:calcLen(6);
 }
 .Guarantee span{
@@ -26,11 +28,11 @@ color: #737272;
 }
 .Seller{
   margin-right:calcLen(8);
-  color:#737272;
+  color:#62666d;
   margin-top:calcLen(6);
 }
 .Seller img{
-  width:calcLen(15);
+  width:10%;
 }
 .Seller span{
   margin-right:calcLen(5);
@@ -38,7 +40,7 @@ color: #737272;
 }
 .Stock{
   margin-right:calcLen(8);
-  color:#737272;
+  color:#62666d;
   margin-top:calcLen(6);
 }
 .Stock span{
@@ -47,34 +49,46 @@ color: #737272;
 }
 .numberOrder{
   display:flex;
+  //flex-direction:row;
   margin-top:calcLen(15);
   padding-top: calcLen(5);
   font-size: calcFont(15);
   border:calcLen(1) solid  darkgray;
-  border-radius: 5%;
+  border-radius: 8%;
+  height:55%;
+width:15%;
 
 }
-.incrbtn{
-  color: #b1b4ff;
+.incrbtn i{
+  color: #e0e0e2;
   background-color: transparent;
-  border: none;
-  margin-left: calcLen(10);
-}
-.numorder{
-  margin-left: calcLen(10);
-  padding-left:calcLen(0);
-}
-.decrbtn{
-  background-color: transparent;
-  color: #b1b4ff;
   border: none;
 
+  //margin-left: calcLen(10);
+  //padding-right:calcLen(10);
+}
+.numorder input{
+  display:flex;
+  justify-content:center;
+  justify-items:center;
+  padding-right:calcLen(5);
+  //margin-left: calcLen(10);
+  //padding-left:calcLen(0);
+  //padding-right:calcLen(14);
+
+}
+.decrbtn i{
+  background-color: transparent;
+  color: #e0e0e2;
+  border: none;
+//margin-right:0;
 }
 .numberOrder,.incrbtn,.decrbtn,.numorder{
-  width: 20%;
+  //width: 20%;
 }
 .formControl{
-  width:20%;
+  //width:20%;
+  color:#0fabc6;
 }
 .NumberDelPrice{
   display:flex;
@@ -86,14 +100,17 @@ color: #737272;
   margin-right:calcLen(15);
   padding-top: calcLen(5);
   cursor:pointer;
-
+  color: #777;
 }
 .Del span{
   margin-right:calcLen(5);
   font-size: calcFont(13);
+
 }
 .Price{
   margin-right:auto;
   margin-top:calcLen(15);
   padding-top: calcLen(5);
+  font-size:calcFont(17);
+  line-height: 1.294;
 }

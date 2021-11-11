@@ -7,23 +7,23 @@ const Intro=(props)=>{
         <Auxx>
             <div className={classes.Description}>
                 <div className={classes.DescriptionTitle}>
-                    ویژگی ها
+مشخصات فنی
                 </div>
-                <span>
-تکنولوژی صفحه نمایش :
-                    {props.detailProduct.ProLCD}
-                </span>
-                <hr />
-                <span>
-سیستم عامل :
-                    {props.detailProduct.ProOS}
-                </span>
-                <hr />
-                <span>
-حافظه داخلی:
-                    {props.detailProduct.ProHDD}
-                    گیگابایت
-                </span>
+                <ul>
+                    <li>
+                        تکنولوژی صفحه نمایش :
+                        {props.detailProduct.ProLCD}
+                    </li>
+                    <li>
+                        سیستم عامل :
+                        {props.detailProduct.ProOS}
+                    </li>
+                    <li>
+                        حافظه داخلی:
+                        {props.detailProduct.ProHDD}
+                   گیگابایت
+                    </li>
+                </ul>
             </div>
 
         </Auxx>

@@ -17,10 +17,10 @@ const ProductDetail=(props)=>{
     const [product,setProduct]=useState([]);
     const [loding,setLoading]=useState(false);
     if(props.flagbuy!==true){
-         IDD=props.match.params.id;
+        IDD=props.match.params.id;
     }
     else {
-         IDD=props.id;
+        IDD=props.id;
     }
 
 
@@ -51,10 +51,29 @@ const ProductDetail=(props)=>{
             <article className={classes.dataProduct}>
 
                 <section className={classes.picGallery}>
-                    {!loding&&<InnerImageZoom src={testimg} />}
-                    {loding&&<Spinner animation="border" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </Spinner>}
+
+                    <div>
+                        {!loding&&<InnerImageZoom src={testimg} />}
+                        {loding&&<Spinner animation="border" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </Spinner>}
+                    </div>
+                    <div className={classes.Namad}>
+                        <ul style={{ listStyleType: "none"}}>
+                            <li>
+                                <i className="fa fa-heart"></i>
+                            </li>
+                            <li>
+                                <i className="fa fa-share-alt"></i>
+                            </li>
+                            <li>
+                                <i className="fa fa-line-chart"></i>
+                            </li>
+                            <li>
+                                <i className='fa fa-bell'></i>
+                            </li>
+                        </ul>
+                    </div>
                 </section>
 
                 <section className={classes.Detail}>

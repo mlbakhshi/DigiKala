@@ -1,6 +1,23 @@
 @import '../../../../../assets/css/desktop/variables';
 
-
+.UserPic{
+    display:flex;
+    flex-direction:row;
+}
+.PicUser{
+    width:70%;
+}
+.PicUser svg{
+    width:calcLen(35);
+    height:calcLen(35);
+}
+.See{
+    color:deepskyblue;
+    font-size:calcFont(10);
+}
+.UserName{
+    padding-right:calcLen(10);
+}
 .LoginBag{
     display: flex;
 }
@@ -30,10 +47,17 @@
      justify-content:flex-start;
      align-items: stretch;
      align-content: space-around;
-     padding: calcLen(8);
+     //padding: calcLen(8);
      margin-left: calcLen(10);
  }
-
+.MyOrders i{
+    font-size:calcFont(25);
+    padding-right:calcLen(12);
+}
+.Exit i{
+    font-size:calcFont(20);
+    padding-right:calcLen(3);
+}
 .Cart{
     margin-top: calcLen(20);
     display: flex;

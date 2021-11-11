@@ -7,14 +7,14 @@
   border:calcLen(1) solid #d4d0d0;
   margin-top:calcLen(25);
   margin-right:calcLen(8);
-  //margin-left:calcLen(8);
+  margin-left:calcLen(8);
   padding:calcLen(10);
 }
 .detailBuy{
   display:flex;
   flex-direction:column;
-  width:70%;
-  margin-left:calcLen(5);
+  width:85%;
+  //margin-left:calcLen(5);
 }
 .CartContainers img{
   width:100%;

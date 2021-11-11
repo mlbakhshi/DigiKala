@@ -18,15 +18,23 @@ const RightMenu = () => {
             </NavigationItem>
             <NavigationItem link="/profile" >
                 <FaMobile />
-                سفارش های من
+               <span>
+                    سفارش های من
+               </span>
             </NavigationItem>
             <NavigationItem link="/account" >
                 <FaRegUser />
-                اطلاعات حساب
+                <span>
+                   اطلاعات حساب
+                </span>
+
             </NavigationItem>
             <NavigationItem link="/logout" >
                 <FiLogOut />
-                خروج</NavigationItem>
+                <span>
+                    خروج
+                </span>
+                </NavigationItem>
 
         </ul>
     </div>

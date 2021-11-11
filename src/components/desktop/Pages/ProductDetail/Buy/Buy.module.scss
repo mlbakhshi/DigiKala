@@ -1,6 +1,8 @@
 @import '../../../../../assets/css/desktop/variables';
 
-
+.Titr{
+  font-size:calcFont(14);
+}
 .Buy{
   background-color:#f5f5f5;
   border:calcLen(1) solid #cfcdcd;
@@ -28,13 +30,14 @@ padding:calcLen(12);
 }
 .CountView{
  font-size:calcFont(24);
+  color:#a1a3a8;
 }
 .CountView i{
   font-size:calcFont(16);
 }
 .View{
   font-size:calcFont(12);
-  color:lightslategray;
+  color:#a1a3a8;
 margin-right:calcLen(15);
 }
 .Stock{
@@ -49,7 +52,7 @@ margin-right:calcLen(15);
   margin-top:calcLen(8);
 }
 .Price{
-  font-size:calcFont(16);
+  font-size:calcFont(24);
   text-align:left;
 }
 .SendDigi{
@@ -65,4 +68,9 @@ margin-right:calcLen(15);
   background-color:#ef394e;
   color:white;
   //height:calcLen(30);
+}
+
+.Currency p{
+  font-size:calcFont(12);
+  color:#b4b4b4;
 }

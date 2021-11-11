@@ -5,18 +5,12 @@
     background-color: #ebebeb;
     border-radius: calcLen(10);
     display: flex;
-    justify-content:flex-start;
-    //align-items: stretch;
-    align-content: space-around;
-    //flex-wrap: wrap;
     flex-direction: row;
     height: calcLen(50);
-    //margin-top: calcLen(2);
-    //margin-right: calcLen(10);
-    margin-left: calcLen(10);
     width:100%;
+    align-items: center;
+    justify-content: center;
     padding-right: calcLen(8);
-    padding-top: calcLen(10);
 
 }
 .Search input{

@@ -33,6 +33,7 @@ const CartContainer = (props) => {
             </div>
             <div className={classes.Seller}>
                 {/*<img src={supermarket}/>*/}
+                <i className="fa fa-check-square"></i>
                 <span>
                                   دیجی‌کالا
                 </span>
@@ -83,17 +84,17 @@ const CartContainer = (props) => {
 
                 <div className={classes.Price}>
                     {props.detailProduct.ProductOff === 1
-                        ? <h2><span>  قیمت با تخفیف
+                        ? <span>  قیمت با تخفیف
                                     <CurrencyFormat value={countOrder * props.detailProduct.OffPrice}
                                                     displayType={'text'} thousandSeparator={true}/>
 
                             {countOrder * order.OffPrice}
-                        </span></h2>
+                        </span>
                         :
-                        <h2><span>
+                        <span>
                             <CurrencyFormat value={countOrder * props.detailProduct.ProductPrice}
                                             displayType={'text'} thousandSeparator={true}/>
-                        </span></h2>
+                        </span>
                     }
                 </div>
             </div>

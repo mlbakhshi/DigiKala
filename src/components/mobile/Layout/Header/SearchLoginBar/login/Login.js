@@ -17,8 +17,8 @@ const Login=(props)=>{
                         <i className="fa fa-sign-in"></i>
 
                     </div>
-                    <div>
-                        <NavLink to="/login" style={{textDecoration: "none",color:"black"}}> ورود</NavLink>
+                    <div className={classes.In}>
+                        <NavLink to="/login" > ورود</NavLink>
                     </div>
                 </div>
                 <div className={classes.Cart}>

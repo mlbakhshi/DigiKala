@@ -1,7 +1,7 @@
 @import '../../../../../../assets/css/mobile/variables';
 
 .Title{
-  font-size:calcFont(9);
+  font-size:calcFont(14);
   color:black;
 }
 .Dot{
@@ -15,7 +15,7 @@
   margin-right:calcLen(8);
 }
 .Color{
-  font-size:calcFont(8);
+  font-size:calcFont(11);
 color: #737272;
 }
 .Guarantee{
@@ -24,7 +24,7 @@ color: #737272;
 }
 .Guarantee span{
   margin-right:calcLen(3);
-  font-size:calcFont(8);
+  font-size:calcFont(11);
 }
 .Seller{
   margin-right:calcLen(8);
@@ -35,7 +35,7 @@ color: #737272;
 }
 .Seller span{
   margin-right:calcLen(5);
-  font-size:calcFont(8);
+  font-size:calcFont(11);
 }
 .Stock{
   margin-right:calcLen(8);
@@ -43,13 +43,15 @@ color: #737272;
 }
 .Stock span{
   margin-right:calcLen(5);
-  font-size:calcFont(8);
+  font-size:calcFont(10);
 }
 .numberOrder{
   display:flex;
   margin-top:calcLen(15);
-  padding-top: calcLen(5);
-  padding-right: calcLen(15);
+  justify-content: center;
+  align-items: center;
+  //padding-top: calcLen(5);
+  //padding-right: calcLen(15);
   font-size: calcFont(15);
   border:calcLen(1) solid  darkgray;
   border-radius: 5%;
@@ -62,6 +64,13 @@ color: #737272;
 }
 .numorder{
   padding-left:calcLen(0);
+}
+.numberOrder input{
+ width: 100%;
+  font-size: calcLen(14);
+  background-color: transparent;
+  border: none;
+
 }
 .decrbtn{
   background-color: transparent;

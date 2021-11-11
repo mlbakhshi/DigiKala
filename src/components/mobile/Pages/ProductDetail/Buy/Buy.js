@@ -80,16 +80,15 @@ const Buy=(props)=>{
                      تومان
                 </div>
 
-                <div className="d-grid gap-2" >
+                <div className={classes.AddBasket} >
                     {(!props.flagbuy || !delBuy) ? <Link to={`/cart/${props.detail.ID}`} >
-                            <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}} >
+                            <Button variant="primary" size="lg" >
                                 افزودن به سبد خرید
 
                             </Button>
                         </Link>
                         :
-                        <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}}
-                                onClick={() => handleDelete(props.detail.ID)}>
+                        <Button onClick={() => handleDelete(props.detail.ID)}>
                             حذف از سبد خرید
                         </Button>
                     }

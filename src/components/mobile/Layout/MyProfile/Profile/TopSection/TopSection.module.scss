@@ -11,6 +11,9 @@
   width:90%;
   font-size:calcFont(10);
 }
+.Cart hr{
+  margin:calcLen(2);
+}
 .UserPic svg{
   width:calcLen(50);
   height:calcLen(50);
@@ -41,7 +44,7 @@
   border: solid calcLen(1) #00bfd6;
   border-radius: calcLen(5);
   width: 35%;
-  margin: auto;
+  margin: calcLen(4) auto;
   text-align: center;
 
 }

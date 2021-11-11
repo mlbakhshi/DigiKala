@@ -8,7 +8,7 @@ const TopBar=()=>{
             <div>
                 <Nav />
             </div>
-            <div style={{width:"30%"}}>
+            <div  className={classes.Logo}>
                 <Logo />
             </div>
             <div className={classes.Question}>

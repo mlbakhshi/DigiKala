@@ -19,6 +19,7 @@
 .Footer{
     font-size: calcFont(16) !important;
     padding-right:calcLen(20);
+    padding-left:calcLen(20);
     background-color:#fff;
     display:flex;
     flex-direction:column;
@@ -38,6 +39,7 @@ font-size:calcFont(12);
 }
 .Alldays{
     font-size:calcFont(12);
+    margin-bottom:calcLen(11.5);
 }
 .PNGLogo{
     display: flex;

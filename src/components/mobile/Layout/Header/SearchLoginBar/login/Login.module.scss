@@ -41,9 +41,15 @@
 .NotLogin {
     font-size:calcFont(12.5);
     display:flex;
-    margin-top:calcLen(11);
+    margin-top:calcLen(14);
 margin-right:calcLen(12);
 margin-left:calcLen(12);
+}
+.In{
+   text-decoration: none;
+    color:black;
+    margin-top:calcLen(2.5);
+
 }
 .LoginSymbol{
     margin-top:calcLen(5);

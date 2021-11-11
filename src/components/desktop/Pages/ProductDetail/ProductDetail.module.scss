@@ -14,10 +14,20 @@ display:flex;
 .picGallery{
 direction:ltr;
   width:35%;
+  display:flex;
 }
 .Suggestion{
   border-radius:calcLen(15);
   border: calcLen(1) solid #bfbbbb;
 margin:calcLen(10);
   padding:calcLen(5);
+}
+
+.Namad{
+  margin-top:calcLen(45);
+}
+
+.Namad i{
+ font-size:calcFont(20);
+  margin-bottom:calcLen(15);
 }

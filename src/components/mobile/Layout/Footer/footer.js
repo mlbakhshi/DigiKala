@@ -36,7 +36,7 @@ const Footer=()=>{
             <div>
                 <DownloadApp />
             </div>
-            <div style={{display:"flex"}}>
+            <div >
                 <Symbols />
             </div>
             <hr style={{color:"#ddd6d6"}} />

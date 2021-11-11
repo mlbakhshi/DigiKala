@@ -1,14 +1,14 @@
 @import '../../../../../assets/css/mobile/variables';
 
 .Title  span{
-  font-size:calcFont(10);
+  font-size:calcFont(14);
 }
 .DesEnglish{
-  font-size:calcFont(8);
+  font-size:calcFont(12);
   color:darkgray;
 }
 .ProductPic{
-  width:calcLen(100);
+  width:calcLen(170);
   margin:auto;
 
 }
@@ -22,14 +22,14 @@
 }
 
 .Like{
-  font-size:calcFont(8);
+  font-size:calcFont(11);
   display:flex;
   margin-top:calcLen(10);
 }
 .LikeFont{
   color:#4caf50;
   margin-left:calcLen(5);
-  font-size:calcFont(10);
+  font-size:calcFont(14);
   margin-top:calcLen(-2);
   margin-right:calcLen(10);
 }

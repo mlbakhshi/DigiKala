@@ -19,26 +19,36 @@
   margin-top:calcLen(15);
 }
 .BuyNotify p{
-  margin-top:calcLen(2);
+  margin-top:calcLen(5);
   font-size:calcFont(11);
 color:gray;
 }
+
+.BuyNotify Button{
+  width:100%;
+  background-color:#ef394e;
+  color:white;
+}
+
+
 .Send{
   display:flex;
   border: calcLen(1) solid #d4d1d1;
   border-radius:calcLen(10);
-  font-size:calcFont(9);
-  padding-right:calcLen(15);
-  padding-left:0;
-  margin:calcLen(15);
+  font-size:calcFont(12);
+  padding-right:calcLen(5);
+  padding-top:calcLen(5);
+  width:100%;
+
 }
 .Send span{
-  font-size:calcFont(8);
+  font-size:calcFont(11);
 }
 .Send img{
-  width:75%;
+  width:85%;
 
 }
 .Image{
+  padding-top:calcLen(15);
   width:55%;
 }

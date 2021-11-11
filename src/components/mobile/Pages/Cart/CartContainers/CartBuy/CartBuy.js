@@ -6,17 +6,9 @@ const CartBuy=()=>{
     return(
 
             <div className={classes.BuyNotify}>
-                <div  className={classes.Buy}>
-                    <div>
-                        جمع سبد خرید
-                    </div>
-                    <div className="d-grid gap-2" >
-                        <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}}>
+                        <Button variant="primary"  size="large" >
                             ادامه فرآیند خرید
                         </Button>
-                    </div>
-                </div>
-
                 <p>
                     کالاهای موجود در سبد شما ثبت و رزرو نشده‌اند، برای ثبت سفارش مراحل بعدی را تکمیل کنید.
                 </p>

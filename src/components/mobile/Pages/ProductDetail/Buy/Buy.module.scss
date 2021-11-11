@@ -38,27 +38,43 @@ margin-right:calcLen(15);
   padding-left:calcLen(13);
 }
 .digikala{
-  font-size:calcFont(11);
+  font-size:calcFont(15);
 }
 .Rezayat{
-  font-size:calcFont(8);
+  font-size:calcFont(12);
+  color:#81858b;
 }
 .Price{
-  font-size:calcFont(14);
+  font-size:calcFont(20);
+  color:red;
   text-align:left;
+  padding-bottom:calcLen(10);
 }
 .SendDigi{
-  color:lightslategray;
-  font-size:calcFont(8);
+
+  font-size:calcFont(12);
   margin-right:calcLen(10);
+  color:#81858b;
 }
 .EgtheenMonth{
   margin-right:calcLen(8);
-  font-size:calcFont(10);
+  font-size:calcFont(14);
 }
 .btnBuy{
   width:95%;
   background-color:#ef394e;
   color:white;
   height:calcLen(30);
+}
+
+.AddBasket{
+//display:flex;
+  align-items:center;
+  justify-content:center;
+
+}
+.AddBasket Button{
+  width:100%;
+  background-color:#ef394e;
+  color:white;
 }

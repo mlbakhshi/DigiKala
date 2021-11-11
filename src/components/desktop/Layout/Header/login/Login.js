@@ -5,9 +5,10 @@ import {Link, NavLink} from "react-router-dom";
 import {connect} from "react-redux";
 import {Dropdown} from "react-bootstrap";
 import {loginAuthSuccess} from "../../../../../redux/data/auth/actions";
+import { ReactComponent as YourSvg } from '../../../../../assets/images/userImageDefault.svg';
 
 const Login=(props)=>{
-    const { auth,counter }  = props;
+    const { auth,counter,userdata }  = props;
 
     if(!auth) {
         return (
@@ -33,18 +34,32 @@ const Login=(props)=>{
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu style={{textAlign:"right"}}>
-                            <Dropdown.Item  href="/account">مشاهده حساب کاربری</Dropdown.Item>
-                           <Dropdown.Item  href="/profile"><i className="fa fa-mobile-phone"></i> سفارش های من </Dropdown.Item>
-                            <Dropdown.Item  href="/logout"><i className="fa fa-sign-out"></i> خروج </Dropdown.Item>
+                            <Dropdown.Item  href="/account">
+                                <div className={classes.UserPic}>
+                                    <div className={classes.PicUser}>
+                                        <YourSvg />
+                                    </div>
+                                    <div className={classes.UserName}>
+                                        {userdata.FirstName}{userdata.LastName}
+                                        <div className={classes.See}>
+                                            مشاهده حساب کاربری
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </Dropdown.Item>
+                            <Dropdown.Item  href="/profile"><span className={classes.MyOrders}> <i className="fa fa-mobile-phone"></i></span> سفارش های من </Dropdown.Item>
+                            <Dropdown.Item  href="/logout"><span className={classes.Exit}><i className="fa fa-sign-out"></i></span> خروج </Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                 </div>
                 <div className={classes.Cart}>
                     <Link to={"/basket"}>
-                    <div className={classes.CountNumber}>
-                        {counter}
-                    </div>
-                    <span className="icon-basket" ></span>
+                        <div className={classes.CountNumber}>
+                            {counter}
+                        </div>
+                        <span className="icon-basket" ></span>
                     </Link>
                 </div>
             </div>
@@ -57,6 +72,7 @@ const mapStateToProps  = (state) => {
 
         auth: state.data.auth.isLogin,
         userId:state.data.auth.userprofile,
+        userdata:state.data.auth.userdata,
         counter:state.data.cntOrder.count,
         orders: state.data.cntOrder.orderProfile,
 

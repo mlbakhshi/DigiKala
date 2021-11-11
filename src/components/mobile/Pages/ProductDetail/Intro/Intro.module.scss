@@ -11,8 +11,13 @@
   margin:calcLen(10);
   font-size:calcFont(10);
 }
+.Description li{
+  color:#858585;
+  font-size:calcLen(14);
+  line-height: 1.571;
+}
 .DescriptionTitle{
-
+color:#81858b;
   margin-bottom:calcLen(10);
   font-size:calcFont(14);
 }

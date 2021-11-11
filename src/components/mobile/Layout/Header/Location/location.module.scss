@@ -1,7 +1,7 @@
 @import '../../../../../assets/css/mobile/variables';
 
 .Location{
-  margin-top:auto;
+  //margin-top:auto;
   margin-bottom:calcLen(5);
   font-size:calcFont(12);
 }
@@ -13,4 +13,5 @@
 
 .Location span{
  margin-right:calcLen(10);
+  padding-bottom:calcLen(5);
 }

@@ -43,14 +43,14 @@ const Search=()=>{
                     value={searchTerm}
                     onChange={handleChange}
                 />
-                <ul>
-                    {
+                {/*<ul>*/}
+                {/*    {*/}
 
-                        searchResults.map(item=> (
-                            <li key={item.ID}>{item.ProductTitle}</li>
-                        ))
-                    }
-                </ul>
+                {/*        searchResults.map(item=> (*/}
+                {/*            <li key={item.ID}>{item.ProductTitle}</li>*/}
+                {/*        ))*/}
+                {/*    }*/}
+                {/*</ul>*/}
 
             </div>
 

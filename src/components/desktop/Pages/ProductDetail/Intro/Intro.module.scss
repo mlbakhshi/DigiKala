@@ -1,6 +1,9 @@
 @import '../../../../../assets/css/desktop/variables';
 
-
+.Titr{
+  font-size:calcFont(16);
+  line-height: calcLen(28);
+}
 
 .Description{
   display:flex;

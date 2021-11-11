@@ -57,7 +57,6 @@ const CartContainer=(props)=>{
                     <div className={classes.numorder}>
                         <input
                             className={classes.formControl}
-                            style={{width: "100%", fontSize: "14px", backgroundColor: "transparent", border: "none"}}
                             disabled value={countOrder}
                         />
                     </div>

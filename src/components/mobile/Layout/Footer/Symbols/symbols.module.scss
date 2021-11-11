@@ -4,13 +4,14 @@
 .Symbols{
     display: flex;
     flex-direction:column;
-    margin-top: calcLen(50);
+    margin-top: calcLen(25);
     margin-left: calcLen(20);
 }
 .PicSymbols{
     display: flex;
     order: 1;
     justify-content: center;
+    padding-right:calcLen(10);
 }
 .Comment{
     color: #928888;

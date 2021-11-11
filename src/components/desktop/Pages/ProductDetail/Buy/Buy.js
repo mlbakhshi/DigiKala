@@ -8,6 +8,8 @@ import {connect} from "react-redux";
 import {DelOrder} from "../../../../../redux/data/ordersCount/actions";
 
 const Buy=(props)=>{
+
+    let CurrencyFormat = require('react-currency-format');
     const {ACTION_Orders_DELETE} = props;
     const [delBuy,setDelBuy]=useState(true);
     const handleDelete=(id)=>{
@@ -19,7 +21,7 @@ const Buy=(props)=>{
 
     return(
         <div className={classes.Buy}>
-            <div>
+            <div className={classes.Titr}>
                 فروشنده
             </div>
 
@@ -64,27 +66,32 @@ const Buy=(props)=>{
             </div>
             <hr style={{width:"90%"}}/>
 
-            <div>
+            <div className={classes.Currency}>
+                <p>
+                    قیمت فروشنده
+                </p>
                 <div className={classes.Price}>
-                    {props.detailProduct.detailProduct.detailProduct.ProductPrice}
+                    <CurrencyFormat value= {props.detailProduct.detailProduct.detailProduct.ProductPrice}
+                                    displayType={'text'} thousandSeparator={true}/>
+
                     تومان
                 </div>
                 <div className={classes.CountView}>
                     <i className='fa fa-eye'  ></i>
                     <span className={classes.View}>
                   +{props.detailProduct.detailProduct.detailProduct.view}
-                        نفر این محصول را دیده اند.
+                          نفر این محصول را دیده اند.
                     </span>
                 </div>
                 <div className="d-grid gap-2" >
                     {(!props.flagbuy || !delBuy) ? <Link to={`/cart/${props.detailProduct.detailProduct.detailProduct.ID}`} >
-                        <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}} >
+                        <Button variant="primary"  style={{width:"100%",backgroundColor:"#ef394e",color:"white"}} >
                             افزودن به سبد خرید
 
                         </Button>
                     </Link>
                     :
-                        <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}}
+                        <Button variant="primary"  style={{width:"100%",backgroundColor:"#ef394e",color:"white"}}
                                 onClick={() => handleDelete(props.detailProduct.detailProduct.detailProduct.ID)}>
                             حذف از سبد خرید
                         </Button>

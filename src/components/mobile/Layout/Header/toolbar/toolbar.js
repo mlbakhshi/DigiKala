@@ -9,16 +9,19 @@ const Toolbar =(props)=>{
         <header className={classes.Header} >
             <div >
                 <TopBar />
-                <hr className={classes.Line}/>
+
             </div>
+            <hr className={classes.Line}/>
            <div>
                <SearchLoginBar />
-               <hr className={classes.Line}/>
+
            </div>
+            <hr className={classes.Line}/>
             <div>
                 <Location />
-                <hr className={classes.Line}/>
+
             </div>
+            <hr className={classes.Line2}/>
         </header>
     )
 }

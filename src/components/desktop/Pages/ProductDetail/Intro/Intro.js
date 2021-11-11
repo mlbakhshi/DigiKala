@@ -13,9 +13,7 @@ const Intro=(props)=>{
         <Auxx>
             <div className={classes.Title}>
 
-                <h6>
                     {props.detailProduct.ProductNamePr}
-                </h6>
             </div>
             <div className={classes.Description}>
                 <DescriptionBuy flagbuy={props.flagbuy} detailProduct={props} />
