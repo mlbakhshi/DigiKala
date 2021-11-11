@@ -35,6 +35,10 @@ margin-top:calcLen(10);
   box-shadow: 0 0 0 calcLen(1) #cce3e9;
 }
 
+.Dot:active{
+  box-shadow: 0 0 0 calcLen(1) #054353;
+}
+
 .Colors{
   margin-top:calcLen(15);
 
@@ -102,4 +106,8 @@ margin:calcLen(15);
 }
 .Send img{
   width:75%;
+}
+.Radio{
+  position: absolute;
+  visibility: hidden;
 }

@@ -61,7 +61,7 @@ const ProductDetail=(props)=>{
                     <div className={classes.Namad}>
                         <ul style={{ listStyleType: "none"}}>
                             <li>
-                                <i className="fa fa-heart"></i>
+                                <i className='fa fa-heart'></i>
                             </li>
                             <li>
                                 <i className="fa fa-share-alt"></i>
