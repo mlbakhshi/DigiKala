@@ -8,12 +8,12 @@
 .Detail{
 display:flex;
   flex-direction:column;
-  width:65%;
+  width:70%;
   padding:calcLen(15);
 }
 .picGallery{
 direction:ltr;
-  width:35%;
+  width:30%;
   display:flex;
 }
 .Suggestion{
@@ -23,7 +23,7 @@ margin:calcLen(10);
   padding:calcLen(5);
 }
 
-.Namad{
+.Image{
   margin-top:calcLen(45);
 }
 

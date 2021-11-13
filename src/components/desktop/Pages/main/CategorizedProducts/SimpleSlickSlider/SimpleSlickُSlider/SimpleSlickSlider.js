@@ -47,7 +47,7 @@ const SimpleSlickSlider=(props)=> {
                 <SimpleSliderComponent
                     id={productInfo.ID}
                     mobilePic={productInfo.ProductPicture}
-                    title={productInfo.ProductNamePr}
+                    title={productInfo.ProductTitle}
                     price={productInfo.ProductPrice}
 
                 />

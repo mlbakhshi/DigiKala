@@ -54,13 +54,13 @@ const CartContainer = (props) => {
                         <button style={{border: "none", outline: "none", backgroundColor: "transparent",}}
                                 onClick={() => setCountOrder(countOrder + 1)}
                         >
-                            <i className="fa fa-plus"></i>
+                            <i  className="fa fa-plus"></i>
                         </button>
                     </div>
                     <div className={classes.numorder}>
                         <input
                             className={classes.formControl}
-                            style={{width: "100%", fontSize: "14px", backgroundColor: "transparent", border: "none"}}
+
                             disabled value={countOrder}
                         />
                     </div>

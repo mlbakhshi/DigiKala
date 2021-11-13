@@ -15,10 +15,10 @@
 }
 .Color{
   font-size:calcFont(12);
-color: #62666d;
+  color: #62666d;
 }
 .Guarantee{
-    margin-right:calcLen(10);
+  margin-right:calcLen(10);
   color:#62666d;
   margin-top:calcLen(6);
 }
@@ -48,47 +48,51 @@ color: #62666d;
   font-size:calcFont(12);
 }
 .numberOrder{
-  display:flex;
-  //flex-direction:row;
+  //display:flex;
+  ////flex-direction:row;
   margin-top:calcLen(15);
-  padding-top: calcLen(5);
-  font-size: calcFont(15);
-  border:calcLen(1) solid  darkgray;
-  border-radius: 8%;
-  height:55%;
-width:15%;
-
+  //padding-top: calcLen(5);
+  //font-size: calcFont(15);
+  ////border:calcLen(1) solid  darkgray;
+  ////border-radius: 8%;
+  //height:55%;
+  //width:15%;
+  display: flex;
+  /* margin-left: auto; */
+  width: 38%;
+  justify-content:center;
 }
-.incrbtn i{
+.incrbtn  i{
   color: #e0e0e2;
   background-color: transparent;
-  border: none;
-
-  //margin-left: calcLen(10);
-  //padding-right:calcLen(10);
+  border: solid calcLen(1) #0fabc6;
+  border-radius:calcLen(5);
+  padding:calcLen(5);
+}
+.numorder{
+  width:27%;
 }
 .numorder input{
-  display:flex;
-  justify-content:center;
-  justify-items:center;
-  padding-right:calcLen(15);
-  //margin-left: calcLen(10);
-  //padding-left:calcLen(0);
-  //padding-right:calcLen(14);
-
+ font-size: calcLen(14);
+  background-color: transparent;
+  border: none;
+  width: 10%;
+  margin-right:calcLen(15);
 }
 .decrbtn i{
-  background-color: transparent;
   color: #e0e0e2;
-  border: none;
-//margin-right:0;
+  background-color: transparent;
+  border: solid calcLen(1) #0fabc6;
+  border-radius:calcLen(5);
+  padding:calcLen(5);
 }
 .numberOrder,.incrbtn,.decrbtn,.numorder{
-  //width: 20%;
+
 }
 .formControl{
   //width:20%;
   color:#0fabc6;
+  width: 56%;
 }
 .NumberDelPrice{
   display:flex;

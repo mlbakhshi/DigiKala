@@ -52,7 +52,7 @@ const ProductDetail=(props)=>{
 
                 <section className={classes.picGallery}>
 
-                    <div>
+                    <div className={classes.Image}>
                         {!loding&&<InnerImageZoom src={testimg} />}
                         {loding&&<Spinner animation="border" role="status">
                             <span className="visually-hidden">Loading...</span>

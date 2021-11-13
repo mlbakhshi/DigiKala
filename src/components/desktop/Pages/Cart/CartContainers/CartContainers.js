@@ -13,6 +13,7 @@ const CartContainers=(props)=>{
                    <div key={ID} className={classes.CartContainers}>
                        <div className={classes.Image} >
                            <img src={image} />
+
                        </div>
                        <div className={classes.detailBuy}>
                            <CartContainer onRemoveItem={props.onRemoveItem} key={"card"+ID} detailProduct={props.OrdersList[ID]} />
