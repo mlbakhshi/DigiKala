@@ -7,7 +7,7 @@ const CartBuy=()=>{
 
         <div className={classes.BuyNotify}>
             <div className={classes.Buy} >
-                <Button variant="primary"  style={{width:"95%",backgroundColor:"#ef394e",color:"white"}}>
+                <Button variant="primary"  style={{backgroundColor:"#ef394e",color:"white"}}>
                     ادامه فرآیند خرید
                 </Button>
             </div>

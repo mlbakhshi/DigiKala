@@ -8,13 +8,11 @@ import Auxx from "../../../../../../../hoc/Auxx/Auxx";
 import {DelOrder} from "../../../../../../../redux/data/ordersCount/actions";
 
 const WaitingPayment=(props)=>{
-    console.log(props)
     const {orders}=props;
     let orderInformation=null;
     const {ACTION_Orders_DELETE}=props;
 
     const handleDelete = (id) => {
-        console.log(id)
         ACTION_Orders_DELETE(id.ID)
         props.onRemoveItem&&props.onRemoveItem()
     }
@@ -24,7 +22,8 @@ const WaitingPayment=(props)=>{
                 Object.keys(orders).map(ID =>
                     <div key={ID} className={classes.CartContainers}>
                         <div className={classes.Image} >
-                            <img src={image} />
+                            <img
+                                src={require('../../../../../../../assets/Upload/' + props.orders[ID].ProductPicture).default}/>
                             <div className={classes.Del} onClick={() => handleDelete(props.orders[ID])}>
                                 <div>
                                     <i className="fa fa-trash" aria-hidden="true"></i>

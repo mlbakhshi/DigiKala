@@ -17,6 +17,7 @@ import Intro from "./Intro/Intro";
 import InnerImageZoom from "react-inner-image-zoom";
 import testimg from "../../../../assets/images/mobilePics/Samsung A12.jpg";
 import {Spinner} from "react-bootstrap";
+import ImageZoom from "../../../desktop/Pages/ProductDetail/ImageZoom/ImageZoom";
 const ProductDetail=(props)=>{
     let IDD=null;
     const [loding,setLoading]=useState(false);
@@ -52,7 +53,10 @@ const ProductDetail=(props)=>{
             <article className={classes.dataProduct}>
 
                 <section className={classes.picGallery}>
-                    <BrandPicture detail={product} />
+                    {!loding&&product?.ProductPicture&&<BrandPicture detail={product} />}
+                    {loding&&<Spinner animation="border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </Spinner>}
                 </section>
                 <section className={classes.Notification}>
                     <div className={classes.Alamat}>

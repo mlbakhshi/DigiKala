@@ -3,19 +3,20 @@ import '../../../../../assets/icon/style.css';
 import classes  from './SimpleSliderComponent.module.scss';
 import {Link} from "react-router-dom";
 const SimpleSliderComponent=(props)=>{
-    let graphImage = require('../../../../../assets/Upload/' + props.mobilePic);
+    const {mobilePic,id,title,price}=props;
+    let graphImage = require('../../../../../assets/Upload/' + mobilePic);
     let CurrencyFormat = require('react-currency-format');
         return(
             <div className={classes.Card} >
-                <Link  to={`/detail/${props.id}`}>
+                <Link  to={`/detail/${id}`}>
                     <img className={classes.ProductImage} src={graphImage.default}  />
                     <div className={classes.ProductDescription}  >
-                        {props.title}
+                        {title}
                     </div>
 
                     <div className={classes.Price} >
 
-                        <CurrencyFormat value={props.price} displayType={'text'} thousandSeparator={true} />
+                        <CurrencyFormat value={price} displayType={'text'} thousandSeparator={true} />
                         تومان
                     </div>
                 </Link>

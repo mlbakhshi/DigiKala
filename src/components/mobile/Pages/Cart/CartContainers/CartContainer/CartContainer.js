@@ -5,7 +5,7 @@ import supermarket from '../../../../../../assets/SVG/supermarket-svgrepo-com.sv
 import {DelOrder} from "../../../../../../redux/data/ordersCount/actions";
 import {connect} from "react-redux";
 const CartContainer=(props)=>{
-    const {ACTION_Orders_DELETE} = props;
+    const {ACTION_Orders_DELETE,detailProduct} = props;
     const [countOrder,setCountOrder]=useState(1);
     const [order,setOrder]=useState([]);
     let CurrencyFormat = require('react-currency-format');
@@ -17,7 +17,7 @@ const CartContainer=(props)=>{
     return (
         <Auxx>
             <div className={classes.Title}>
-                {props.detailProduct.ProductNamePr}
+                {detailProduct.ProductNamePr}
             </div>
             <div className={classes.Color}>
                 <span className={classes.Dot} style={{backgroundColor: "gray"}}></span>
@@ -39,7 +39,7 @@ const CartContainer=(props)=>{
                 <i className="fa fa-floppy-o" aria-hidden="true"></i>
 
 
-                {props.detailProduct.ProductCount === 1
+                {detailProduct.ProductCount === 1
                     ? <span>تنها یک عدد در انبار باقی مانده است  </span>
                     : <span> موجود در انبار  </span>
 
@@ -70,16 +70,16 @@ const CartContainer=(props)=>{
                 </div>
 
                 <div className={classes.Price}>
-                    {props.detailProduct.ProductOff === 1
+                    {detailProduct.ProductOff === 1
                         ? <h2><span>  قیمت با تخفیف
-                                    <CurrencyFormat value={countOrder * props.detailProduct.OffPrice}
+                                    <CurrencyFormat value={countOrder * detailProduct.OffPrice}
                                                     displayType={'text'} thousandSeparator={true}/>
 
                             {countOrder * order.OffPrice}
                         </span></h2>
                         :
                         <h2><span>
-                            <CurrencyFormat value={countOrder * props.detailProduct.ProductPrice}
+                            <CurrencyFormat value={countOrder * detailProduct.ProductPrice}
                                             displayType={'text'} thousandSeparator={true}/>
                         </span></h2>
                     }

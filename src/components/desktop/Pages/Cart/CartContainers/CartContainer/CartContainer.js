@@ -6,20 +6,17 @@ import {connect} from "react-redux";
 import {DelOrder} from "../../../../../../redux/data/ordersCount/actions";
 
 const CartContainer = (props) => {
-    const {ACTION_Orders_DELETE} = props;
+const {detailProduct}=props;
     const [countOrder, setCountOrder] = useState(1);
     const [order, setOrder] = useState([]);
 
     let CurrencyFormat = require('react-currency-format');
 
-    const handleDelete = (id) => {
-        ACTION_Orders_DELETE(id)
-        props.onRemoveItem&&props.onRemoveItem()
-    }
+
     return (
         <Auxx>
             <div className={classes.Title}>
-                {props.detailProduct.ProductNamePr}
+                {detailProduct.ProductNamePr}
             </div>
             <div className={classes.Color}>
                 <span className={classes.Dot} style={{backgroundColor: "gray"}}></span>
@@ -42,7 +39,7 @@ const CartContainer = (props) => {
                 <i className="fa fa-floppy-o" aria-hidden="true"></i>
 
 
-                {props.detailProduct.ProductCount === 1
+                {detailProduct.ProductCount === 1
                     ? <span>تنها یک عدد در انبار باقی مانده است  </span>
                     : <span> موجود در انبار  </span>
 
@@ -58,41 +55,34 @@ const CartContainer = (props) => {
                         </button>
                     </div>
                     <div className={classes.numorder}>
+                       <label>
                         <input
                             className={classes.formControl}
 
                             disabled value={countOrder}
                         />
+                       </label>
                     </div>
                     <div className={classes.decrbtn}>
-                        <button type="button" style={{border: "none", outline: "none", backgroundColor: "transparent",}}
+                        <button  style={{border: "none", outline: "none", backgroundColor: "transparent",}}
                                 onClick={() => setCountOrder(countOrder - 1)}
                         >
                             <i className="fa fa-minus"></i>
                         </button>
                     </div>
                 </div>
-                    <div className={classes.Del} onClick={() => handleDelete(props.detailProduct.ID)}>
-                        <div>
-                            <i className="fa fa-trash" aria-hidden="true"></i>
-                        </div>
-
-                        <span>
-            حذف
-        </span>
-                    </div>
 
                 <div className={classes.Price}>
-                    {props.detailProduct.ProductOff === 1
+                    {detailProduct.ProductOff === 1
                         ? <span>  قیمت با تخفیف
-                                    <CurrencyFormat value={countOrder * props.detailProduct.OffPrice}
+                                    <CurrencyFormat value={countOrder * detailProduct.OffPrice}
                                                     displayType={'text'} thousandSeparator={true}/>
 
                             {countOrder * order.OffPrice}
                         </span>
                         :
                         <span>
-                            <CurrencyFormat value={countOrder * props.detailProduct.ProductPrice}
+                            <CurrencyFormat value={countOrder * detailProduct.ProductPrice}
                                             displayType={'text'} thousandSeparator={true}/>
                         </span>
                     }
@@ -101,10 +91,6 @@ const CartContainer = (props) => {
         </Auxx>
     )
 }
-const mapDispatchToProps = (dispatch) => {
-    return {
-        ACTION_Orders_DELETE: (data) => dispatch(DelOrder(data)),
-    }
-}
 
-export default connect(null, mapDispatchToProps)(CartContainer);
+
+export default connect(null, null)(CartContainer);

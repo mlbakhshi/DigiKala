@@ -39,7 +39,7 @@ const CategorizedProducts=(props)=>{
                 <div>
 
 
-                    {!loding&& <SimpleSlickSlider Products={products}/>}
+                    {!loding&&products&& <SimpleSlickSlider Products={products}/>}
                     {loding&&<Spinner animation="border" role="status">
                         <span className="visually-hidden">Loading...</span>
                     </Spinner>}

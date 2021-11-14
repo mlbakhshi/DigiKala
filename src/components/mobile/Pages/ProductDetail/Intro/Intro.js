@@ -3,6 +3,7 @@ import classes from './Intro.module.scss';
 import Auxx from "../../../../../hoc/Auxx/Auxx";
 
 const Intro=(props)=>{
+    const {detailProduct}=props;
     return(
         <Auxx>
             <div className={classes.Description}>
@@ -12,15 +13,15 @@ const Intro=(props)=>{
                 <ul>
                     <li>
                         تکنولوژی صفحه نمایش :
-                        {props.detailProduct.ProLCD}
+                        {detailProduct.ProLCD}
                     </li>
                     <li>
                         سیستم عامل :
-                        {props.detailProduct.ProOS}
+                        {detailProduct.ProOS}
                     </li>
                     <li>
                         حافظه داخلی:
-                        {props.detailProduct.ProHDD}
+                        {detailProduct.ProHDD}
                    گیگابایت
                     </li>
                 </ul>

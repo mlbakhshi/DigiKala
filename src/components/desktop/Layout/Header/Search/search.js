@@ -16,7 +16,6 @@ const Search=()=>{
     const handleChange = event => {
         setSearchTerm(event.target.value);
     };
-    console.log(searchTerm)
     React.useEffect(async () => {
         let response=null;
         try {
@@ -32,17 +31,12 @@ const Search=()=>{
                 j++
             }
         }
-        console.log(searchResults.length)
 
-        console.log(searchResults.map(item => (
-            item.ProductTitle)));
 
     }, [searchTerm]);
 
-console.log(searchResults.length);
 
     if(searchResults.length>=1){
-        console.log(searchResults.length);
         return(
             <SearchResult results={searchResults} />
         )

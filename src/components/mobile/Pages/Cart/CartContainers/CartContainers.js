@@ -6,32 +6,28 @@ import Auxx from "../../../../../hoc/Auxx/Auxx";
 import {connect} from "react-redux";
 import {DelOrder} from "../../../../../redux/data/ordersCount/actions";
 const CartContainers=(props)=>{
-    console.log(props)
-    const {ACTION_Orders_DELETE}=props;
+    const {ACTION_Orders_DELETE,OrdersList}=props;
 
     const handleDelete = (id) => {
-        console.log(id.ID)
         ACTION_Orders_DELETE(id.ID)
         props.onRemoveItem&&props.onRemoveItem()
     }
     return(
         <Auxx>
             {
-                Object.keys(props.OrdersList).map(ID =>
+                Object.keys(OrdersList).map(ID =>
                     <div key={ID} className={classes.CartContainers}>
                         <div className={classes.Image} >
-                            <img src={image} />
-                            <div className={classes.Del} onClick={() => handleDelete(props.OrdersList[ID])}>
-                                <div>
-                                    <i className="fa fa-trash" aria-hidden="true"></i>
-                                </div>
-                                <span>
-                                 حذف
-                            </span>
+                            <div>
+                                <img
+                                    src={require('../../../../../assets/Upload/' + OrdersList[ID].ProductPicture).default}/>
+                            </div>
+                            <div className={classes.Del} onClick={() => handleDelete(OrdersList[ID])}>
+                                <i className="fa fa-trash" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div className={classes.detailBuy}>
-                            <CartContainer onRemoveItem={props.onRemoveItem} key={"card"+ID} detailProduct={props.OrdersList[ID]} />
+                            <CartContainer onRemoveItem={props.onRemoveItem} key={"card"+ID} detailProduct={OrdersList[ID]} />
                         </div>
                     </div>
 

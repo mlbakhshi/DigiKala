@@ -10,6 +10,7 @@ import Processing from "./LeftMenu/Processing/Processing";
 import DeliverProcess from "./LeftMenu/DeliverProcess/DeliverProcess";
 import {loginAuthSuccess} from "../../../../../redux/data/auth/actions";
 import Login from "../../../Logn/Login";
+import CartContainers from "../../../Pages/Cart/CartContainers/CartContainers";
 
 
 
@@ -17,7 +18,11 @@ import Login from "../../../Logn/Login";
 const MyProfile=(props)=>{
     const {auth,userId}=props;
     const [leftMenu,setLeftMenu]=useState(0);
+    const [state,setState]=useState(new Date().getTime())
 
+    const onRemoveItem=()=>{
+        setState(new Date().getTime())
+    }
 
     const onclickLeftMenu=(event,index)=>{
         event.preventDefault()
@@ -31,7 +36,7 @@ const MyProfile=(props)=>{
     ]
     let component;
     if(leftMenu===1){
-        component=<WaitingPayment  />
+        component=<WaitingPayment onRemoveItem={onRemoveItem} key={state} />
     }
     else if(leftMenu===2){
         component=<Processing />

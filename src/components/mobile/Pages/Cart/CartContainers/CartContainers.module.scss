@@ -14,7 +14,6 @@
   display:flex;
   flex-direction:column;
   width:85%;
-  //margin-left:calcLen(5);
 }
 .CartContainers img{
   width:100%;
@@ -26,12 +25,9 @@
 .Del{
   display:flex;
   margin-top:calcLen(15);
-  margin-right:calcLen(15);
   padding-top: calcLen(5);
   cursor:pointer;
-
-}
-.Del span{
-  margin-right:calcLen(5);
-  font-size: calcFont(13);
+color:red;
+  justify-content:center;
+  align-items:center;
 }

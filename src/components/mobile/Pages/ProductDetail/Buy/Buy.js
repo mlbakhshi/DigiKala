@@ -9,7 +9,7 @@ import {DelOrder, incrementOrder} from "../../../../../redux/data/ordersCount/ac
 import {connect} from "react-redux";
 
 const Buy=(props)=>{
-    const {ACTION_Orders_DELETE} = props;
+    const {ACTION_Orders_DELETE,detail,} = props;
     const [delBuy,setDelBuy]=useState(true);
     const handleDelete=(id)=>{
         ACTION_Orders_DELETE(id)
@@ -20,11 +20,11 @@ const Buy=(props)=>{
     let CurrencyFormat = require('react-currency-format');
     let price;
 
-    if(props.detail.ProductOff===1){
-        price=props.detail.OffPrice
+    if(detail.ProductOff===1){
+        price=detail.OffPrice
     }
     else{
-        price=props.detail.ProductPrice;
+        price=detail.ProductPrice;
     }
     return(
         <Auxx>
@@ -81,14 +81,14 @@ const Buy=(props)=>{
                 </div>
 
                 <div className={classes.AddBasket} >
-                    {(!props.flagbuy || !delBuy) ? <Link to={`/cart/${props.detail.ID}`} >
+                    {(!props.flagbuy || !delBuy) ? <Link to={`/cart/${detail.ID}`} >
                             <Button variant="primary" size="lg" >
                                 افزودن به سبد خرید
 
                             </Button>
                         </Link>
                         :
-                        <Button onClick={() => handleDelete(props.detail.ID)}>
+                        <Button onClick={() => handleDelete(detail.ID)}>
                             حذف از سبد خرید
                         </Button>
                     }

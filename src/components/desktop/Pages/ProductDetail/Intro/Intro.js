@@ -9,11 +9,12 @@ import Return from "../../../../../assets/SVG/4.png";
 import Orginal from "../../../../../assets/SVG/5.png";
 
 const Intro=(props)=>{
+    const {detailProduct}=props;
     return(
         <Auxx>
             <div className={classes.Title}>
 
-                    {props.detailProduct.ProductNamePr}
+                    {detailProduct.ProductNamePr}
             </div>
             <div className={classes.Description}>
                 <DescriptionBuy flagbuy={props.flagbuy} detailProduct={props} />

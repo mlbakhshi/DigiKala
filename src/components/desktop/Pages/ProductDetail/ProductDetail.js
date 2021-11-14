@@ -9,8 +9,8 @@ import Auxx from "../../../../hoc/Auxx/Auxx";
 import Footer from "../../Layout/Footer/footer";
 import Toolbar from "../../Layout/Header/toolbar/toolbar";
 import {DetailProduct} from "../../../../redux/data/auth/apiFunction";
-import Snipper from "../../../../common/snipper/snipper";
 import {Spinner} from "react-bootstrap";
+import ImageZoom from "./ImageZoom/ImageZoom";
 
 const ProductDetail=(props)=>{
     let IDD=null;
@@ -43,8 +43,6 @@ const ProductDetail=(props)=>{
 
     },[IDD])
 
-
-
     return(
         <Auxx>
             <Toolbar />
@@ -53,7 +51,7 @@ const ProductDetail=(props)=>{
                 <section className={classes.picGallery}>
 
                     <div className={classes.Image}>
-                        {!loding&&<InnerImageZoom src={testimg} />}
+                        {!loding&&product?.ProductPicture&&<ImageZoom ProductPicture={product.ProductPicture} />}
                         {loding&&<Spinner animation="border" role="status">
                             <span className="visually-hidden">Loading...</span>
                         </Spinner>}

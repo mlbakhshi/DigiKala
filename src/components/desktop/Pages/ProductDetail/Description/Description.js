@@ -15,7 +15,7 @@ const RadioInput = ({label, value, checked, setter}) => {
     );
 };
 const Description=(props)=>{
-
+const {detailProduct,}=props;
     const [color, setColor] = React.useState();
     const handleSubmit = e => {
         e.preventDefault();
@@ -28,7 +28,7 @@ const Description=(props)=>{
 return(
     <Auxx>
         <div className={classes.DesEnglish}>
-            {props.detailProduct.detailProduct.detailProduct.ProductNameEn}
+            {detailProduct.detailProduct.detailProduct.ProductNameEn}
         </div>
         <div className={classes.Like}>
             <div className={classes.LikeFont}>
@@ -110,15 +110,15 @@ return(
             <ul className={classes.ParametersList}>
                 <li>
                     حافظه داخلی:
-                    {props.detailProduct.detailProduct.detailProduct.ProRam}
+                    {detailProduct.detailProduct.detailProduct.ProRam}
                 </li>
                 <li>
                     نوع صفحه نمایش:
-                    {props.detailProduct.detailProduct.detailProduct.ProLCD}
+                    {detailProduct.detailProduct.detailProduct.ProLCD}
                 </li>
                 <li>
                     شبکه های ارتباطی:
-                    {props.detailProduct.detailProduct.detailProduct.ProNetwork}
+                    {detailProduct.detailProduct.detailProduct.ProNetwork}
                 </li>
             </ul>
         </div>

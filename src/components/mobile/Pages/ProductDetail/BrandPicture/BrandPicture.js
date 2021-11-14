@@ -1,20 +1,20 @@
 import React from 'react';
 import classes from './BrandPicture.module.scss';
 import Auxx from "../../../../../hoc/Auxx/Auxx";
-import PicProduct from './../../../../../assets/images/mobilePics/Poco F3.jpg';
 const BrandPicture=(props)=>{
-
+    const {detail}=props;
+    let graphImage = require('../../../../../assets/Upload/' + detail.ProductPicture);
     return(
         <Auxx>
             <div className={classes.Title}>
                 <span>
- {props.detail.ProductNamePr}
+ {detail.ProductNamePr}
                 </span>
                 <div className={classes.DesEnglish}>
-                    {props.detail.ProductNameEn}
+                    {detail.ProductNameEn}
                 </div>
                 <div className={classes.ProductPic}>
-                    <img src={PicProduct} />
+                    <img src={graphImage.default} />
                 </div>
                 <div className={classes.Like}>
                     <div className={classes.LikeFont}>

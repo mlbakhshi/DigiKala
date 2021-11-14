@@ -24,10 +24,8 @@ const Search=()=>{
                 j++
             }
         }
-        console.log(searchResults)
 
-        console.log(searchResults.map(item => (
-            item.ProductTitle)));
+
 
     }, [searchTerm]);
 

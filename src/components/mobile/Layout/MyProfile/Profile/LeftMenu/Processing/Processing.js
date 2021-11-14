@@ -9,7 +9,6 @@ const WaitingPayment=(props)=>{
     const {orders}=props;
     let PackOrders=[];
     let j=0;
-    console.log(orders);
     for(let i=0;i<orders.length;i++){
         if(orders[i].PackStatus===1 ){
             PackOrders[j]=orders[i];

@@ -5,7 +5,7 @@
   background-color: #fdfcfc;
   border-radius:calcLen(5);
   border:calcLen(1) solid #d4d0d0;
-  margin-top:calcLen(25);
+  //margin-top:calcLen(25);
   margin-right:calcLen(25);
   padding:calcLen(15);
 }
@@ -19,4 +19,22 @@
 }
 .Image{
   width:20%;
+}
+.Image div{
+  //margin-top:calcLen(20);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.DelSection{
+  display:flex;
+  margin-top:calcLen(5);
+  cursor:pointer;
+  //margin-right:calcLen(35);
+  justify-content:center;
+}
+
+.Del i{
+  font-size:calcFont(21);
+  color:red;
 }

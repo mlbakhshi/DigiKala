@@ -10,7 +10,7 @@ import {DelOrder} from "../../../../../redux/data/ordersCount/actions";
 const Buy=(props)=>{
 
     let CurrencyFormat = require('react-currency-format');
-    const {ACTION_Orders_DELETE} = props;
+    const {ACTION_Orders_DELETE,detailProduct} = props;
     const [delBuy,setDelBuy]=useState(true);
     const handleDelete=(id)=>{
         ACTION_Orders_DELETE(id)
@@ -71,7 +71,7 @@ const Buy=(props)=>{
                     قیمت فروشنده
                 </p>
                 <div className={classes.Price}>
-                    <CurrencyFormat value= {props.detailProduct.detailProduct.detailProduct.ProductPrice}
+                    <CurrencyFormat value= {detailProduct.detailProduct.detailProduct.ProductPrice}
                                     displayType={'text'} thousandSeparator={true}/>
 
                     تومان
@@ -79,12 +79,12 @@ const Buy=(props)=>{
                 <div className={classes.CountView}>
                     <i className='fa fa-eye'  ></i>
                     <span className={classes.View}>
-                  +{props.detailProduct.detailProduct.detailProduct.view}
+                  +{detailProduct.detailProduct.detailProduct.view}
                           نفر این محصول را دیده اند.
                     </span>
                 </div>
                 <div className="d-grid gap-2" >
-                    {(!props.flagbuy || !delBuy) ? <Link to={`/cart/${props.detailProduct.detailProduct.detailProduct.ID}`} >
+                    {(!props.flagbuy || !delBuy) ? <Link to={`/cart/${detailProduct.detailProduct.detailProduct.ID}`} >
                         <Button variant="primary"  style={{width:"100%",backgroundColor:"#ef394e",color:"white"}} >
                             افزودن به سبد خرید
 
@@ -92,7 +92,7 @@ const Buy=(props)=>{
                     </Link>
                     :
                         <Button variant="primary"  style={{width:"100%",backgroundColor:"#ef394e",color:"white"}}
-                                onClick={() => handleDelete(props.detailProduct.detailProduct.detailProduct.ID)}>
+                                onClick={() => handleDelete(detailProduct.detailProduct.detailProduct.ID)}>
                             حذف از سبد خرید
                         </Button>
                     }

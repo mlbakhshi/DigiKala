@@ -6,7 +6,6 @@ import { loginMember} from "../../../redux/data/auth/apiFunction";
 import {Redirect, useHistory} from "react-router-dom";
 import {connect} from "react-redux";
 import {loginAuthSuccess} from "../../../redux/data/auth/actions";
-import {WaitOrder} from "../../../redux/data/ordersCount/actions";
 
 async function loginUser(credentials) {
     return loginMember(credentials);

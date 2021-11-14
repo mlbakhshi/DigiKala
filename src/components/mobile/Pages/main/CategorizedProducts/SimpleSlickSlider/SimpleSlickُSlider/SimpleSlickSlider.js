@@ -5,6 +5,7 @@ import 'swiper/swiper.min.css';
 import SimpleSliderComponent from "../../../SimpleSliderComponent/SimpleSliderComponent";
 
 const SimpleSlickSlider=(props)=> {
+    const {Products}=props;
     const swiperParams = {
         slidesPerView: 2,
         grabCursor: true,
@@ -39,7 +40,7 @@ const SimpleSlickSlider=(props)=> {
         rebuildOnUpdate: true,
         shouldSwiperUpdate: true
     }
-    let productInformation=props.Products.map(productInfo=>
+    let productInformation=Products.map(productInfo=>
         <SwiperSlide >
         <SimpleSliderComponent
             id={productInfo.ID}
