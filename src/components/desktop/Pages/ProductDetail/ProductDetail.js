@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import classes from './ProductDetail.module.scss';
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
-import InnerImageZoom from 'react-inner-image-zoom';
-import testimg from '../../../../assets/images/mobilePics/Samsung A12.jpg';
 import Intro from "./Intro/Intro";
 import CategorizedProducts from "../main/CategorizedProducts/CategorizedProducts";
 import Auxx from "../../../../hoc/Auxx/Auxx";
@@ -11,6 +9,7 @@ import Toolbar from "../../Layout/Header/toolbar/toolbar";
 import {DetailProduct} from "../../../../redux/data/auth/apiFunction";
 import {Spinner} from "react-bootstrap";
 import ImageZoom from "./ImageZoom/ImageZoom";
+import ScrollAttribute from "./ScrollAttribute/ScrollAttribute";
 
 const ProductDetail=(props)=>{
     let IDD=null;
@@ -42,6 +41,7 @@ const ProductDetail=(props)=>{
 
 
     },[IDD])
+
 
     return(
         <Auxx>
@@ -83,6 +83,10 @@ const ProductDetail=(props)=>{
                     }
                 </section>
             </article>
+{/*<section >*/}
+{/*    <ScrollAttribute/>*/}
+{/*</section>*/}
+
             <section className={classes.Suggestion}>
                 <CategorizedProducts />
             </section>

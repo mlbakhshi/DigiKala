@@ -7,11 +7,11 @@ import Toolbar from "../../Layout/Header/toolbar/toolbar";
 import BrandPicture from "./BrandPicture/BrandPicture";
 import Buy from "./Buy/Buy";
 import SendPic from "../../../../assets/images/send.png";
-import Express from "../../../../assets/SVG/1.png";
-import Pay from "../../../../assets/SVG/2.png";
-import Allday from "../../../../assets/SVG/3.png";
-import Return from "../../../../assets/SVG/4.png";
-import Orginal from "../../../../assets/SVG/5.png";
+import {ReactComponent as Express} from "../../../../assets/images/footer/1.svg";
+import  {ReactComponent as Pay} from "../../../../assets/images/footer/2.svg";
+import  {ReactComponent as Allday} from "../../../../assets/images/footer/3.svg";
+import  {ReactComponent as Return} from "../../../../assets/images/footer/4.svg";
+import  {ReactComponent as Orginal} from "../../../../assets/images/footer/5.svg";
 import {DetailProduct} from "../../../../redux/data/auth/apiFunction";
 import Intro from "./Intro/Intro";
 import InnerImageZoom from "react-inner-image-zoom";
@@ -98,20 +98,45 @@ const ProductDetail=(props)=>{
             </article>
 
             <div className={classes.PNGLogo}>
-                <div  >
-                    <img src={Express}  />
+                <div className={classes.Pic1}  >
+                    <Express />
+                    <div>
+                       <span>
+                                           تحویل اکسپرس
+                    </span>
+                    </div>
+
                 </div>
                 <div >
-                    <img src={Pay} />
+                    <Return />
+                    <div>
+                         <span>
+7 روز ضمانت بازگشت کالا
+                    </span>
+                    </div>
+
                 </div>
-                <div  >
-                    <img src={Allday}  />
-                </div>
+                {/*<div  >*/}
+                {/*    <Allday/>*/}
+                {/*    /!*<img src={Allday}  />*!/*/}
+                {/*</div>*/}
                 <div >
-                    <img src={Return}  />
+                    <Pay/>
+                    <div>
+                         <span>
+پرداخت در محل
+                    </span>
+                    </div>
+
                 </div>
                 <div  >
-                    <img src={Orginal}  />
+                    <Orginal />
+                    <div>
+                        <span>
+ضمانت اصل بودن کالا
+                    </span>
+                    </div>
+
                 </div>
             </div>
 

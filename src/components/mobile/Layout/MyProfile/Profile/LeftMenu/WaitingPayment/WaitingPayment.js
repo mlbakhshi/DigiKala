@@ -28,9 +28,7 @@ const WaitingPayment=(props)=>{
                                 <div>
                                     <i className="fa fa-trash" aria-hidden="true"></i>
                                 </div>
-                                <span>
-                                 حذف
-                            </span>
+
                             </div>
                         </div>
                         <div className={classes.detailBuy}>

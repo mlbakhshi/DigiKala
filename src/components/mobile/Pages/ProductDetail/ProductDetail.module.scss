@@ -49,16 +49,30 @@ display:flex;
 .PNGLogo{
   display: flex;
   margin-top: calcLen(15);
-  justify-content: center;
+  justify-content:  space-between;
+  align-items:center;
   margin-bottom:calcLen(15);
+  //padding-right:calcLen(15);
+  //padding-left:calcLen(15);
 }
-.PNGLogo div{
-  width:calcLen(200);
+.PNGLogo svg{
+  width:calcLen(30);
+  height:calcLen(50);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-left: auto;
+  margin-right: auto;
 }
-.PNGLogo img{
-  width:60%;
+.PNGLogo span{
+  font-size:calcFont(9);
+  color:#4a5f73;
 }
 .Send i{
   font-size:calcLen(24);
   color:red;
+}
+.Pic1 svg{
+  width:calcLen(35);
+  //padding-top:calcLen(20);
 }
